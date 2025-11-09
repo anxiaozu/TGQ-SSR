@@ -1,0 +1,37 @@
+{
+    "edges": [
+        "边的类型为：containerOf,起点类型为:forum,终点类型为:post",
+        "边的类型为：replyofpost,起点类型为:post,终点类型为:post",
+        "边的类型为：likespost,起点类型为:person,终点类型为:post",
+        "边的类型为：replyofcomment,起点类型为:comment,终点类型为:comment",
+        "边的类型为：likescomment,起点类型为:person,终点类型为:comment",
+        "边的类型为：studyat,起点类型为:person,终点类型为:organisation",
+        "边的类型为：workat,起点类型为:person,终点类型为:organisation",
+        "边的类型为：hasmember,起点类型为:forum,终点类型为:person",
+        "边的类型为：hasmoderator,起点类型为:forum,终点类型为:person",
+        "边的类型为：hascreatorpost,起点类型为:post,终点类型为:person",
+        "边的类型为：hascreatorcomment,起点类型为:comment,终点类型为:person",
+        "边的类型为：knows,起点类型为:person,终点类型为:person",
+        "边的类型为：islocatedinpost,起点类型为:post,终点类型为:place",
+        "边的类型为：islocatedincomment,起点类型为:comment,终点类型为:place",
+        "边的类型为：islocatedinorgan,起点类型为:organisation,终点类型为:place",
+        "边的类型为：islocatedinperson,起点类型为:person,终点类型为:place",
+        "边的类型为：ispartof,起点类型为:place,终点类型为:place",
+        "边的类型为：hastagforum,起点类型为:forum,终点类型为:tag",
+        "边的类型为：hastagpost,起点类型为:post,终点类型为:tag",
+        "边的类型为：hastagcomment,起点类型为:comment,终点类型为:tag",
+        "边的类型为：hasinterest,起点类型为:person,终点类型为:tag",
+        "边的类型为：hastype,起点类型为:tag,终点类型为:tagclass",
+        "边的类型为：issubclassof,起点类型为:tagclass,终点类型为:tagclass"
+    ],
+    "nodes": [
+        "节点类型:comment,包含属性信息:(['id', 'length', 'content', 'locationip', 'browserused', 'creationdate'],)",
+        "节点类型:place,包含属性信息:(['id', 'url', 'name', 'type'],)",
+        "节点类型:person,包含属性信息:(['id', 'email', 'gender', 'birthday', 'language', 'lastname', 'firstname', 'locationip', 'browserused', 'creationdate'],)",
+        "节点类型:organisation,包含属性信息:(['id', 'url', 'name', 'type'],)",
+        "节点类型:forum,包含属性信息:(['id', 'title', 'creationdate'],)",
+        "节点类型:tag,包含属性信息:(['id', 'url', 'name'],)",
+        "节点类型:post,包含属性信息:(['id', 'length', 'content', 'language', 'imagefile', 'locationip', 'browserused', 'creationdate'],)",
+        "节点类型:tagclass,包含属性信息:(['id', 'url', 'name'],)"
+    ]
+}

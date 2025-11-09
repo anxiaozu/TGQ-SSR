@@ -1,0 +1,22 @@
+cd /home/work/liuytest/LLaMA-Factory/src/llamafactory/chat/
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/gemma9B_base.yaml  /home/work/liuytest/大论文/2微调/ldbc_normal_test_7_3.json gemma9B_base_normal_prompt.json
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/gemma9B_base.yaml  /home/work/liuytest/大论文/2微调/ldbc_with_schema_prompt_test_7_3.json gemma9B_base_schema_prompt.json
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/gemma9B_base.yaml  /home/work/liuytest/大论文/2微调/ldbc_with_vector_prompt_test_7_3.json gemma9B_base_vector_prompt.json
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/gemma9B_base.yaml  /home/work/liuytest/大论文/2微调/ldbc_with_schema_vector_prompt_test_7_3.json gemma9B_base_schema_vector_prompt.json
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/Qwen2.57B_base.yaml /home/work/liuytest/大论文/2微调/ldbc_normal_test_7_3.json Qwen2.57B_base_normal_prompt.json 
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/Qwen2.57B_base.yaml /home/work/liuytest/大论文/2微调/ldbc_with_schema_prompt_test_7_3.json Qwen2.57B_base_schema_prompt.json
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/Qwen2.57B_base.yaml /home/work/liuytest/大论文/2微调/ldbc_with_vector_prompt_test_7_3.json Qwen2.57B_base_vector_prompt.json
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/Qwen2.57B_base.yaml /home/work/liuytest/大论文/2微调/ldbc_with_schema_vector_prompt_test_7_3.json Qwen2.57B_base_schema_vector_prompt.json
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/GLM49B_base.yaml /home/work/liuytest/大论文/2微调/ldbc_normal_test_7_3.json GLM49B_base_normal_prompt.json 
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/GLM49B_base.yaml /home/work/liuytest/大论文/2微调/ldbc_with_schema_prompt_test_7_3.json GLM49B_base_schema_prompt.json
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/GLM49B_base.yaml /home/work/liuytest/大论文/2微调/ldbc_with_vector_prompt_test_7_3.json GLM49B_base_vector_prompt.json
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/GLM49B_base.yaml /home/work/liuytest/大论文/2微调/ldbc_with_schema_vector_prompt_test_7_3.json GLM49B_base_schema_vector_prompt.json
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/LLama8B_base.yml /home/work/liuytest/大论文/2微调/ldbc_normal_test_7_3.json LLama8B_base_normal_prompt.json 
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/LLama8B_base.yml /home/work/liuytest/大论文/2微调/ldbc_with_schema_prompt_test_7_3.json LLama8B_base_schema_prompt.json
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/LLama8B_base.yml /home/work/liuytest/大论文/2微调/ldbc_with_vector_prompt_test_7_3.json LLama8B_base_vector_prompt.json
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/LLama8B_base.yml /home/work/liuytest/大论文/2微调/ldbc_with_schema_vector_prompt_test_7_3.json LLama8B_base_schema_vector_prompt.json
+
+
+ASCEND_RT_VISIBLE_DEVICES=6,7 python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/Qwen2.57B_base.yaml /home/work/liuytest/大论文/2微调/ldbc_with_schema_prompt_test_7_3.json Qwen2.57B_base_schema_prompt.json
+ASCEND_RT_VISIBLE_DEVICES=4 nohup python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/Qwen2.57B_base.yaml /home/work/liuytest/大论文/2微调/ldbc_with_vector_prompt_test_7_3.json Qwen2.57B_base_vector_prompt.json &
+ASCEND_RT_VISIBLE_DEVICES=5 nohup python3 -u liuy_test_all_model.py /home/work/liuytest/LLaMA-Factory/examples/inference/Qwen2.57B_base.yaml /home/work/liuytest/大论文/2微调/ldbc_with_schema_vector_prompt_test_7_3.json Qwen2.57B_base_schema_vector_prompt.json &

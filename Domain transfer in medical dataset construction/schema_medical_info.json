@@ -1,0 +1,28 @@
+{
+    "edges": [
+        "边的类型为：belong_to,起点类型为:second_level_departments,终点类型为:first_level_departments",
+        "边的类型为：affiliation_department,起点类型为:disease,终点类型为:second_level_departments",
+        "边的类型为：diagnostic_tests,起点类型为:disease,终点类型为:inspection_means",
+        "边的类型为：treatment,起点类型为:disease,终点类型为:treatment_plan",
+        "边的类型为：complication,起点类型为:disease,终点类型为:disease",
+        "边的类型为：with_symptoms,起点类型为:disease,终点类型为:symptoms",
+        "边的类型为：produce_medicine,起点类型为:manufacturer,终点类型为:drug",
+        "边的类型为：highly_rated_medicines,起点类型为:disease,终点类型为:drug",
+        "边的类型为：common_used,起点类型为:disease,终点类型为:drug",
+        "边的类型为：suitable_to_eat,起点类型为:disease,终点类型为:food",
+        "边的类型为：avoid_eating,起点类型为:disease,终点类型为:food",
+        "边的类型为：recommended_recipes,起点类型为:disease,终点类型为:recipe"
+    ],
+    "nodes": [
+        "节点类型:treatment_plan,包含属性信息:(['id', 'name', 'label'],)",
+        "节点类型:recipe,包含属性信息:(['id', 'name', 'label'],)",
+        "节点类型:symptoms,包含属性信息:(['id', 'name', 'label'],)",
+        "节点类型:inspection_means,包含属性信息:(['id', 'name', 'label'],)",
+        "节点类型:manufacturer,包含属性信息:(['id', 'name', 'label'],)",
+        "节点类型:disease,包含属性信息:(['id', 'name', 'causes', 'describe', 'prevention', 'recovery_rate', 'duration_of_treatment', 'susceptible_population'],)",
+        "节点类型:second_level_departments,包含属性信息:(['id', 'name', 'label'],)",
+        "节点类型:drug,包含属性信息:(['id', 'name', 'label'],)",
+        "节点类型:first_level_departments,包含属性信息:(['id', 'name', 'label'],)",
+        "节点类型:food,包含属性信息:(['id', 'name', 'label'],)"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "edges": [
+        "边的类型为：accounttransferaccount,起点类型为:account,终点类型为:account",
+        "边的类型为：accountwithdrawaccount,起点类型为:account,终点类型为:account",
+        "边的类型为：loandepositaccount,起点类型为:loan,终点类型为:account",
+        "边的类型为：mediumsigninaccount,起点类型为:medium,终点类型为:account",
+        "边的类型为：personownaccount,起点类型为:person,终点类型为:account",
+        "边的类型为：companyguaranteecompany,起点类型为:company,终点类型为:company",
+        "边的类型为：companyinvestcompany,起点类型为:company,终点类型为:company",
+        "边的类型为：personinvestcompany,起点类型为:person,终点类型为:company",
+        "边的类型为：accountrepayloan,起点类型为:account,终点类型为:loan",
+        "边的类型为：companyapplyloan,起点类型为:company,终点类型为:loan",
+        "边的类型为：personapplyLoan,起点类型为:person,终点类型为:loan",
+        "边的类型为：personguaranteeperson,起点类型为:person,终点类型为:person"
+    ],
+    "nodes": [
+        "节点类型:medium,包含属性信息:(['mediumId', 'isblocked', 'risklevel', 'createtime', 'mediumtype', 'lastlogintime'],)",
+        "节点类型:person,包含属性信息:(['city', 'gender', 'country', 'birthday', 'personId', 'isBlocked', 'createtime', 'personname'],)",
+        "节点类型:account,包含属性信息:(['email', 'nickname', 'phonenum', 'accountid', 'isblocked', 'accouttype', 'createtime', 'accountlevel', 'freqlogintype', 'lastlogintime'],)",
+        "节点类型:company,包含属性信息:(['url', 'city', 'country', 'business', 'companyid', 'isblocked', 'createtime', 'companyname', 'description'],)",
+        "节点类型:loan,包含属性信息:(['loanId', 'balance', 'loanusage', 'createtime', 'loanamount', 'interestrate'],)"
+    ]
+}

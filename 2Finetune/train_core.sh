@@ -1,0 +1,17 @@
+cd /home/work/liuytest/LLaMA-Factory
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/gemma9B_fitune_normal_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/gemma9B_fitune_schema_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/gemma9B_fitune_schema_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/gemma9B_fitune_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/GLM49B_fitune_normal_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/GLM49B_fitune_schema_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/GLM49B_fitune_schema_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/GLM49B_fitune_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/LLama8B_fitune_normal_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/LLama8B_fitune_schema_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/LLama8B_fitune_schema_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/LLama8B_fitune_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/Qwen2.57B_fitune_normal_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/Qwen2.57B_fitune_schema_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/Qwen2.57B_fitune_schema_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/Qwen2.57B_fitune_vector_prompt.yaml

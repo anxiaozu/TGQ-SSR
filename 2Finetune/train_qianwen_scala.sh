@@ -1,0 +1,10 @@
+cd /home/work/liuytest/LLaMA-Factory
+ASCEND_RT_VISIBLE_DEVICES=4,5 llamafactory-cli train examples/train_lora/scala_1_9_Qwen2.57B_fitune_schema_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=4,5 llamafactory-cli train examples/train_lora/scala_2_8_Qwen2.57B_fitune_schema_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=4,5 llamafactory-cli train examples/train_lora/scala_3_7_Qwen2.57B_fitune_schema_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=4,5 llamafactory-cli train examples/train_lora/scala_4_6_Qwen2.57B_fitune_schema_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=4,5 llamafactory-cli train examples/train_lora/scala_5_5_Qwen2.57B_fitune_schema_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=4,5 llamafactory-cli train examples/train_lora/scala_6_4_Qwen2.57B_fitune_schema_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=4,5 llamafactory-cli train examples/train_lora/scala_7_3_Qwen2.57B_fitune_schema_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=4,5 llamafactory-cli train examples/train_lora/scala_8_2_Qwen2.57B_fitune_schema_vector_prompt.yaml
+ASCEND_RT_VISIBLE_DEVICES=4,5 llamafactory-cli train examples/train_lora/scala_9_1_Qwen2.57B_fitune_schema_vector_prompt.yaml

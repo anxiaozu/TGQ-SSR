@@ -1,0 +1,1542 @@
+[
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 1 of Hossein Forouhar的创建日期、标题和id，最多返回5条结果",
+        "output": "MATCH (a:Album)-[:CREATED_BY]->(artist:Artist {name: 'Hossein Forouhar'}) WHERE a.number = 1 RETURN a.creationDate, a.title, a.id LIMIT 5"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 6 of Hossein Forouhar的创建日期",
+        "output": "MATCH (p:Person {name: 'Hossein Forouhar'})-[:ARTIST]->(a:Album {title: 'Album 6'})\nRETURN a.creationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 7 of Hossein Forouhar的创建日期、id和标题",
+        "output": "MATCH (a:Album)-[:CREATED_BY]->(artist:Artist {name: 'Hossein Forouhar'}) WHERE a.position = 7 RETURN a.creationDate, a.id, a.title"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 8 of Hossein Forouhar的id、创建日期和标题",
+        "output": "MATCH (a:Artist {name: 'Hossein Forouhar'})-[:HAS_ALBUM]->(album:Album {title: 'Album 8'})\nRETURN album.id, album.creationDate, album.title"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找标题为Album 17 of Hossein Forouhar的论坛标题",
+        "output": "MATCH (a:Album {title: 'Album 17 of Hossein Forouhar'})-[:CREATED_BY]->(artist:Artist {name: 'Hossein Forouhar'})<-[:POSTED_IN]-(f:Forum)\nRETURN f.title AS ForumTitle"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 18 of Hossein Forouhar的标题、id和创建日期",
+        "output": "MATCH (a:Album)-[:HAS_ALBUM]->(artist:Artist {name: 'Hossein Forouhar'}) WHERE a.id = 18 RETURN a.title, a.id, a.creationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 22 of Hossein Forouhar的标题和id，仅返回一条结果",
+        "output": "MATCH (a:Album)-[:BELONGS_TO]-(artist:Artist {name: 'Hossein Forouhar'}) WHERE a.id = 22 RETURN a.title AS Title, a.id AS ID LIMIT 1"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 24 of Hossein Forouhar的标题、id和创建日期",
+        "output": "MATCH (a:Artist {name: 'Hossein Forouhar'})-[:HAS_ALBUM]->(album:Album {id: 24})\nRETURN album.title, album.id, album.creationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 30 of Hossein Forouhar的id和标题",
+        "output": "MATCH (a:Album)-[:BY]->(artist:Artist {name: 'Hossein Forouhar'}) WHERE a.albumNumber = 30 RETURN a.id, a.title"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 34 of Hossein Forouhar的标题、id和创建日期",
+        "output": "Artist {\n  id: \"hossein_forouhar\",\n  name: \"Hossein Forouhar\"\n}\n\nAlbum {\n  id: \"34\",\n  title: \"专辑标题\",\n  creationDate: \"2023-01-01\"\n}\n\nHAS_ALBUM {\n  artist: \"hossein_forouhar\",\n  album: \"34\"\n}"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wall of Wojciech Ciesla的创建日期",
+        "output": "MATCH (w:Wall {name: 'Wall of Wojciech Ciesla'})\nRETURN w.creationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 1 of Ali Achiou的id",
+        "output": "MATCH (a:Artist {name: 'Ali Achiou'})-[:RELEASED]->(album:Album {name: 'Album 1'})\nRETURN album.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 2 of Ali Achiou的标题、id和创建日期",
+        "output": "MATCH (a:Album)-[:HAS_TITLE]->(t:Title)\nWHERE a.id = 2 AND a.artist = 'Ali Achiou'\nRETURN t.title, a.id, a.creationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Pamir_Airways的id、网址和名称",
+        "output": "MATCH (a:Airline {name: 'Pamir_Airways'})\nRETURN a.id, a.website, a.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找SonAir的名称、网址和id，限制返回16条结果",
+        "output": "MATCH (a:Airline {name: 'SonAir'})\nRETURN a.name, a.url, a.id\nLIMIT 16"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Aero_VIP_(Argentina)的网址和id，最多返回14条结果",
+        "output": "MATCH (a:Company {name: 'Aero_VIP_(Argentina)'})\nRETURN a.url AS Website, a.id AS ID\nLIMIT 14"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Líneas Aéreas Federales的名称和网址",
+        "output": "MATCH (a: Airlines {name: \"Líneas Aéreas Federales\"})\nRETURN a.name AS Name, a.website AS Website"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Andes_Líneas_Aéreas的网址",
+        "output": "MATCH (a:Airline {name: 'Andes Líneas Aéreas'})\nRETURN a.url AS Website"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Impulse_Airlines的名称、id和网址，最多返回9条记录",
+        "output": "MATCH (a:Airline {name: 'Impulse_Airlines'})\nRETURN a.name, a.id, a.website\nLIMIT 9"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Sunshine Express Airlines的id",
+        "output": "MATCH (a:Airline {name: 'Sunshine Express Airlines'})\nRETURN a.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Aero-Tropics_Air_Services的名称和网址",
+        "output": "MATCH (a:Airline {name: 'Aero-Tropics_Air_Services'})\nRETURN a.name AS Name, a.website AS Website"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Tasman Cargo Airlines的id",
+        "output": "MATCH (a:Airline {name: 'Tasman Cargo Airlines'})\nRETURN a.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Toll_Aviation的名称和网址，并按名称排序返回",
+        "output": "MATCH (a:Toll_Aviation)\nRETURN a.name, a.url\nORDER BY a.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Skytrans_Airlines的名称，最多返回20个结果",
+        "output": "MATCH (a:Airline {name: 'Skytrans_Airlines'})\nRETURN a.name\nLIMIT 20"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Flight West Airlines的网址",
+        "output": "MATCH (a:Airline {name: 'Flight West Airlines'})-[:hasWebsite]->(website:Website)\nRETURN website.url AS WebsiteURL"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Ali的个人的创建日期、位置IP、语言、id、生日、名、姓、电子邮件和性别",
+        "output": "MATCH (p:Person {name: 'Ali'})\nRETURN p.creationDate, p.locationIP, p.language, p.id, p.birthdate, p.first_name, p.last_name, p.email, p.gender"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Albaye Papa的用户的性别、使用的浏览器、id、名字、生日、IP地址和姓氏，最多返回2条结果",
+        "output": "MATCH (u:User {name: 'Albaye Papa'})\nRETURN u.gender, u.browser, u.id, u.name, u.birthday, u.ip_address, u.surname\nLIMIT 2"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Chaim Azriel的语言、生日、使用的浏览器、电子邮件和姓氏",
+        "output": "MATCH (p:Person {name: 'Chaim Azriel'}) \nRETURN p.language, p.birthday, p.browser, p.email, p.surname"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Jose的人员的浏览器使用情况、id、创建日期、姓氏、电子邮件、位置IP、生日、语言和名字",
+        "output": "MATCH (p:Person {name: 'Jose'})\nRETURN p.id, p.creationDate, p.surname, p.email, p.locationIP, p.birthDate, p.language, p.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Parviz的人的语言、生日、使用的浏览器和性别",
+        "output": "MATCH (p:Person {name: 'Parviz'})\nRETURN p.language, p.birthday, p.browser, p.gender"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Bingbing的人的电子邮件、姓氏和位置IP",
+        "output": "MATCH (p:Person {name: 'Bingbing'})\nRETURN p.surname AS Surname, p.email AS Email, p.ip_address AS IP"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Franz的人的浏览器使用情况、电子邮件、位置IP、创建日期、性别、姓氏、生日、ID、语言和名字",
+        "output": "MATCH (p:Person {name: 'Franz'})\nRETURN p.browser_usage, p.email, p.location_ip, p.creation_date, p.gender, p.surname, p.birthdate, p.id, p.language, p.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名字为Chen的前5个人的姓名、使用的浏览器、性别、IP地址和语言",
+        "output": "MATCH (p:Person {name: 'Chen'})-[:FRIEND_OF]->(friend:Person)\nRETURN friend.name AS Name, friend.browser AS Browser, friend.gender AS Gender, friend.ip_address AS IP, friend.language AS Language\nLIMIT 5"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名字为Jun的人的生日、使用的浏览器、电子邮件和id，限制返回18条结果",
+        "output": "MATCH (p:Person {name: 'Jun'})\nRETURN p.birthdate, p.browser, p.email, p.id\nLIMIT 18"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Zdenek的人员的电子邮件、位置IP、创建日期、性别、ID、生日、姓氏和名字",
+        "output": "MATCH (p:Person {name: 'Zdenek'})\nRETURN p.email, p.locationIP, p.createDate, p.gender, p.id, p.birthday, p.surname, p.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Sven的人员的性别、IP地址、使用的浏览器、创建日期、ID、生日、语言和姓氏",
+        "output": "MATCH (p:Person {name: 'Sven'})\nRETURN p.gender, p.ipAddress, p.browser, p.creationDate, p.id, p.birthdate, p.language, p.surname"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名字为Dith的前7个人的位置IP、性别、浏览器、名字、生日、创建日期、邮箱和语言",
+        "output": "MATCH (u:User {name: 'Dith'})-[:AT]->(l:Location)\nRETURN u.name AS Name, u.gender AS Gender, u.browser AS Browser, u.birthday AS Birthday, u.created_at AS CreationDate, u.email AS Email, u.language AS Language, l.ip AS LocationIP\nLIMIT 7"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Bechir的人员的语言、电子邮件、IP地址、浏览器、性别和创建日期",
+        "output": "MATCH (p:Person {name: 'Bechir'})\nRETURN p.language, p.email, p.ip_address, p.browser, p.gender, p.created_at"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名字为Paul的人的生日",
+        "output": "MATCH (p:Person {name: 'Paul'})\nRETURN p.birthday"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Emperor of Brazil的人的语言、使用的浏览器、性别、生日、创建日期和邮箱，限制返回20条结果",
+        "output": "MATCH (p:Person {name: \"Emperor of Brazil\"})\nRETURN p.language, p.browser, p.gender, p.birthdate, p.creationDate, p.email\nLIMIT 20"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Ahmed的人员的位置IP、使用的语言、姓氏和生日",
+        "output": "MATCH (p:Person {name: 'Ahmed'})\nRETURN p.ip, p.language, p.surname, p.birthdate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Juan的用户的创建日期和名字",
+        "output": "MATCH (u:User {name: 'Juan'})\nRETURN u.creationDate, u.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名字为Takeshi的人的性别、电子邮件、创建日期和生日",
+        "output": "MATCH (p:Person {name: 'Takeshi'})\nRETURN p.gender, p.email, p.createDate, p.birthdate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Shweta的人员的浏览器使用情况、语言、生日、电子邮件、姓氏、名字、创建日期、性别、位置IP和ID",
+        "output": "MATCH (p:Person {name: 'Shweta'})-[:HAS详细信息]->(details)\nRETURN p.name AS Name, p.firstName AS FirstName, p.lastName AS LastName, p.gender AS Gender, \n       p.birthday AS Birthday, p.email AS Email, p.creationDate AS CreationDate, \n       details.browserUsage AS BrowserUsage, details.language AS Language, \n       details.locationIP AS LocationIP, p.id AS ID"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名字为Ning的用户的创建日期和名字，最多返回7个结果",
+        "output": "MATCH (u:User {name: 'Ning'})\nRETURN u.creationDate, u.name\nLIMIT 7"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找El Salvador的名称和URL",
+        "output": "MATCH (n:Country {name: 'El Salvador'})\nRETURN n.name, n.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Estonia的id、网址和名称",
+        "output": "MATCH (c:Country {name: \"Estonia\"})\nRETURN c.id AS id, c.website AS website, c.name AS name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Finland的id、名称和URL，并按名称排序",
+        "output": "MATCH (n:Country {name: 'Finland'})\nRETURN n.id, n.name, n.url\nORDER BY n.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Honduras的地方的网址和名称，并按名称降序排列，返回前9个结果",
+        "output": "MATCH (l:Location {name: 'Honduras'})-[:HAS_WEBSITE]->(w:Website)\nRETURN w.url AS website_url, l.name AS location_name\nORDER BY l.name DESC\nLIMIT 9"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n按名称降序返回Jordan的名称和URL",
+        "output": "MATCH (p:Person)-[:hasName]->(name)\nWHERE p.name = 'Jordan'\nRETURN p.name, p.url\nORDER BY p.name DESC"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Latvia的地方的名称和id",
+        "output": "MATCH (n:Place {name: 'Latvia'})\nRETURN n.name, n.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Lithuania的网址和名称",
+        "output": "MATCH (c:Country {name: 'Lithuania'})-[:HAS_WEBSITE]->(w:Website)\nRETURN w.url AS WebsiteURL, c.name AS CountryName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Nicaragua的地方的名称",
+        "output": "MATCH (n:Place {name: 'Nicaragua'})\nRETURN n.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Oman的url、名称和id",
+        "output": "MATCH (o:Country {name: \"Oman\"})\nRETURN o.url, o.name, o.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Panama的地方的名称、id和URL",
+        "output": "MATCH (n:Place {name: 'Panama'})\nRETURN n.name, n.id, n.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Scotland的地方的名称和id",
+        "output": "MATCH (n:Place {name: 'Scotland'})\nRETURN n.name, n.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Switzerland的url、名称和id",
+        "output": "MATCH (n:Country {name: \"Switzerland\"})\nRETURN n.url, n.name, n.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Uruguay的id、名称和URL",
+        "output": "MATCH (u:Country {name: \"Uruguay\"})\nRETURN u.id, u.name, u.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Germany的地方的名称和URL",
+        "output": "MATCH (n:Place {name: \"Germany\"})\nRETURN n.name, n.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找日本的url、id和名称，最多返回4个结果",
+        "output": "MATCH (j:Japan)\nRETURN j.url AS url, j.id AS id, j.name AS name\nLIMIT 4"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为United_States的地方的id，最多返回9个结果",
+        "output": "MATCH (n:Place {name: 'United_States'})\nRETURN n.id\nLIMIT 9"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Algeria的URL",
+        "output": "MATCH (c:Country {name: 'Algeria'})-[:hasURL]->(u:URL)\nRETURN u.url AS URL"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Mahmud_of_Ghazni的URL",
+        "output": "MATCH (p:Person {name: 'Mahmud_of_Ghazni'})\nRETURN p.url AS Mahmud_of_Ghazni_URL"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名称为Abbas I of Persia的标签的url和id，最多返回8个结果",
+        "output": "MATCH (n:Person {name: \"Abbas I of Persia\"})\nRETURN n.url AS url, n.id AS id\nLIMIT 8"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Jorge Luis Borges的id和名称",
+        "output": "MATCH (p:Person {name: 'Jorge Luis Borges'})\nRETURN p.id, p.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找José_de_San_Martín的id和名称",
+        "output": "MATCH (p:Person {name: 'José de San Martín'})\nRETURN p.id, p.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名称为Paola_Suárez的标签的id、名称和URL，最多返回11条结果",
+        "output": "MATCH (n:Label {name: 'Paola_Suárez'}) RETURN n.id, n.name, n.url LIMIT 11"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Ástor_Piazzolla的标签的名称和URL",
+        "output": "MATCH (a:Ástor_Piazzolla)\nRETURN a.name, a.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名称为Daniel_Barenboim的标签的url和名称，并按名称降序排列",
+        "output": "MATCH (p:Person {name: 'Daniel_Barenboim'})-[:HAS_URL]->(url:URL)\nRETURN url.url AS url, p.name AS name\nORDER BY p.name DESC"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Carlos_Tévez的url、id和名称",
+        "output": "MATCH (p:Person {name: 'Carlos_Tévez'})\nRETURN p.url, p.id, p.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Hernán_Crespo的url和id",
+        "output": "MATCH (p:Person {name: 'Hernán Crespo'})\nRETURN p.url, p.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Carlos_Berlocque的id和名称",
+        "output": "MATCH (p:Person {name: 'Carlos_Berlocque'})\nRETURN p.id, p.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名称为Raúl_Alfonsín的标签的url、名称和id，最多返回5个结果",
+        "output": "MATCH (n:Label {名称: 'Raúl_Alfonsín'}) RETURN n.url, n.名称, n.id LIMIT 5"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找标签Gabriel_Batistuta的名称和URL",
+        "output": "MATCH (n:Gabriel_Batistuta)\nRETURN n.name, n.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Rupert_Murdoch的名称、id和URL",
+        "output": "MATCH (p:Person {name: 'Rupert_Murdoch'})\nRETURN p.name AS Name, p.id AS ID, p.url AS URL"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Royalty的标签类别的名称",
+        "output": "MATCH (l:Label) WHERE l.name = 'Royalty' RETURN l.name AS LabelName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名称为Saint的标签类的url、id和名称",
+        "output": "MATCH (t:Tag {name: 'Saint'})\nRETURN t.url, t.id, t.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Athlete的标签类的url和id",
+        "output": "MATCH (a:Athlete)\nRETURN a.url, a.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名称为Scientist的标签类的名称，最多返回14条结果",
+        "output": "MATCH (n:Scientist)\nRETURN n.name\nLIMIT 14"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为IceHockeyPlayer的标签类的id",
+        "output": "MATCH (p:IceHockeyPlayer) RETURN p.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找标签类名为BasketballPlayer的id",
+        "output": "MATCH (p:BasketballPlayer)\nRETURN p.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找BaseballPlayer的URL",
+        "output": "MATCH (bp:BaseballPlayer)\nRETURN bp.url AS PlayerURL"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名称为ChristianBishop的标签类的url，最多返回5个结果",
+        "output": "MATCH (n:LabelClass {name: 'ChristianBishop'})-[:HAS_URL]->(url)\nRETURN url\nLIMIT 5"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名称为Chancellor的标签类的id、名称和URL，仅返回一条记录",
+        "output": "MATCH (n:Chancellor)\nRETURN n.id, n.name, n.url\nLIMIT 1"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Governor的标签类的名称、id和URL",
+        "output": "MATCH (n:Governor)\nRETURN n.name, n.id, n.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名称为Model的标签类的url和id",
+        "output": "MATCH (l:Label {name: \"Model\"})\nRETURN l.url, l.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Criminal的标签类的url、id和名称，并按名称排序",
+        "output": "MATCH (c: Criminal)\nRETURN c.url AS url, c.id AS id, c.name AS name\nORDER BY c.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为CollegeCoach的标签类的id和名称",
+        "output": "MATCH (n:CollegeCoach)\nRETURN n.id, n.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名称为MusicalWork的标签类的id、url和名称，最多返回11条记录",
+        "output": "MATCH (n:MusicalWork)\nRETURN n.id, n.url, n.name\nLIMIT 11"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 1 of Hossein Forouhar包含的帖子的语言、论坛的id、关联关系的创建日期、帖子的id、帖子的长度和论坛的标题",
+        "output": "MATCH (a:Album)-[:HAS_ALBUM]->(user:User {name: 'Hossein Forouhar'})-[:HAS_ALBUM]->(album:Album {name: '1 of Hossein Forouhar'})-[:CONTAINS_POST]->(post:Post)\nWITH post, a.title AS albumTitle, a.creationDate AS albumCreationDate\nMATCH (post)-[:POSTED_IN_FORUM]->(forum:Forum)\nWITH post, forum.id AS forumId, forum.title AS forumTitle\nMATCH (a)-[:HAS_ALBUM]->(user)\nRETURN post.language, forum.id, a.creationDate, post.id, LENGTH(post.content) AS postLength, forum.title"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 1 of Hossein Forouhar包含的帖子的IP地址、长度以及关系的创建日期",
+        "output": "MATCH (a:Album {name: 'Album 1 of Hossein Forouhar'})-[:CONTAINS]->(p:Post)\nRETURN p.ipAddress AS IPAddress, p.length AS Length, type(p) AS PostType, a.createdAt AS CreationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 1 of Hossein Forouhar包含的帖子的关联关系创建日期和帖子创建日期",
+        "output": "MATCH (a:Album {id: 1, artist: 'Hossein Forouhar'})-[:HAS_POST]->(p:Post)\nRETURN p.creationDate, a.creationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 2 of Hossein Forouhar及其包含的帖子的信息，包括论坛的标题、创建日期、帖子的语言、长度、论坛的id、帖子的创建日期、图片文件、内容、位置IP、帖子的id、使用的浏览器以及关系的创建日期，限制返回15条结果",
+        "output": "MATCH (a:Album)-[:CONTAINS]->(p:Post)\nWHERE a.title = 'Album 2' AND a.artist = 'Hossein Forouhar'\nRETURN p.title, p.creationDate, p.language, p.length, p.forumId, p.creationDate, p.imageFile, p.content, p.locationIP, p.id, p.browser, type(a)-[:CREATED_AT]->(date:Date) AS creationDate\nLIMIT 15"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 2 of Hossein Forouhar包含的帖子的id",
+        "output": "MATCH (a:Album)-[:CONTAINS]->(p:Post)\nWHERE a.title = 'Album 2' AND a.artist = 'Hossein Forouhar'\nRETURN p.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 3 of Hossein Forouhar包含的帖子的创建日期、位置IP、长度和ID",
+        "output": "MATCH (a:Album)-[:CONTAINS]->(p:Post)\nWHERE a.id = 3 AND a.artist = 'Hossein Forouhar'\nRETURN p.creationDate, p.locationIP, p.length, p.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 3 of Hossein Forouhar包含的帖子的标题、关系的创建日期、帖子的IP地址、长度、id和使用的浏览器",
+        "output": "MATCH (a:Album {name: 'Album 3 of Hossein Forouhar'})-[:contains]->(p:Post)\nRETURN p.title, p.creationDate, p.ipAddress, p.length, p.id, p.browser"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 4 of Hossein Forouhar包含的帖子的创建日期、内容、使用的浏览器、IP地址以及论坛的id，最多返回18条记录",
+        "output": "MATCH (a:Album {id: 4})-[:CONTAINS]->(p:Post)\nWHERE a.artist = 'Hossein Forouhar'\nRETURN p.creationDate, p.content, p.browser, p.ipAddress, p.forumId\nLIMIT 18"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 5 of Hossein Forouhar包含的帖子的关联时间、帖子的创建时间、论坛的创建时间、帖子的位置IP、帖子使用的浏览器以及论坛的id",
+        "output": "MATCH (a:Artist {name: 'Hossein Forouhar'})-[:CREATED]->(album:Album {id: 5})<-[r:ALBUM_HAS_FORUM]-(f:Forum)\n<-[:FORUM_HAS_POST]-(p:Post)\nRETURN p.creationTime AS PostCreationTime, p.locationIP AS PostLocationIP, p.browserUsed AS BrowserUsed, f.creationTime AS ForumCreationTime, f.id AS ForumID"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 6 of Hossein Forouhar包含的帖子的创建日期、语言、IP位置、内容以及论坛的id",
+        "output": "MATCH (a:Album)-[:CONTAINS]->(p:Post), (a)-[:BY]->(:Artist {name: \"Hossein Forouhar\"}), (a)-[:NUMBER]->(number {value: 6})\nWHERE a.name = \"Album 6\"\nRETURN p.creationDate, p.language, p.ipLocation, p.content, p.forumId"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 6 of Hossein Forouhar的创建日期",
+        "output": "MATCH (a:Artist {name: 'Hossein Forouhar'})-[:HAS_ALBUM]->(album:Album)\nWHERE album.album_number = 6\nRETURN album.creation_date"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Grigore的人加入的论坛的id、创建日期，以及该人的邮箱、语言、生日、id、性别和名字，同时返回加入关系的创建日期",
+        "output": "MATCH (p:Person {name: 'Grigore'})-[:MemberOf]->(f:Forum)\nRETURN f.id AS forumId, f.creationDate AS creationDate, p.email AS email, p.language AS language, p.birthday AS birthday, p.id AS personId, p.gender AS gender, TYPE(p)-[:MemberOf]->f AS relationshipType, p.name AS personName, TYPE(p)-[:MemberOf]->f.creationDate AS relationshipCreationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 1 of Hossein Forouhar中的成员Grigore的姓氏、性别、id、论坛id、成员创建日期、论坛创建日期、语言、位置IP、生日、浏览器使用情况、关系创建日期、电子邮件和论坛标题，最多返回18条记录。",
+        "output": "MATCH (a:Artist)-[:ARTIST_OF_ALBUM]->(album:Album {name: 'Album 1 of Hossein Forouhar'}) \nWHERE a.name = 'Grigore'\nRETURN a.surname, a.gender, a.id, a.forum_id, a.created_date, a.forum_created_date, a.language, \n       a.location_ip, a.birthday, a.browser_usage, a.relationship_created_date, a.email, album.title \nLIMIT 18"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Alfonso的成员加入的论坛，返回加入时间、成员的名字、邮箱、性别、成员的创建日期、成员的id以及论坛的创建日期",
+        "output": "MATCH (m:Member)-[:JOINED]->(f:Forum)\nWHERE m.name = 'Alfonso'\nRETURN m.joinedAt, m.name, m.email, m.gender, m.createdAt, m.id, f.createdAt"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Jorge的人加入的Album 1 of Hossein Forouhar论坛的信息，返回该人的浏览器使用情况、生日、位置IP、姓氏、该论坛的创建日期、该人的创建日期、加入关系的创建日期、名字、语言和邮箱，以及该论坛的id。",
+        "output": "MATCH (p:Person {name: 'Jorge'})-[:JOINED]->(a:Album {id: '1 of Hossein Forouhar'})\nRETURN p.browser_usage, p.birthdate, p.location_ip, p.surname, a.creation_date, p.creation_date, (p)-[:JOINED]->(a).creation_date, p.name, p.language, p.email, a.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Salim Ahmed的人在Album 2 of Hossein Forouhar论坛中使用的浏览器",
+        "output": "MATCH (p:Person {name: 'Salim Ahmed'})-[:uses]->(b:Browser)\nWHERE (p)-[:hasAlbum]->(a:Album {name: '2'})-[:isInForum]->(f:Forum {name: 'Hossein Forouhar'})\nRETURN b"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Emperor of Brazil的人加入的论坛的id、他使用的浏览器、性别以及论坛的标题",
+        "output": "MATCH (p:Person {name: 'Emperor of Brazil'})-[:JOINED]->(f:Forum)\nRETURN f.id AS forumId, p.browser AS browser, p.gender AS gender, f.title AS title"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为K.的人所在的论坛的标题，以及这个人的邮箱、语言、性别、使用的浏览器和IP地址",
+        "output": "MATCH (p:Person {name: 'K.'})-[:PART_OF]->(f:Forum)\nRETURN f.title AS ForumTitle, p.email AS Email, p.language AS Language, p.gender AS Gender, p.browser AS Browser, p.ip_address AS IPAddress"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 5 of Hossein Forouhar中成员名为K.的用户的姓氏、邮箱、生日、id、论坛标题、用户的位置IP、论坛的创建日期、论坛的id和用户的语言信息",
+        "output": "MATCH (u:User)-[:JOIN]->(l:Language),\n      (a:Artist {name: 'Hossein Forouhar'})-[:ARTIST_OF]->(album:Album {id: 5}),\n      (album)-[:MEMBER_OF]->(u),\n      (u)-[:POSTED_IN]->(f:Forum)\nWHERE u.name = 'K.'\nRETURN u.surname, u.email, u.birthday, u.id, f.title, u.locationIP, f.creationDate, f.id, l.languageInfo"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Abdul-Malik的人加入的论坛，返回第16到第23条记录，包括人的IP地址、论坛的id、人的名字、加入时间、邮箱、姓氏、论坛标题、语言和人的创建日期",
+        "output": "MATCH (p:Person {name: 'Abdul-Malik'})-[r:JOINED]->(f:Forum)\nRETURN p.ipAddress, f.id, p.name, r.joinDate, p.email, p.surname, f.title, f.language, p.createDate\nORDER BY r.joinDate\nSKIP 15\nLIMIT 8"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Chris的成员在Album 6 of Hossein Forouhar论坛中的性别、论坛的创建日期、成员的创建日期、语言、邮箱、加入论坛的日期、论坛的id、成员的名、成员的IP地址、成员的id、成员的生日、成员使用的浏览器、论坛的标题和成员的姓。",
+        "output": "MATCH (m:Member)-[:JOINED]->(f:Forum {title: \"Album 6 of Hossein Forouhar\"}) \n  <-[:MEMBER_OF]-(m:Member {name: \"Chris\"})\nWITH m, f\nMATCH (m)-[:GENDER]->(gender:Gender), (m)-[:CREATED_AT]->(memberCreated), \n      (f)-[:CREATED_AT]->(forumCreated), (m)-[:LANGUAGE]->(language:Language), \n      (m)-[:EMAIL]->(email:Email), (m)-[:JOINED_AT]->(joinedAt), \n      (m)-[:IP_ADDRESS]->(ip:IPAddress), (m)-[:BIRTHDAY]->(birthday:Birthday), \n      (m)-[:USING_BROWSER]->(browser:Browser)\nRETURN m.name AS MemberName, m.surname AS MemberSurname, gender.name AS Gender, \n       forumCreated.date AS ForumCreationDate, memberCreated.date AS MemberCreationDate, \n       language.name AS Language, email.address AS Email, joinedAt.date AS JoinDate, \n       f.id AS ForumID, m.id AS MemberID, ip.address AS IPAddress, birthday.date AS Birthday, \n       browser.name AS Browser, f.title AS ForumTitle"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Jan作为管理员的Wall of Jan Zakrzewski论坛的信息，包括关系的创建日期、Jan的IP地址、电子邮件、生日、姓氏、论坛的id以及Jan的名字。",
+        "output": "MATCH (jan:Person {name: 'Jan', role: 'admin'})-[:MANAGES]->(wall:Wall {name: 'Wall of Jan Zakrzewski'})\nMATCH (jan)-[:HAS_IP]->(ip:IPAddress)\nMATCH (jan)-[:HAS_EMAIL]->(email:Email)\nMATCH (jan)-[:HAS_BIRTHDAY]->(birthday:Birthday)\nMATCH (jan)-[:HAS_LAST_NAME]->(lastName:LastName)\nMATCH (wall)-[:HAS_ID]->(wallId:WallID)\nRETURN wallId, wall.name, ip.address, email.email, birthday.birthday, lastName.lastName, jan.name, jan.created"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wall of Albaye Papa Diouf的管理员Albaye Papa的语言信息",
+        "output": "MATCH (a:Administrator)-[:MANAGE]->(w:Wall {name: \"Wall of Albaye Papa Diouf\"}) \nWITH a \nMATCH (a)-[:SPEAK]->(l:Language)\nRETURN l"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wall of Chaim Azrail Hleb的管理员的性别、IP地址、管理关系的创建日期、使用的浏览器、邮箱以及论坛的标题",
+        "output": "MATCH (a:Administrator)-[:MANAGES]->(wall:Wall {title: \"Wall of Chaim Azrail Hleb\"}) \nRETURN a.gender, a.ipAddress, a.creationDate, a.browser, a.email, wall.title"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wall of Zdenek Herzigová的管理员Zdenek的生日、论坛标题、关系创建日期、管理员的语言、论坛id、管理员的邮箱和名字，限制返回2条结果",
+        "output": "MATCH (a:Admin)-[:MANAGES]->(f:Forum {title: \"Wall of Zdenek Herzigová\"})\n<-[:ADMIN_OF]-(admin:Admin {name: \"Zdenek\"})\nRETURN admin.birthday, f.title, a.created_at, admin.language, f.id, admin.email, admin.name\nLIMIT 2"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wall of Jose Gonzalez的管理员的性别、邮箱、语言，以及管理员关系的创建日期和论坛的id",
+        "output": "MATCH (wall:Wall {name: 'Wall of Jose Gonzalez'})-[:ADMINISTRATOR]->(admin:Admin)\nRETURN admin.gender, admin.email, admin.language, TYPE(wall)-[:ADMINISTRATOR]->(admin) as admin_relationship, wall.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Jun且管理着Wall of Jun Li论坛的人的邮箱、姓氏、语言以及他们成为管理员的时间",
+        "output": "MATCH (p:Person {name: 'Jun'})-[:MANAGES]->(f:Forum {name: 'Wall of Jun Li'})<-[:MANAGES]-(a:Admin)\nRETURN a.email, a.surname, a.language, a.became_admin_date"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Cam且管理着Wall of Cam Ho论坛的人的语言和IP地址，最多返回3条结果",
+        "output": "MATCH (p:Person {name: 'Cam'})-[:MANAGES]->(f:Forum {name: 'Wall of Cam Ho'})-[:POSTED_BY]->(u:User)\nRETURN u.language, u.ip_address\nLIMIT 3"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wall of Ashin Karat的管理员的id、创建日期和生日，并返回论坛的标题",
+        "output": "MATCH (f:Forum {title: 'Wall of Ashin Karat'})-[:ADMIN]->(u:User)\nRETURN u.id AS AdminID, u.creationDate AS CreationDate, u.birthday AS Birthday, f.title AS ForumTitle"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找David作为管理员的论坛“Wall of David Fenter”的详细信息，包括David的姓氏、创建日期、id、使用的浏览器、语言、IP地址、电子邮件和生日，以及论坛的创建日期和id。",
+        "output": "MATCH (david:User {firstName: 'David', role: 'admin'})-[:MANAGES]->(forum:Forum {name: 'Wall of David Fenter'})\nRETURN david.surname, david.createdDate, david.id, david.browser, david.language, david.ipAddress, david.email, david.birthday, forum.createdDate, forum.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wall of Franz Muller的管理员Franz的姓氏、位置IP、生日以及论坛的创建日期",
+        "output": "MATCH (f:Forum)-[:ADMIN]->(p:Person {surname: 'Franz'}) WHERE f.name = 'Wall of Franz Muller'\nRETURN p.surname, p.locationIP, p.birthday, f.creationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Frank且是Wall of Frank Anderson论坛管理员的人的详细信息，包括他的姓氏、电子邮件、位置IP、语言、性别、浏览器使用情况、生日和ID，以及论坛的ID和标题，还有管理员关系的创建日期。",
+        "output": "MATCH (a:Administrator)-[:MANAGES]->(f:Forum {name: \"Wall of Frank Anderson\"})\nWHERE a.name = \"Frank\"\nWITH a, f\nMATCH (a)-[:DETAILS]->(info:UserInfo)\nRETURN a.surname, info.email, info.locationIP, info.language, info.gender, info.browserUsage, info.birthday, a.id, f.id, f.title, a.createdDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wall of Gheorghe Popescu的版主Gheorghe的语言、关系创建日期、生日、性别、id、姓氏、使用的浏览器、IP地址以及论坛的标题",
+        "output": "MATCH (wall:Wall {title: \"Wall of Gheorghe Popescu\"})-[:MODERATOR]->(moderator:Person)-[hasBrowser:HasBrowser]->(browser)-[hasIP:HasIP]->(ip)\nWITH wall, moderator, browser, ip\nMATCH (moderator)-[:HAS_BIRTHDAY]->(birthdate)\nWITH wall, moderator, browser, ip, birthdate\nRETURN wall.title AS ForumTitle,\n       moderator.name AS Language,\n       wall.created_at AS RelationshipCreationDate,\n       birthdate AS Birthday,\n       moderator.gender AS Gender,\n       moderator.id AS ID,\n       moderator.surname AS Surname,\n       browser.name AS Browser,\n       ip.address AS IPAddress"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wall of Jun Xu的版主信息，包括论坛的id、标题，版主的生日、id和名字",
+        "output": "MATCH (w:Wall {title: 'Wall of Jun Xu'})-[:MODERATED_BY]->(m:Moderator)\nRETURN w.id AS ForumID, w.title AS ForumTitle, m.birthday AS ModeratorBirthday, m.id AS ModeratorID, m.name AS ModeratorName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 4 of Zdenek Balcar的管理员的id、标题、生日、邮箱、论坛创建日期、使用的浏览器和性别",
+        "output": "MATCH (a:Album {id: 4})-[:MANAGED_BY]->(admin:Person)\nRETURN admin.id, admin.title, admin.birthday, admin.email, admin.browser, admin.gender"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wall of Bechir Cardinale的管理员的姓氏、论坛的id、管理员的IP地址和性别",
+        "output": "MATCH (wall:Wall {name: 'Wall of Bechir Cardinale'})-[:AdministratorOf]->(admin:Admin)\nMATCH (admin)-[:BelongsTo]->(forum:Forum)\nRETURN admin.surname AS AdminSurname, forum.id AS ForumID, admin.ip AS AdminIP, admin.gender AS Gender"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 7 of Hossein Forouhar与Henry_James标签之间的关联创建日期",
+        "output": "MATCH (a:Album {title: '7 of Hossein Forouhar'})-[:ASSOCIATED_WITH]->(t:Tag {name: 'Henry_James'})\nRETURN t.creationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与标签Bulletproof_Wallets关联的论坛的创建日期、论坛的id和标签的URL",
+        "output": "MATCH (t:Tags {name: 'Bulletproof_Wallets'})<-[:RELATED_TO]-(f:Forum)\nRETURN f.creationDate, f.id, t.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与标签Bulletproof_Wallets相关的论坛关系的创建日期，限制返回17条结果",
+        "output": "MATCH (w:Bulletproof_Wallets)-[r:FORUM]->()\nRETURN r.created_date\nLIMIT 17"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与Miles_Davis标签相关的论坛的信息，包括关系的创建日期、论坛的id、标签的id以及论坛的创建日期，跳过前14条记录，返回接下来的19条记录",
+        "output": "MATCH (f:Forum)-[:HAS_TAG]->(t:Tag {name: \"Miles_Davis\"})\nRETURN f.id AS forum_id, f.creationDate AS forum_creation_date, t.id AS tag_id, f.creationDate AS relationship_creation_date\nORDER BY f.creationDate\nSKIP 14\nLIMIT 19"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 19 of Hossein Forouhar的id、它具有的标签名称、关系的创建日期、论坛的创建日期和标题",
+        "output": "MATCH (a:Album)-[:CREATED_BY]->(artist:Artist {name: 'Hossein Forouhar'}) \nWHERE a.name = '19'\nRETURN a.id, a.labels, a.creationDate, a.title"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 20 of Hossein Forouhar与Walter_Scott标签之间的关系创建日期，论坛的创建日期，标签的URL和名称",
+        "output": "MATCH (a:Album {name: '20 of Hossein Forouhar'})<-[:HAS_ALBUM]-(l:Label {name: 'Walter_Scott'})\nWITH a, l\nMATCH (l)-[:RELATED_TO]->(r)\nWITH a, l, r\nMATCH (r)<-[:CREATED_IN]-(f:Forum)\nWITH a, l, r, f\nMATCH (l)-[:HAS_URL]->(url:URL)\nWITH a, l, r, f, url\nRETURN r.creationDate, f.creationDate, url.url AS URL, url.name AS Name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 21 of Hossein Forouhar具有Bulletproof_Wallets标签的论坛id",
+        "output": "MATCH (a:Album {id: 21})-[:BY]->(artist:Artist {name: 'Hossein Forouhar'})-[:PART_OF_ALBUM]->(album:Album)\nMATCH (album)<-[:HAS_TAG]-(tag:Tag {name: 'Bulletproof_Wallets'})-[:POSTED_IN]->(forum:Forum)\nRETURN forum.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 25 of Hossein Forouhar中包含Martin_Luther标签的信息，返回关系的创建日期、标签的URL、名称、论坛的标题、标签的id以及论坛的创建日期，最多返回7条结果。",
+        "output": "MATCH (a:Album)-[:CONTAINS]->(t:Tag {name: 'Martin_Luther'})<-[:POSTED_IN]-(f:Forum)\nWHERE a.id = 25 AND a.artist = 'Hossein Forouhar'\nRETURN t.creationDate, t.url, t.name, f.title, t.id, f.creationDate\nLIMIT 7"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与标签Charlton_Heston相关的论坛，返回关系的创建日期、论坛的标题和创建日期、标签的URL和名称，以及它们的id",
+        "output": "MATCH (t:Tag {name: 'Charlton_Heston'})-[:RELATED_TO]->(f:Forum)\nRETURN f.id AS ForumID, f.title AS ForumTitle, f.creationDate AS ForumCreationDate, t.url AS TagURL, t.name ASTagName, f.creationDate AS ForumCreationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Album 32 of Hossein Forouhar具有的名为Shadow_Zone的标签的名称、论坛的id、标签的url以及关系的创建日期，最多返回9条结果",
+        "output": "MATCH (a:Album)-[:HAS_TAG]->(t:Tag {name: 'Shadow_Zone'})\nWHERE a.albumId = 32 AND a.artist = 'Hossein Forouhar'\nMATCH (a)-[:POSTED_ON_FORUM]->(f:Forum)\nRETURN t.name, f.id, t.url, type((a)-[:HAS_TAG]->(t)), type((a)-[:POSTED_ON_FORUM]->(f)), (a)-[:HAS_TAG]->(t).relationship.startNode, (a)-[:POSTED_ON_FORUM]->(f).relationship.startNode\nLIMIT 9"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wall of Wojciech Ciesla与Shania_Twain标签之间的关系创建日期，以及Wall of Wojciech Ciesla的id和标题",
+        "output": "MATCH (w:Wall {title: 'Wall of Wojciech Ciesla'})-[r:HAS_TAG]->(t:Tag {name: 'Shania_Twain'})\nRETURN r.creationDate, w.id, w.title"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wall of Wojciech Ciesla中包含Christopher Columbus标签的论坛信息，返回标签的id、论坛的标题和id、标签的URL以及论坛的创建日期，限制返回7条结果。",
+        "output": "MATCH (w:Wall {name: 'Wojciech Ciesla'})-[:CONTAINS]->(f:Forum)<-[:HAS_TAG]-(t:Tag {name: 'Christopher Columbus'})\nRETURN t.id AS TagID, f.title AS ForumTitle, f.id AS ForumID, t.url AS TagURL, f.creationDate AS CreationDate\nLIMIT 7"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wall of Wojciech Ciesla中包含Gloria Macapagal-Arroyo标签的关系的创建日期，以及该标签的id、名称和论坛的创建日期，并按标签名称排序",
+        "output": "MATCH (wall:Wall {name: 'Wall of Wojciech Ciesla'})-[:HAS_LABEL]->(tag:Tag)\nWHERE tag.name = 'Gloria Macapagal-Arroyo'\nRETURN tag.id AS tag_id, tag.name AS tag_name, wall.creationDate AS wall_creation_date, tag.creationDate AS tag_creation_date\nORDER BY tag_name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由Hossein创建的帖子的id、长度以及Hossein的语言和性别",
+        "output": "MATCH (p:Person {name: 'Hossein'})-[:CREATE_POST]->(post:Post)\nRETURN post.id, post.length, p.language, p.gender"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由Hossein创建的帖子的语言、内容、IP地址、id、浏览器使用情况、以及创建者Hossein的性别、创建日期、语言、id、浏览器使用情况、电子邮件、IP地址、名字、帖子的创建日期、生日和帖子的长度",
+        "output": "MATCH (h:User {name: 'Hossein'})-[:CREATED]->(p:Post)\nWITH p, h\nMATCH (h)-[:HAS]->(info:UserInfo)\nWITH p, h, info\nRETURN p.language, p.content, p.ip, p.id, p.browserUsage,\n       h.gender, h.creationDate, h.language, h.id, h.browserUsage,\n       info.email, info.ip, info.name, p.creationDate, p.birthday, LENGTH(p.content)"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Hossein的人的生日、性别、电子邮件、语言，以及他创建的帖子的语言和IP地址",
+        "output": "MATCH (p:Person {name: 'Hossein'}) \nWITH p, \n     [post:Post IN p.posts | {language: post.language, ipAddress: post.ipAddress}] AS posts\nRETURN p.birthday, p.gender, p.email, p.language, posts"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由Hossein创建的帖子的创建日期、创建者的邮箱、位置IP、姓氏、ID、帖子的图片文件、帖子的ID、帖子的语言、创建者使用的浏览器和帖子的位置IP，限制返回20条记录。",
+        "output": "MATCH (p:Post)-[:CREATED_BY]->(u:User {name: 'Hossein'})\nRETURN p.creationDate, u.email, p.locationIP, u.surname, p.id, p.imageFile, p.language, u.browser, p.locationIP\nLIMIT 20"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由名为Ali的人创建的帖子的id、语言、位置IP、创建日期、内容、长度、图片文件、浏览器使用情况，以及该人的名字、姓氏、创建日期、位置IP、浏览器使用情况、性别、id、生日、语言和邮箱，同时返回关系的创建日期。",
+        "output": "MATCH (p:Person {name: 'Ali'})-[:Created_by]->(post:Post)<-[:Visited_by]-(ali:Person)\nRETURN \n    post.id AS PostID,\n    post.language AS Language,\n    post.locationIP AS LocationIP,\n    post.creationDate AS CreationDate,\n    post.content AS Content,\n    post.length AS Length,\n    post.imageFile AS ImageFile,\n    post.browserUsage AS BrowserUsage,\n    p.name AS PersonName,\n    p.surname AS Surname,\n    p.creationDate AS PersonCreationDate,\n    p.locationIP AS PersonLocationIP,\n    p.browserUsage AS PersonBrowserUsage,\n    p.gender AS Gender,\n    p.id AS PersonID,\n    p.birthday AS Birthday,\n    p.language AS PersonLanguage,\n    p.email AS Email,\n    ali.creationDate AS RelationshipCreationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Ali的人创建的帖子的相关信息，包括该人的邮箱、位置IP、名字，帖子的长度、创建日期、使用的浏览器、位置IP，以及该人的语言、使用的浏览器、生日、性别和创建日期",
+        "output": "MATCH (p:Post)-[:CREATED_BY]->(u:User {name: 'Ali'}) \nRETURN u.email, u.locationIP, u.name, p.length, p.creationDate, p.browser, u.language, u.browser, u.birthDate, u.gender, p.creationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由名为Alejandro的人创建的帖子的信息，包括创建者的电子邮件、位置IP、帖子的创建日期、浏览器使用情况、关系的创建日期、帖子的图片文件、创建者的性别、生日、帖子的内容、创建者的姓氏、帖子的位置IP、帖子的ID、创建者的创建日期、创建者的ID、创建者的语言和名字。",
+        "output": "MATCH (p:Post)-[:CREATED_BY]->(u:User {name: 'Alejandro'})\nRETURN p.email, p.locationIP, p.creationDate, p.browserUsage, p.creationDate, p.imageFile, u.gender, u.birthday, p.content, u.surname, p.locationIP, p.id, u.creationDate, u.id, u.language, u.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由名为Deepak的人创建的帖子的信息，包括：人的语言、IP地址、ID、生日、性别、创建日期、邮箱、姓氏、名字；帖子的ID、语言、图片文件、创建日期、内容、浏览器使用情况、IP地址、长度；以及关系的创建日期。",
+        "output": "MATCH (p:Post)-[:CREATED_BY]->(a:Author)\nWHERE a.name = 'Deepak'\nRETURN a.language, a.ip, a.id, a.birthdate, a.gender, a.creationDate, a.email, a.surname, a.name,\n       p.id, p.language, p.imageFile, p.creationDate, p.content, p.browserUsage, p.ip, length(p.content), p.creationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由名为Deepak的人创建的帖子的长度、创建者的id、浏览器使用情况、创建日期、帖子的语言、创建者的电子邮件、位置IP和图片文件",
+        "output": "MATCH (p:Person {name: 'Deepak'})-[:CREATE]->(post:Post)\nRETURN post.length AS PostLength, p.id AS CreatorID, \n       (browser:BrowserUsage)<-[:HAS_BROWSER_USAGE]-(post),\n       post.created_at AS CreationDate, \n       (language:Language)<-[:HAS_LANGUAGE]-(post) AS PostLanguage, \n       (email:Email)<-[:HAS_EMAIL]-(p) AS CreatorEmail, \n       (locationIP:LocationIP)<-[:HAS_LOCATION_IP]-(p) AS LocationIP, \n       (image:Image)<-[:HAS_IMAGE]-(post) AS ImageFile"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由Albaye Papa创建的帖子的长度、浏览器使用情况、语言、id，以及Albaye Papa的生日、位置IP和id",
+        "output": "MATCH (p:Post)-[:CREATED_BY]->(u:User {name: 'Albaye Papa'})\nMATCH (p)-[:CREATED_WITH_BROWSERS]->(b:Browsers)\nMATCH (p)-[:CREATED_IN_LANGUAGE]->(l:Language)\nWITH p, b, l\nRETURN p.length AS PostLength, b AS BrowsersUsed, l AS Language, p.id AS PostID, u.birthday AS Birthday, u.locationIP AS LocationIP, u.id AS UserID"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由Albaye Papa创建的帖子的IP地址和使用的浏览器，以及他的名字",
+        "output": "MATCH (u:User {name: 'Albaye Papa'})-[:CREATE]->(p:Post)-[:USE]->(ip:IPAddress)-[:USE]->(b:Browser)\nRETURN p.title, ip.ip, b.browserName, u.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Albaye Papa的用户创建的帖子的创建日期、使用的浏览器和图片文件",
+        "output": "MATCH (u:User {name: 'Albaye Papa'})-[:CREATED]->(p:Post)\nRETURN p.creationDate, p.browser, p.imageFile"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Pavel的人创建的帖子的id、长度、创建日期，以及该人的id、语言、创建日期、性别、邮箱、IP地址和生日",
+        "output": "MATCH (p:Person {name: 'Pavel'})-[:CREATED]->(t:Thread)\nRETURN t.id AS ThreadId, length(t.content) AS Length, t.creationDate AS CreationDate,\n       p.id AS PersonId, p.language AS Language, p.creationDate AS PersonCreationDate,\n       p.gender AS Gender, p.email AS Email, p.ipAddress AS IPAddress, p.birthDate AS BirthDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由名为Bingbing的人创建的帖子的创建者生日、位置IP、性别以及帖子的创建日期，最多返回12条记录",
+        "output": "MATCH (p:Post)-[:CREATED_BY]->(u:User {name: 'Bingbing'}) \nRETURN u.birthday, u.locationIP, u.gender, p.creationDate \nLIMIT 12"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与F. Scott Fitzgerald相关的帖子的创建日期、语言、标签名称、图片文件、内容、IP地址、帖子ID、使用的浏览器、标签ID、关系的创建日期和帖子长度，并按标签名称降序排列",
+        "output": "MATCH (p:Post)-[:HAS_TAG]->(t:Tag)<-[:CREATED_BY]-(u:User)-[:HAS_PROFILE_PICTURE]->(pic:ProfilePicture)\nOPTIONAL MATCH (p)-[:HAS_RELATIONSHIP]->(r:Relationship)\nRETURN p.creationDate, p.language, t.tagName, pic.imageFile, p.content, p.ipAddress, p.postId, p.browser, t.tagId, r.creationDate, LENGTH(p.content) AS contentLength\nORDER BY t.tagName DESC"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找包含标签Denny_Hulme的帖子的信息，包括帖子的图片文件、关系的创建日期、帖子的创建日期、标签的URL、标签的id、标签的名称、帖子的id、帖子的内容、帖子的长度和帖子的位置IP。",
+        "output": "MATCH (t:Thread)-[:HAS_IMAGE]->(i:Image), (t:Thread)-[:HAS_TAG]->(tag:Tag {name: 'Denny_Hulme'})\nRETURN t.id AS ThreadID, t.content AS Content, t.length AS Length, t.locationIP AS LocationIP, i.filename AS ImageFile, t.creationDate AS ThreadCreationDate, tag.url AS TagURL, tag.id AS TagID, tag.name ASTagName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找包含Uzbekistan标签的帖子的创建日期、语言、IP地址、id以及该标签的URL和帖子的图片文件。",
+        "output": "MATCH (p:Post)-[:HAS_TAG]->(t:Tag {name: 'Uzbekistan'})\nRETURN p.creationDate, p.language, p.ipAddress, p.id, t.url, p.imageFile"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与标签Paradorn_Srichaphan相关的帖子的图片文件、语言、标签id、关系创建日期、浏览器使用情况、帖子长度、标签URL、帖子id和帖子创建日期",
+        "output": "MATCH (p:Paradorn_Srichaphan)-[r:RELATED_TO]->(t:Thread)\nRETURN t.image_file, t.language, t.tag_id, r.creation_date, t.browser_usage, t.length, t.tag_url, t.id, t.creation_date"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与标签Run_to_the_Hills相关的帖子的创建日期、id、图片文件、标签的URL、关系的创建日期、标签名称、帖子的语言、使用的浏览器、长度和IP地址，限制返回12条结果",
+        "output": "MATCH (p:Post)-[r:TAGGED_WITH]->(t:Tag {name: \"Run_to_the_Hills\"})\nRETURN p.creationDate, p.id, p.imageFile, t.url, r.creationDate, t.name, p.language, p.browser, LENGTH(p.content) AS length, p.ipAddress\nLIMIT 12"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与标签Bless_Its_Pointed_Little_Head相关的帖子的详细信息，包括标签的URL、关系的创建日期、标签名称、帖子ID、帖子的IP地址、内容、使用的浏览器、标签ID、帖子的语言、帖子的创建日期和图片文件，并按标签名称排序，限制返回9条结果。",
+        "output": "MATCH (p:Post)-[r:HAS_TAG]->(t:Tag {name: 'Bless_Its_Pointed_Little_Head'})\nRETURN p.postId, p.ipAddress, p.content, p.browser, t.tagId, t.url, r.creationDate, t.name, p.language, p.creationDate, p.imageFile\nORDER BY t.name\nLIMIT 9"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找包含Dante_Alighieri标签的帖子的图片文件、创建日期、长度和语言信息",
+        "output": "MATCH (p:Post)-[:CONTAINS]->(i:Image)\nWHERE p.tags CONTAINS 'Dante_Alighieri'\nRETURN i.file, p.creationDate, p.length, p.language"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找包含标签Gulzar的所有帖子的图片文件、标签名称、使用的浏览器、帖子id、关联关系的创建日期、帖子的位置IP、标签的URL、帖子的创建日期、帖子内容、帖子长度和标签id，并按标签名称降序排列",
+        "output": "MATCH (t:Post)-[:CONTAINS]->(g:Gulzar), (t)-[:HAS_PICTURE]->(p:Picture), (t)-[:CREATED_BY]->(u:User), (t)-[:HAS_TAG]->(tag:Tag)\nRETURN p.file, tag.name, u.browser, t.id, t.creationDate, t.locationIP, tag.url, t.creationDate, t.content, LENGTH(t.content) AS contentLength, tag.id\nORDER BY tag.name DESC"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与标签Paradorn_Srichaphan相关的帖子的长度、标签id、帖子的语言、帖子id、内容、关系创建日期、帖子的位置IP和标签URL，最多返回13条结果",
+        "output": "MATCH (p:Post)-[:HAS_TAG]->(t:Tag {name: \"Paradorn_Srichaphan\"})\nRETURN p.length, t.id, p.language, p.id, p.content, p.creationDate, p.locationIP, t.url\nLIMIT 13"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与标签Manmohan_Singh相关的帖子的id和url，限制返回17条结果",
+        "output": "MATCH (p:Post)-[:RELATED_TO]->(m:Manmohan_Singh)\nRETURN p.id, p.url\nLIMIT 17"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与标签Virginia Woolf相关联的帖子的id，以及该标签的名称和URL，还有关联关系的创建日期",
+        "output": "MATCH (t:Tags {name: 'Virginia Woolf'})-[:TaggedIn]->(p:Posts)\nRETURN p.id AS PostID, t.name AS TagName, t.url AS TagURL, type(t)-[:TaggedIn]->p AS RelationshipType, t.created_at AS TagCreationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找包含标签Andrew_Jackson的帖子的语言、图片文件、标签id、帖子的创建日期、位置IP、长度、帖子id、标签URL和标签名称",
+        "output": "MATCH (p:Post)-[:HAS_LABEL]->(l:Label {name: 'Andrew_Jackson'})\nRETURN p.language, p.image_file, l.id, p.creation_date, p.location_ip, p.length, p.id, l.url, l.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与标签Paradorn_Srichaphan相关的帖子的长度、图片文件、内容和关联关系的创建日期，并按标签名称降序排列",
+        "output": "MATCH (p:Post)-[:RELATED_TO]->(player:Player {name: 'Paradorn Srichaphan'})\nRETURN p.length, p.image_file, p.content, p.created_date\nORDER BY p.name DESC"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找包含标签Iggy_Pop的帖子的长度、创建日期、图片文件、语言、关联关系的创建日期、内容、位置IP、帖子ID、标签URL、标签ID和浏览器使用情况",
+        "output": "MATCH (p:Post)-[:HAS_TAG]->(t:Tag {name: 'Iggy_Pop'})\nRETURN p.length, p.creationDate, p.imageFile, p.language, (p)-[:CREATED_BY]->(r:Relationship).creationDate, r.content, p.locationIP, p.id, t.url, t.id, p.browserUsage"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找包含标签David_Bowie的帖子的IP地址、标签id、关系创建日期、帖子内容、帖子id、标签URL、帖子创建日期、使用的浏览器、帖子长度和标签名称以及帖子的语言。",
+        "output": "MATCH (p:Post)-[:HAS_TAG]->(t:Tag)\nWHERE t.name = 'David_Bowie'\nRETURN p.ipAddress, t.id, p.relationshipCreatedDate, p.content, p.id, t.url, p.creationDate, p.browser, LENGTH(p.content) AS contentLength, t.name, p.language"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的帖子的创建日期，最多返回11条记录",
+        "output": "MATCH (p:Post)-[:located_in]->(l:Location {country: 'Iran'}) RETURN p.created_at LIMIT 11"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的帖子的地点名称、图片文件、发布日期、语言、使用的浏览器、地点的URL和帖子的内容长度，最多返回14条记录",
+        "output": "MATCH (p:Post)-[:RELEASED_IN]->(l:Location {country: 'Iran'}) \nRETURN p.locationName AS LocationName, \n       p.imageFile AS ImageFile, \n       p.releaseDate AS ReleaseDate, \n       p.language AS Language, \n       p.browser AS Browser, \n       l.url AS LocationURL, \n       LENGTH(p.content) AS ContentLength \nORDER BY p.releaseDate DESC \nLIMIT 14"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的所有帖子的创建日期、长度、语言、使用的浏览器、内容、图片文件以及地点名称和地点id，并按地点名称排序",
+        "output": "MATCH (p:Post)-[:PUBLISHED_IN]->(l:Location {name: '伊朗'}) \nRETURN p.creationDate, p.length, p.language, p.browser, p.content, p.imageFile, l.name AS locationName, l.id AS locationId\nORDER BY l.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的帖子的浏览器使用情况、内容、地点URL、语言、长度以及关系的创建日期",
+        "output": "MATCH (p:Post)-[:publishedIn]->(c:Country {name: 'Iran'}) \nWITH p, c\nMATCH (p)-[:usedBrowser]->(b:Browser)\nMATCH (p)-[:language]->(lang:Language)\nRETURN p.content AS Content, p.url AS URL, p.length AS Length, p.creationDate AS CreationDate, b.name AS BrowserName, c.name AS CountryName, lang.name AS LanguageName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的帖子的内容、位置IP、ID、图片文件、关系的创建日期、地点的URL、ID、名称、帖子的长度、使用的浏览器和语言，并按地点名称降序排列",
+        "output": "MATCH (p:Post)-[:PUBLISHED_IN|:LOCATED_AT]->(l:Location)\n<-[:USED_BY]-(b:Browser)\n<-[:USED_LANGUAGE]-(lang:Language)\nRETURN p.content AS Content, p.ip AS IP, p.id AS PostID, p.image_file AS ImageFile, \n       p.created_at AS CreationDate, l.url AS LocationURL, l.id AS LocationID, l.name AS LocationName, \n       LENGTH(p.content) AS Length, b.name AS Browser, lang.name AS Language\nORDER BY l.name DESC"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的所有帖子的图片文件和语言，以及伊朗的名称和id",
+        "output": "MATCH (p:Post)-[:RELEASED_IN]->(c:Country {name: \"Iran\"})\nMATCH (p:Post)-[:HAS_IMAGE]->(i:Image)\nMATCH (p:Post)-[:HAS_LANGUAGE]->(l:Language)\nRETURN p.title AS Title, i.file AS ImageFile, l.name AS Language, c.name AS CountryName, c.id AS CountryId"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的帖子的内容、id、关系的创建日期、帖子的创建日期、图片文件、语言、长度、地点的URL、帖子的IP地址和地点名称",
+        "output": "MATCH (p:Post)-[:RELEASED_IN]->(c:Country {name: 'Iran'}) \nRETURN p.content, p.id, p.creationDate, p.releaseDate, p.imageFile, p.language, p.length, p.locationUrl, p.ipAddress, c.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的帖子的IP地址、图片文件、内容、长度和使用的浏览器信息",
+        "output": "基于这个假设的图模式，以下是一个Cypher查询，用于查找在伊朗发布的帖子的IP地址、图片文件、内容、长度和使用的浏览器信息："
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的帖子的创建日期、语言、地点URL、IP地址、ID、浏览器使用情况、图片文件和创建日期，最多返回12条记录",
+        "output": "MATCH (p:Post)-[:RELEASED_IN]->(c:Country {name: \"Iran\"})\nRETURN p.creationDate, p.language, p.locationUrl, p.ipAddress, p.id, p.browserUsage, p.imageFile, p.creationDate\nLIMIT 12"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的帖子的创建日期、地点URL、图片文件、地点ID、语言和内容",
+        "output": "MATCH (p:Post)-[:POSTED_AT]->(l:Location) \n  <-[:HAS_URL]-(url:URL) \n  <-[:HAS_IMAGE]-(image:ImageFile) \n  <-[:IN_LANGUAGE]-(lang:Language) \n  <-[:HAS_CONTENT]-(content:Content)\nWHERE l.country = 'Iran'\nRETURN p.creationDate, url.value, image.value, l.id, lang.name, content.value"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的帖子的位置IP、语言、地点URL、关系创建日期、帖子长度、帖子创建日期和地点ID",
+        "output": "MATCH (p:Post)-[:RELEASED_IN]->(country:Country {name: \"Iran\"})\nRETURN p.ip, p.language, p.locationUrl, p.relationshipCreatedDate, p.postLength, p.creationDate, p.locationId"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的帖子的信息，包括使用的浏览器、语言、位置URL、长度、创建日期、帖子ID、图片文件、关联关系的创建日期、IP地址和内容，按位置名称降序排列，限制返回3条记录。",
+        "output": "MATCH (p:Post)-[:RELEASED_IN]->(c:Country {name: \"Iran\"}) \nRETURN p.id AS PostID, p.browser, p.language, p.locationURL, p.length, p.creationDate, p.imageFile, r.creationDate AS RelationshipCreationDate, r.ipAddress, p.content\nORDER BY c.name DESC\nLIMIT 3"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的帖子的图片文件、位置IP、创建日期和内容，返回17条记录",
+        "output": "MATCH (p:Post)-[:RELEASED_IN]->(c:Country {name: \"Iran\"}) \n<-[:CREATED_IN]-(i:Image)\n<-[:FROM_IP]-(ip:IP)\n<-[:CREATED_AT]-(date:Date)\n<-[:HAS_CONTENT]-(content:Content)\nRETURN p.imageFile, ip.ipAddress, date.dateValue, content.contentValue\nLIMIT 17"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的帖子的信息，包括位置的id、关系的创建日期、位置的名称、帖子的IP地址、帖子的id、内容、长度、图片文件、创建日期和使用的浏览器。",
+        "output": "MATCH (p:Post)-[:PUBLISHED_AT]->(l:Location)\nWHERE l.country = 'Iran'\nRETURN p.id AS PostID, p.content AS Content, p.length AS Length, p.imageFile AS ImageFile, p.creationDate AS CreationDate, p.ipAddress AS IPAddress, p.browserUsed AS BrowserUsed, l.id AS LocationID, l.name AS LocationName, type(p) AS NodeType, type(l) AS LocationType, type(('PUBLISHED_AT')()) AS RelationshipType"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在伊朗发布的帖子的语言、IP地址和图片文件",
+        "output": "MATCH (p:Post)-[:locatedIn]->(c:Country {name: \"Iran\"}) \n<-[:hasLanguage]-(l:Language) \n<-[:hasImage]-(i:Image)\n<-[:hasIP]-(ip:IP)\nRETURN p.language AS Language, ip.address AS IP, i.filename AS ImageFilename"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由名为Alexander的人创建的评论的id、位置IP、创建日期、内容，以及该人的姓氏、id、语言、生日、性别，同时返回关系的创建日期，限制结果为5条。",
+        "output": "MATCH (p:Person {name: 'Alexander'})-[:CREATED]->(c:Comment)\nRETURN c.id, c.locationIP, c.creationDate, c.content, p.surname, p.id, p.language, p.birthDate, p.gender, type(p)-[:CREATED]->(c) AS relationshipCreationDate\nLIMIT 5"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由名为Aad De的人创建的评论的相关信息，包括评论的长度、内容、创建日期、位置IP，以及该人的性别、电子邮件、生日、姓氏、创建日期、使用的语言、浏览器和ID。",
+        "output": "MATCH (p:Person {name: 'Aad De'})-[:CREATED]->(c:Comment)\nRETURN c.length, c.content, c.creationDate, c.locationIP, \n       p.gender, p.email, p.birthday, p.surname, p.creationDate, p.language, p.browser, p.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Alejandro的人创建的评论的id",
+        "output": "MATCH (p:Person {name: 'Alejandro'})-[:CREATED]->(c:Comment)\nRETURN c.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由Daouda Malam创建的评论的长度",
+        "output": "MATCH (u:User {name: 'Daouda Malam'})-[:CREATED_BY]->(c:Comment)\nRETURN c.length AS CommentLength"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由名为Albert的人创建的评论的详细信息，包括评论的创建日期、内容、长度、位置IP和浏览器使用情况，以及创建者的IP位置、语言、性别、生日、姓氏、名字和电子邮件。",
+        "output": "MATCH (c:Comment)-[:CREATED_BY]->(u:User {name: 'Albert'})\nRETURN c.creationDate, c.content, LENGTH(c.content) AS contentLength, c.locationIP, c.browserUsage,\n       u.locationIP AS creatorLocationIP, u.language, u.gender, u.birthday, u.surname, u.name, u.email"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Albert的人创建的评论的详细信息，包括他的姓氏、位置IP、评论的创建日期、关系的创建日期、使用的浏览器、评论的ID、内容、长度、性别和使用的浏览器",
+        "output": "MATCH (p:Person {name: 'Albert'})<-[:CREATED_BY]-(c:Comment)\nRETURN p.surname, p.locationIP, c.createdDate, p.relationCreatedDate, c.browser, c.id, c.content, c.length, p.gender, c.browser"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Albert的人创建的评论的id、创建日期、语言和位置IP，以及评论的创建日期",
+        "output": "MATCH (p:Person {name: 'Albert'})-[:CREATED]->(c:Comment)\nRETURN c.id, c.creationDate, c.language, c.locationIP, c.creationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由名为Alexander的人创建的评论的内容、长度、位置IP，以及该人的性别、ID、名、浏览器使用情况、创建日期和语言，同时返回关系的创建日期和评论的ID。",
+        "output": "MATCH (p:Person {name: 'Alexander'})-[:CREATED]->(c:Comment)\nRETURN c.content AS content, \n       length(c.content) AS length, \n       c.positionIP AS positionIP, \n       p.gender AS gender, \n       p.id AS id, \n       p.name AS name, \n       p.browserUsage AS browserUsage, \n       c.creationDate AS creationDate, \n       p.language AS language, \n       type(p)-[:CREATED]->c AS relationType, \n       c.id AS commentID, \n       type(p)-[:CREATED]->c AS relationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由名为Alexander的人创建的评论的详细信息，包括评论的id、创建日期、位置IP、浏览器使用情况、内容，以及该人的id、创建日期、位置IP、生日、电子邮件、姓氏、性别、浏览器使用情况和语言，仅返回一条记录。",
+        "output": "MATCH (p:Person {name: 'Alexander'})-[:CREATED]->(c:Comment)\nRETURN c.id AS comment_id, c.creationDate AS comment_creation_date, c.locationIP AS comment_location_ip, c.browserUsage AS comment_browser_usage, c.content AS comment_content, \n       p.id AS person_id, p.creationDate AS person_creation_date, p.locationIP AS person_location_ip, p.birthDate AS person_birth_date, p.email AS person_email, \n       p.surname AS person_surname, p.gender AS person_gender, p.browserUsage AS person_browser_usage, p.language AS person_language\nLIMIT 1"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Ashley的人创建的评论的创建日期和长度",
+        "output": "MATCH (p:Person {name: 'Ashley'})-[:CREATED]->(c:Comment)\nRETURN c.creationDate, LENGTH(c.content) AS commentLength"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由Jun创建的评论内容",
+        "output": "MATCH (u:User {name: 'Jun'})-[:CREATE]->(c:Comment)\nRETURN c.content"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由名为Aad De的人创建的评论的长度、评论的IP地址、创建者的ID、性别和生日，以及创建者的邮箱",
+        "output": "MATCH (c:Comment)-[:CREATED_BY]->(u:User {name: 'Aad De'})\nRETURN c.length, c.ipAddress, u.id, u.gender, u.birthday, u.email"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由John创建的评论的详细信息，包括评论者的IP地址、性别、评论的IP地址、评论者的语言、评论的创建日期、评论内容、评论者使用的浏览器以及评论者的姓名和创建日期。",
+        "output": "MATCH (c:Comment)-[:CREATED_BY]->(u:User {name: 'John'})\nRETURN c.commenter_ip, u.gender, c.comment_ip, u.language, c.creation_date, c.content, u.browser, u.name, c.creation_date"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由名为Constantin的人创建的评论，返回该人的姓氏、id、使用的浏览器、评论内容、位置IP、名、评论的创建日期、该人的生日以及评论的长度，跳过前10条记录，限制返回8条记录。",
+        "output": "MATCH (p:Person {name: 'Constantin'})-[:CREATED]->(c:Comment)\nRETURN p.surname, p.id, c.browser, c.content, c.locationIP, p.name, c.creationDate, p.birthdate, LENGTH(c.content)\nSKIP 10\nLIMIT 8"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找由Michael创建的评论的信息，包括评论使用的浏览器、内容、长度、创建日期，以及Michael的电子邮件、生日、语言、创建日期、姓氏、名字和使用的浏览器。同时返回评论和Michael的id，以及关系的创建日期。",
+        "output": "MATCH (m:User {name: 'Michael'})-[:CREATED]->(c:Comment)\nRETURN c.id AS CommentID, c.browser AS CommentBrowser, c.content AS CommentContent, \n       LENGTH(c.content) AS CommentLength, c.created_at AS CommentCreatedAt, \n       m.id AS UserID, m.email AS Email, m.birthdate AS Birthday, \n       m.language AS Language, m.surname AS Surname, m.name AS Name, \n       m.browser AS UserBrowser, m.created_at AS UserCreatedAt, \n       TYPE((m)-[:CREATED]->(c)) AS RelationshipType, \n       (m)-[:CREATED]->(c).created_at AS RelationshipCreatedAt"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与标签Franz_Kafka相关的评论的id，以及该标签的id，最多返回11条记录",
+        "output": "MATCH (c:Comment)-[:RELATED_TO]->(t:Tag {name: 'Franz_Kafka'}) RETURN c.id, t.id LIMIT 11"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与George IV of the United Kingdom相关的评论所使用的浏览器，并返回标签的id、名称以及评论所使用的浏览器，按标签名称排序。",
+        "output": "MATCH (u:users {name: 'George IV of the United Kingdom'})-[:COMMENTED_BY]->(c:comments)\nWITH c, c.tags AS tags\nUNWIND tags AS tag\nMATCH (tag:tags)\nRETURN tag.id AS tag_id, tag.name AS tag_name, c.browser AS comment_browser\nORDER BY tag.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找包含标签George_IV_of_the_United_Kingdom的评论的id、位置IP、长度以及该标签的URL和id，同时返回评论使用的浏览器。",
+        "output": "MATCH (c:Comment)-[:HAS_LABEL]->(l:Label {name: 'George_IV_of_the_United_Kingdom'})\nRETURN c.id, c.locationIP, LENGTH(c.text), l.url, l.id, c.browser"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与标签Gamal_Abdel_Nasser相关的评论的创建日期、标签URL、评论长度、标签名称、评论id、评论内容和使用的浏览器。",
+        "output": "MATCH (c:Comment)-[:HAS_TAG]->(t:Tag {name: 'Gamal_Abdel_Nasser'})\nRETURN c.creationDate, c.tagURL, LENGTH(c.content) AS commentLength, t.name, c.id, c.content, c.browser"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与Göktürks标签相关的评论的长度、创建日期、关联关系的创建日期、使用的浏览器、标签的id以及评论内容，限制返回6条结果",
+        "output": "MATCH (c:Comment)-[:HAS_TAG]->(t:Tag {name: \"Göktürks\"})\nRETURN c.length, c.creationDate, c.relationCreationDate, c.browser, t.id, c.content\nLIMIT 6"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找包含标签Shania_Twain的评论内容、长度、创建日期、评论id、标签id、标签URL以及关系的创建日期，最多返回7条结果",
+        "output": "MATCH (c:Comment)-[r:HAS_TAG]->(t:Tag {name: 'Shania_Twain'})\nRETURN c.content, LENGTH(c.content) AS length, c.createDate, c.id AS commentId, t.id AS tagId, t.url AS tagUrl, r.createDate\nLIMIT 7"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与Peter_Pan标签相关的评论的长度、关系创建日期、评论id、使用的浏览器、标签id、标签URL、标签名称以及评论创建日期，并按标签名称排序",
+        "output": "MATCH (p:Person {name: 'Peter_Pan'})-[r:COMMENTED_ON]->(c:Comment)\nRETURN c.length AS CommentLength, type(r) AS RelationshipType, r.createDate AS RelationshipCreationDate, c.id AS CommentID, c.browser AS Browser, c.tag.id AS TagID, c.tag.url AS TagURL, c.tag.name ASTagName, c.createDate AS CommentCreationDate\nORDER BY c.tag.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找包含Shania_Twain标签的评论的长度",
+        "output": "MATCH (c:Comment)-[:MADE_BY]->(u:User)\nWHERE c.content CONTAINS 'Shania_Twain'\nRETURN c, LENGTH(c.content) AS comment_length"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找包含标签Muddy_Waters的评论的长度、id、创建日期、使用的浏览器、内容以及关系的创建日期",
+        "output": "MATCH (r:Review)-[:CREATED]->(user), (r:Review {label: 'Muddy_Waters'})\nRETURN r.id AS ReviewID, r.length AS Length, r.creationDate AS CreationDate, \n       r.browser AS Browser, r.content AS Content, type(r)-[:CREATED]->(user) AS RelationshipType, \n       (r)-[:CREATED]->(user).creationDate AS RelationshipCreationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与Shania_Twain标签相关的评论的浏览器使用情况、位置IP、创建日期、评论内容、长度，并按标签名称排序，同时返回标签的id和URL。",
+        "output": "MATCH (c:Comment)-[:HAS_TAG]->(t:Tag {name: 'Shania_Twain'})\nRETURN c.browserUsage, c.locationIP, c.createDate, c.content, LENGTH(c.content) AS contentLength, t.id, t.url\nORDER BY t.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找包含George_Michael标签的评论的创建日期、标签的URL、评论的id、使用的浏览器和评论长度",
+        "output": "MATCH (c:Comment)-[:HAS_TAG]->(t:Tag {name: 'George_Michael'})\nRETURN c.creationDate, t.url, c.id, c.browser, LENGTH(c.text) AS commentLength"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找包含标签Shania_Twain的评论内容、评论id、标签id、关系创建日期、使用的浏览器、评论长度、标签名称、评论创建日期和标签URL，并按标签名称排序",
+        "output": "MATCH (c:Comment)-[:HAS_TAG]->(t:Tag)\nWHERE c.content CONTAINS 'Shania_Twain' AND t.name = 'Shania Twain'\nRETURN c.content AS CommentContent, c.id AS CommentId, c.tagId AS TagId, c.relationshipCreatedDate AS RelationshipCreatedDate, c.browserUsed AS BrowserUsed, LENGTH(c.content) AS CommentLength, t.name ASTagName, c.createdDate AS CommentCreatedDate, t.url AS TagURL\nORDER BY t.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与标签Eye_Legacy相关的评论内容、创建日期、长度以及标签的id和名称",
+        "output": "MATCH (c:Comment)-[:HAS_TAG]->(t:Tag {name: \"Eye_Legacy\"})\nRETURN c.content, c.creationDate, c.length, t.id, t.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与Etruscan_civilization标签相关的评论的内容、长度、浏览器使用情况、位置IP、创建日期以及标签的URL和ID，并按标签名称降序排列。返回值包括标签的URL、评论的内容、标签的名称、评论的ID、评论的长度、评论的浏览器使用情况、评论的位置IP、标签的ID、评论的创建日期和关系的创建日期。",
+        "output": "MATCH (c:Comment)-[:HAS_TAG]->(t:Tag {name: 'Etruscan_civilization'})\nRETURN \n    t.url AS tagURL,\n    t.id AS tagID,\n    c.content AS content,\n    LENGTH(c.content) AS contentLength,\n    c.browser_usage AS browserUsage,\n    c.location_ip AS locationIP,\n    c.creation_date AS creationDate,\n    t.name AS tagName,\n    c.id AS commentID,\n    c.creation_date AS commentCreationDate,\n    (c)-[:HAS_TAG]->(t) {date: type('datetime')} AS relationshipCreationDate\nORDER BY t.name DESC"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与标签Adolf_Hitler相关的评论的标签名称、评论长度、标签URL、关系创建日期、标签ID、评论IP地址、评论创建日期、评论内容、评论ID，并限制结果数量为6条。",
+        "output": "MATCH (c:Comment)-[:RELATED_TO]->(l:Label {name: 'Adolf_Hitler'})\nRETURN l.name AS LabelName, LENGTH(c.content) AS CommentLength, l.url AS LabelURL, c.created_at AS RelationshipCreationDate, l.id AS LabelID, c.ip AS CommentIPAddress, c.created_at AS CommentCreationDate, c.content AS CommentContent, c.id AS CommentID\nLIMIT 6"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找包含John_F._Kennedy标签的评论的创建日期、标签id和使用的浏览器",
+        "output": "MATCH (c:Comment)-[:HAS_TAG]->(t:Tag {name: 'John_F._Kennedy'})\nRETURN c.creationDate, t.id, c.browserUsed"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与Andre Agassi标签相关的评论内容、评论的创建日期、标签的id和名称、评论的id，跳过前8条记录，返回接下来的15条记录",
+        "output": "MATCH (c:Comment)-[:HAS_TAG]->(t:Tag {name: 'Andre Agassi'})\nRETURN c.content, c.creationDate, t.id, t.name, c.id\nORDER BY c.creationDate\nSKIP 8\nLIMIT 15"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Algeria地点下的评论信息，返回评论的创建日期、内容、地点的id和名称、评论的id、位置IP、浏览器使用情况、评论长度、评论创建日期以及地点的URL，并按地点名称排序。",
+        "output": "MATCH (l:Location {name: 'Algeria'})-[:HAS_REVIEW]->(r:Review)\nRETURN r.creationDate, r.content, l.id, l.name, r.id, r.locationIP, r.browserUsage, LENGTH(r.content) as contentLength, r.creationDate, l.url\nORDER BY l.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在瑞典发布的评论所使用的浏览器",
+        "output": "MATCH (c:Comment)-[:publishedIn]->(country:Country {name: 'Sweden'})-[:usedBrowser]->(browser:Browser)\nRETURN browser"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在中国发表的评论的id以及中国的url、id和名称",
+        "output": "MATCH (c:Comment)-[:POSTED_IN]->(country:Country {name: '中国'})-[:HAS_URL]->(url:URL)\nRETURN c.id AS CommentID, url.id AS URLID, url.name AS URLName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在瑞典发表的评论所使用的浏览器和评论长度",
+        "output": "MATCH (c:Comment)-[:COMMENTED_USING]->(b:Browser) \nMATCH (c:Comment)-[:POSTED_IN]->(s:Country {name: 'Sweden'})\nRETURN b.name AS Browser, LENGTH(c.text) AS CommentLength"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n在菲律宾发布的评论中，跳过前9条，返回接下来5条评论的创建日期、长度、使用的浏览器、IP地址以及评论的创建日期和ID",
+        "output": "MATCH (c:Comment)-[:RELEASED_IN]->(p:Place {name: \"Philippines\"})\nWITH c\nORDER BY c.creationDate DESC\nSKIP 9\nLIMIT 5\nRETURN c.creationDate AS creationDate, LENGTH(c.content) AS length, c.browserUsed AS browser, c.ipAddress AS ipAddress, c.id AS id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在斯威士兰发布的评论的创建日期、位置IP、长度、斯威士兰的URL、浏览器使用情况和评论内容",
+        "output": "MATCH (c:Comments)-[:RELEASED_IN]->(country:Countries {name: \"Eswatini\"}) \n<-[:HAS_URL]-(url:URLs) \n<-[:USED_BY]-(browser:Browsers) \nRETURN c.createdDate, c.locationIP, c.length, url.url, browser.browser, c.content"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找位于斯威士兰的评论的长度、id、位置IP、内容以及斯威士兰的id和关系的创建日期",
+        "output": "MATCH (c:Comment)-[:LOCATED_IN]->(sw:Swaziland)\nRETURN c.length, c.id, c.positionIP, c.content, sw.id, type(c)-[:CREATED_AT]->()"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Cuba发布的评论的浏览器使用情况、IP地址、评论创建日期、内容和评论ID，以及Cuba的ID",
+        "output": "MATCH (c:Comment)-[:POSTED_IN]->(country:Country {name: 'Cuba'}) \n<-[:CREATED_BY]-(comment:Comment)\nRETURN comment.browser_usage, comment.ip_address, comment.creation_date, comment.content, comment.id, country.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Azerbaijan位置的评论的id、位置的id、关系的创建日期、位置的名称、评论的IP地址和评论的创建日期，跳过前16条记录，返回接下来的14条记录",
+        "output": "MATCH (r:Review)-[:AT_LOCATION]->(l:Location {name: 'Azerbaijan'}) \nRETURN r.id AS review_id, l.id AS location_id, r.creationDate AS review_creation_date, l.name AS location_name, r.ipAddress AS review_ip_address, r.creationDate AS review_creation_date\nORDER BY r.creationDate DESC\nSKIP 16\nLIMIT 14"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在菲律宾发表的评论的内容、评论的id、创建日期、位置IP、浏览器使用情况、长度，以及菲律宾的位置id、名称和关系的创建日期，并按菲律宾的名称排序",
+        "output": "MATCH (c:Comments)-[:POSTED_IN]->(l:Locations {name: 'Philippines'})\nRETURN c.content AS content, c.id AS commentId, c.creationDate AS creationDate, c.locationIP AS locationIP, c.browserUsage AS browserUsage, c.length AS length, l.locationID AS locationID, l.name AS locationName, c.creationDate AS relationshipCreationDate\nORDER BY l.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n在德国位置下的评论中，返回前3条评论的IP地址和内容",
+        "output": "MATCH (c:Comment)-[:LOCATED_IN]->(l:Location {name: \"Germany\"})\nRETURN c.ip, c.content\nORDER BY c.timestamp ASC\nLIMIT 3"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在巴西位置的评论的创建日期和巴西的位置URL，限制返回20条结果",
+        "output": "MATCH (c:Comment)-[:LOCATED_IN]->(p:Place {name: 'Brazil'})\nRETURN c.creationDate, p.url\nLIMIT 20"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找位于阿富汗的组织所在的地点名称",
+        "output": "MATCH (o:Organization)-[:HEADQUARTERS]->(l:Location)\nWHERE o.name = '阿富汗'\nRETURN l.name AS LocationName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Khalifa_Airways所在的地方的信息，包括该地方的URL、ID以及Khalifa_Airways的ID和URL，同时返回该地方的名称和ID",
+        "output": "MATCH (a:Airport {name: 'Khalifa_Airways'})-[:LOCATED_IN]->(place)\nRETURN place.url AS PlaceURL, place.id AS PlaceID, a.id AS AirportID, a.url AS AirportURL, place.name AS PlaceName, place.id AS PlaceID"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Aero_Tropical所在的地方的信息，包括地方的url、id以及Aero_Tropical的名称和id",
+        "output": "MATCH (place)-[:LOCATED_IN]->(aeroTropical:Airport {name: 'Aero_Tropical'})\nRETURN place.url AS placeUrl, place.id AS placeId, aeroTropical.name AS aeroTropicalName, aeroTropical.id AS aeroTropicalId"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找位于安哥拉的组织的id以及安哥拉的名称和网址",
+        "output": "MATCH (o:Organizations)-[:located_in]->(c:Countries)\nWHERE c.name = '安哥拉'\nRETURN o.id, c.name AS 安哥拉名称, o.website AS 网址"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Air_Gemini的组织所在的位置的id和名称，位置名称为Angola",
+        "output": "MATCH (org:Organization {name: 'Air_Gemini'})-[:located_at]->(location:Location {name: 'Angola'})\nRETURN location.id AS LocationID, location.name AS LocationName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找位于安哥拉的组织的url、id以及安哥拉的url和名称，并按安哥拉的名称降序排列",
+        "output": "MATCH (o:Organization)-[:HAS_URL]->(url)<-[:LOCATED_IN]-(location:Location)-[:LOCATED_IN]->(country:Country)\nWHERE country.name = '安哥拉'\nRETURN o.url AS organizationUrl, o.id AS organizationId, country.url AS countryUrl, country.name AS countryName\nORDER BY country.name DESC"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找位于阿根廷的组织的id、名称、网址，并按组织名称降序排列，同时返回阿根廷的网址",
+        "output": "MATCH (o:Organization)-[:LOCATED_IN]->(c:Country {name: \"Argentina\"})\nRETURN o.id, o.name, o.website\nORDER BY o.name DESC\nWITH o.id, o.name, o.website\nMATCH (o)-[:WEBSITE]->(w:Website)\nRETURN o.id, o.name, o.website, w.url\nORDER BY o.name DESC"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找位于阿根廷的组织的URL和阿根廷的名称",
+        "output": "MATCH (org:Organization)-[:LOCATED_IN]->(country:Country)\nWHERE country.name = 'Argentina'\nRETURN org.url AS OrganizationURL, country.name AS CountryName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Sol_Líneas_Aéreas位于阿根廷的组织和地点的URL、组织名称和地点ID，并按组织名称排序，限制结果为9条记录",
+        "output": "MATCH (a:Organization {name: 'Sol Líneas Aéreas'})-[:LOCATED_IN]->(l:Location {country: 'Argentina'})\nRETURN l.url AS URL, a.name AS OrganizationName, l.id AS LocationID\nORDER BY a.name\nLIMIT 9"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Andes_Líneas_Aéreas所在地点的网址，以及该组织的名称和id",
+        "output": "MATCH (o:Organization {name: 'Andes Líneas Aéreas'})-[:hasLocation]->(l:Location)\nRETURN l.url AS LocationURL, o.name AS OrganizationName, o.id AS OrganizationID"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Virgin Blue所在的位置名称和其网址，已知位置名称为Australia",
+        "output": "MATCH (airline:Airline {name: 'Virgin Blue'})-[:OPERATES_AT]->(location:Location {name: 'Australia'})<-[website:WEBSITE]-(url:Url)\nRETURN location.name AS LocationName, url.url AS WebsiteUrl"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找位于澳大利亚的Impulse_Airlines的id、网址，以及澳大利亚的id、网址和名称，并按澳大利亚的名称降序排列",
+        "output": "MATCH (a:airlines {name: 'Impulse_Airlines'})-[:located_in]->(l:locations {country: 'Australia'}) \nRETURN a.id AS airline_id, a.url AS airline_url, \n       l.id AS location_id, l.url AS location_url, l.name AS location_name\nORDER BY l.name DESC"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Emu_Airways的组织，其所在地点为Australia，返回该组织的网址、id、名称以及地点的名称和id，限制返回14条结果",
+        "output": "MATCH (org:Organization {name: 'Emu_Airways'})-[:LOCATED_IN]->(location:Location {name: 'Australia'})\nRETURN org.url, org.id, org.name, location.name, location.id\nLIMIT 14"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找位于澳大利亚的组织的网址和名称，限制返回5个结果",
+        "output": "MATCH (o:Organization)-[:LOCATED_IN]->(c:Country {name: \"Australia\"})\nRETURN o.url AS Website, o.name AS Name\nLIMIT 5"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找位于澳大利亚的Tasman Cargo Airlines的id、网址以及澳大利亚的id和名称",
+        "output": "MATCH (a:Airline {name: 'Tasman Cargo Airlines'})-(c:Country)\nWHERE c.name = 'Australia'\nRETURN a.id, a.website, c.id, c.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找对Gilbert_du_Motier,_marquis_de_Lafayette感兴趣的人员的电子邮件、标签的URL、使用的浏览器和性别",
+        "output": "MATCH (p:Person)-[:INTERESTED_IN]->(tag:Tag {name: 'Gilbert_du_Motier, marquis_de_Lafayette'})\n<-[:HAS_EMAIL]-(email:Email)\n<-[:USES_BROWSER]-(browser:Browser)\n<-[:HAS_GENDER]-(gender:Gender)\nRETURN email.address AS Email, tag.url AS TagsURL, browser.name AS Browser, gender.type AS Gender"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Hossein的人的兴趣标签的名称，该人的创建日期，兴趣关系的创建日期以及该人的性别",
+        "output": "MATCH (p:Person {name: 'Hossein'})-[:HAS_INTEREST]->(i:Interest)\nRETURN i.name AS InterestName, p.created_at AS PersonCreatedAt, p.gender AS Gender, i.created_at AS InterestRelationCreatedAt"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找对Wilhelm_II,_German_Emperor感兴趣的名为Hossein的人的姓名、性别、语言、姓氏、URL、生日、使用的浏览器、创建日期以及兴趣关系的创建日期",
+        "output": "MATCH (p:Person {name: 'Hossein', interests: 'Wilhelm_II,_German_Emperor'}) \n<-[:INTERESTED_IN]-(interest:Interest)\nWITH p, interest\nMATCH (p)-[:HAS个人信息]->(info:个人信息)\nRETURN p.name AS Name, info.gender AS Gender, info.language AS Language, info.surname AS Surname, info.url AS URL, info.birthday AS Birthday, info.browser AS Browser, p.created AS CreationDate, interest.created AS InterestCreationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Hossein的人的兴趣标签，并返回他的语言信息",
+        "output": "MATCH (p:Person {name: 'Hossein'})-[:INTERESTED_IN]->(interest:InterestTag)\nRETURN interest.name AS InterestTags\n\nMATCH (p:Person {name: 'Hossein'})-[:SPEAKS]->(language:Language)\nRETURN language.name AS Languages"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Hossein的人的IP地址、名字、姓氏、语言、性别、兴趣标签的id、兴趣关系的创建日期、人的id和生日",
+        "output": "MATCH (p:Person {name: 'Hossein'})-[:INTERESTED_IN]->(i:Interest)\nRETURN p.ip_address, p.name, p.surname, p.language, p.gender, i.id, (p)-[:INTERESTED_IN]->(i).relationship.startDate, p.id, p.birthdate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找对Thomas_Jefferson感兴趣的人员的性别、使用的浏览器、姓氏、电子邮件、兴趣创建日期、位置IP、标签名称、人员ID、名字、标签URL、生日、人员创建日期和语言，并按标签名称降序排列",
+        "output": "MATCH (p:Person)-[:INTERESTED_IN]->(:Interest {name: 'Thomas_Jefferson'})\nRETURN p.gender, p.browser, p.surname, p.email, p.interestCreationDate, p.locationIP, p.tagNames, p.personID, p.name, p.tagURL, p.birthday, p.creationDate, p.language\nORDER BY p.tagNames DESC"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找对Timbaland感兴趣的人员的姓名、id、姓氏、兴趣创建日期、邮箱、标签URL、位置IP、生日、创建日期、名字、浏览器、性别和语言",
+        "output": "MATCH (p:Person)-[:interestedIn]->(i:Interest)\nWHERE i.name = 'Timbaland'\nRETURN p.name AS Name, p.id AS ID, p.surname AS Surname, i.creationDate AS InterestCreationDate, p.email AS Email, p.tagURL AS TagURL, p.locationIP AS LocationIP, p.birthDate AS BirthDate, p.creationDate AS CreationDate, p.name AS Name, p.browser AS Browser, p.gender AS Gender, p.language AS Language"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Hossein的人对Jack_Kirby标签的兴趣的创建日期和标签名称",
+        "output": "MATCH (p:Person {name: 'Hossein'})-[:INTERESTED_IN]->(t:Tag {name: 'Jack_Kirby'})\nRETURN t.creationDate, t.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找对Henry_James感兴趣的人员的创建日期、id、姓氏、标签的URL、兴趣关系的创建日期、标签的id、名称、使用的浏览器、名字、性别、生日、语言和邮箱",
+        "output": "MATCH (p:Person)-[r:INTERESTED_IN]->(i:Interest)\nWHERE p.name = 'Henry_James'\nMATCH (i)-[:HAS_TAG]->(t:Tag)\nMATCH (i)-[:USING]->(b:Browser)\nRETURN p.creationDate AS CreationDate, p.id AS Id, p.surname AS Surname, p.tagUrl AS TagUrl, r.creationDate AS InterestRelationCreationDate, t.id AS TagId, t.name ASTagName, b.browserName AS BrowserName, p.name AS Name, p.gender AS Gender, p.birthday AS Birthday, p.language AS Language, p.email AS Email"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Hossein的人对Adam_Sandler标签的兴趣信息，返回标签的URL、Hossein使用的浏览器、兴趣的创建日期、Hossein的创建日期、标签的ID、Hossein的姓氏和名字",
+        "output": "MATCH (h:Person {name: 'Hossein'})-[i:INTERESTED_IN]->(t:Tag {name: 'Adam_Sandler'})\nRETURN t.url, h.browser, i.creationDate, h.creationDate, t.id, h.surname, h.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Hossein的人的兴趣标签的id，以及该人的浏览器使用情况、创建日期、性别、位置IP和兴趣关系的创建日期",
+        "output": "MATCH (p:Person {name: 'Hossein'})-[:has_interest]->(i:Interest)\nRETURN p.id AS person_id, i.id AS interest_id, p.browser_usage, p.creation_date, p.gender, p.location_ip, i.creation_date"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找对Cary Grant感兴趣的Hossein的姓氏、Cary Grant标签的URL和id、Hossein的id、创建日期和性别",
+        "output": "MATCH (hossein:Person {id: 'Hossein_id'}), (caryGrantTag:Tag {id: 'Cary_Grant_id'}), \n      (hossein)-[:HAS_INTEREST]->(caryGrantTag)\nRETURN hossein.surname AS Surname, caryGrantTag.url AS URL, \n       caryGrantTag.id AS TagId, hossein.id AS HosseinId, hossein.creationDate AS CreationDate, \n       hossein.gender AS Gender"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找对Bulletproof_Wallets感兴趣的用户，返回兴趣的创建日期和标签名称，并按标签名称排序",
+        "output": "MATCH (u:User)-[:INTERESTED_IN]->(t:Tag {name: 'Bulletproof_Wallets'})\nRETURN t.creationDate, t.name\nORDER BY t.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找位于Diourbel的前三个人的个人信息，包括他们的id、使用的语言、浏览器和性别，同时返回Diourbel的url和id",
+        "output": "MATCH (p:Person)-[:LOCATED_IN]->(l:Location {name: \"Diourbel\"})\nRETURN p.id, p.language, p.browser, p.gender\nORDER BY p.id\nLIMIT 3\nWITH p, l\nRETURN p.id, p.language, p.browser, p.gender, l.url, l.id\nLIMIT 3"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找位于Bobruysk的名为Chaim Azriel的人的详细信息，包括地点id、姓氏、创建日期、关系创建日期、语言、浏览器使用情况、名和地点URL",
+        "output": "MATCH (p:Person {name: 'Chaim Azriel', locationName: 'Bobruysk'}) \nRETURN p.locationId, p.surname, p.creationDate, p.relationshipCreationDate, p.language, p.browserUsage, p.name, p.locationUrl"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Mthatha的David所使用的浏览器信息和他的名字",
+        "output": "MATCH (u:User {name: 'David'})-[:USES]->(b:Browser)<-[:FROM_LOCATION]-(l:Location {name: 'Mthatha'}) \nRETURN u.name AS DavidName, b"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找位于Zhukovsky的所有人的姓名、使用的浏览器、电子邮件、生日、性别、创建日期以及他们的id，同时返回Zhukovsky的名称、id和URL，以及关系的创建日期。",
+        "output": "MATCH (p:Person)-[:LIVES_IN]->(city:City {name: \"Zhukovsky\"})\nMATCH (city)<-[:HAS_CITY]-(browser:Browser)\nRETURN p.name AS Name, p.browser AS Browser, p.email AS Email, p.birthday AS Birthday, p.gender AS Gender, p.createdAt AS CreatedAt, p.id AS PersonID, city.name AS CityName, city.id AS CityID, city.url AS CityURL, (p)-[:LIVES_IN]->(city)[:HAS_CITY]->(browser)[:CREATED_AT]->(p).createdAt AS RelationshipCreatedAt"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找位于Pretoria的人的姓氏和Pretoria的id",
+        "output": "MATCH (p:Person)-[:LOCATED_IN]->(city:City {name: 'Pretoria'}) \nRETURN p.surname, city.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Emperor of Brazil且位于Santa Maria的人的创建日期、位置IP、所在地点名称、使用的浏览器、姓氏和语言，最多返回20条记录",
+        "output": "MATCH (p:Person {name: \"Emperor of Brazil\", location: \"Santa Maria\"})\nRETURN p.creationDate, p.locationIP, p.locationName, p.browser, p.surname, p.language\nLIMIT 20"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找居住在New Cairo的所有人的生日、语言、id、创建日期、位置关系的创建日期、地点名称、浏览器使用情况、地点id、名字、邮箱、网址、姓氏、性别和IP地址",
+        "output": "MATCH (p:Person)-[:LIVES_IN]->(l:Location {name: \"New Cairo\"})\nRETURN p.birthday, p.language, p.id, p.creationDate, p.relationshipCreationDate, l.name, p.browserUsage, l.id, p.name, p.email, p.website, p.surname, p.gender, p.ipAddress"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找认识Salim Ahmed的人的IP地址、名字、性别以及Salim Ahmed的性别和创建日期",
+        "output": "MATCH (p:Person)-[:KNOWS]->(salim:Person {name: 'Salim Ahmed'})<-[:KNOWS]-(other:Person)\nRETURN other.ip, other.name, other.gender, salim.gender, salim.created_at"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找认识Abdul-Malik的人的性别和他们的id，同时返回Abdul-Malik的id",
+        "output": "MATCH (a:Person {name: 'Abdul-Malik'})-[:KNOWS]->(k:Person)\nRETURN k.gender AS Gender, k.id AS ID, a.id AS AbdulMalikID"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找认识Chris的人的姓名、语言、电子邮件、生日、id以及Chris的语言和姓氏",
+        "output": "MATCH (c:People {name: 'Chris'})-[:knows]->(person:People)\nRETURN \n    person.name AS PersonName, \n    person.language AS PersonLanguage, \n    person.email AS PersonEmail, \n    person.birthday AS PersonBirthday, \n    person.id AS PersonId, \n    c.language AS ChrisLanguage, \n    c.surname AS ChrisSurname"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Jan的人认识的名为Grigore的人的信息，包括Jan的生日、IP地址、性别、创建日期、语言和姓氏，以及Grigore的名、浏览器和邮箱。",
+        "output": "MATCH (j:Person {name: 'Jan'})-[:KNOWS]->(g:Person {name: 'Grigore'})\nRETURN j.birthday, j.ip_address, j.gender, j.creation_date, j.language, j.surname, g.name, g.browser, g.email"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Andrius认识的人的生日、姓氏、使用的语言、创建日期、位置IP、ID和浏览器使用情况",
+        "output": "MATCH (a:Person {name: \"Andrius\"})-[:KNOWS]->(k:Person)\nRETURN k.birthday, k.surname, k.language, k.creationDate, k.locationIP, k.id, k.browserUsage"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名字为Jan的人的IP地址、性别，以及他认识的人的生日、IP地址、创建日期、id和邮箱，同时返回Jan的名字。",
+        "output": "MATCH (p:Person {name: 'Jan'})<-[r:KNOWS]->(k:Person)\nRETURN p.ip, p.gender, k.birthdate, k.ip, k.creationDate, k.id, k.email, p.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wojciech认识的名叫Ali的人的创建日期、语言、姓氏和浏览器使用情况",
+        "output": "MATCH (p:Person {name: 'Wojciech'})-[:KNOWS]->(ali:Person {name: 'Ali'})\nRETURN ali.createdDate, ali.language, ali.surname, ali.browserUsage"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Wojciech的人的生日、姓氏、id、位置IP和创建日期，以及他认识的人的语言、位置IP、浏览器使用情况和关系的创建日期",
+        "output": "MATCH (p:Person {name: 'Wojciech'}) \nWITH p, \n    (p)-[:KNOWS]->(r:Relationship) \nRETURN p.name AS Name, \n       p.surname AS Surname, \n       p.id AS ID, \n       p.locationIP AS LocationIP, \n       p.creationDate AS CreationDate, \n       r.language AS Language, \n       r.locationIP AS RelationshipLocationIP, \n       r.browserUsage AS BrowserUsage, \n       r.creationDate AS RelationshipCreationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Wojciech的人及其认识的人的相关信息，包括他们的浏览器使用情况、生日、性别、创建日期、电子邮件、语言、位置IP以及关系的创建日期，限制返回10条结果。返回的信息包括：Wojciech的浏览器使用情况、生日、性别、创建日期、电子邮件、语言、位置IP、ID；他认识的人的浏览器使用情况、生日、性别、创建日期、位置IP、姓名、姓氏、ID。",
+        "output": "MATCH (woj:Person {name: 'Wojciech'})-[:KNOWS]->(person:Person)\nRETURN woj.name AS WojciechName, woj.browser_usage AS WojciechBrowserUsage, \n       woj.birthdate AS WojciechBirthdate, woj.gender AS WojciechGender, \n       woj.creation_date AS WojciechCreationDate, woj.email AS WojciechEmail, \n       woj.language AS WojciechLanguage, woj.location_ip AS WojciechLocationIP, \n       woj.id AS WojciechID, \n       person.name AS PersonName, person.surname AS PersonSurname, \n       person.browser_usage AS PersonBrowserUsage, \n       person.birthdate AS PersonBirthdate, \n       person.gender AS PersonGender, \n       person.creation_date AS PersonCreationDate, \n       person.location_ip AS PersonLocationIP, \n       person.id AS PersonID\nLIMIT 10"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wojciech认识的人的姓名，以及Wojciech使用的语言、创建日期，对方的创建日期、生日、浏览器使用情况、位置IP和性别",
+        "output": "MATCH (woj:Person {name: 'Wojciech'})-[:KNOWS]->(known:Person)\nRETURN known.name AS KnownName,\n       woj <-[:SPEAKS]-(lang:Language) AS Language,\n       woj <-[:HAS_CREATED_DATE]-(date:CreatedDate) AS CreationDate,\n       known <-[:HAS_CREATED_DATE]-(knownDate:CreatedDate) AS KnownCreationDate,\n       known <-[:HAS_DATE_OF_BIRTH]-(birthday:DateOfBirth) AS Birthday,\n       known <-[:HAS_BROWSER_USAGE]-(browser:BrowserUsage) AS BrowserUsage,\n       known <-[:HAS_LOCATION]-(location:Location) AS LocationIP,\n       known.gender AS Gender"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Wojciech的人及其认识的人的详细信息，包括他们的名字、电子邮件、语言、位置IP、ID、性别、创建日期、生日和浏览器使用情况，限制返回6条记录。",
+        "output": "MATCH (p:Person {name: 'Wojciech'})-[:KNOWS]->(k:Person)\nRETURN p.name AS PersonName, p.email AS Email, p.language AS Language, p.ip AS LocationIP, p.id AS ID, p.gender AS Gender, p.created AS CreatedDate, p.birthday AS Birthday, p.browser_usage AS BrowserUsage\nLIMIT 6"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Jose的好友关系，返回Jose的id、位置IP、浏览器、语言，以及他的好友的id和邮箱，还有他们关系的创建日期",
+        "output": "MATCH (jose:Person {name: 'Jose'})-[:FRIEND_OF]->(friend:Person)\nRETURN\n  jose.id AS JoseID,\n  jose.locationIP AS JoseLocationIP,\n  jose.browser AS JoseBrowser,\n  jose.language AS JoseLanguage,\n  friend.id AS FriendID,\n  friend.email AS FriendEmail,\n  jose.name AS JoseName,\n  friend.name AS FriendName,\n  type(jose)-[:FRIEND_OF]->(friend) AS RelationshipType,\n  jose.created_at AS JoseCreatedAt,\n  friend.created_at AS FriendCreatedAt"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Ali的人认识的名为Francisco的人的生日、性别、Francisco的姓氏、Francisco的创建日期、Francisco的IP地址、Francisco使用的浏览器、关系的创建日期、Ali的语言、Ali的邮箱、Ali的创建日期、Ali的ID、Francisco的语言、Francisco的IP地址。",
+        "output": "MATCH (a:Person {name: 'Ali'})-[:KNOWS]->(f:Person {name: 'Francisco'})\nRETURN f.birthday, f.gender, f.surname, f.createDate, f.ipAddress, f.browser, type(a), a.createDate, a.language, a.email, a.createDate, a.id, f.language, f.ipAddress"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Emperor of Brazil的人喜欢的帖子的信息，包括该人的名字、邮箱、创建日期、语言、ID、位置IP、生日、性别、姓氏，以及帖子的长度、位置IP、内容、语言、创建日期、使用的浏览器，还有喜欢关系的创建日期。",
+        "output": "MATCH (p:Person {name: \"Emperor of Brazil\"})-[:LIKES]->(t:Post)\nRETURN p.name AS Name, p.email AS Email, p.created_date AS CreationDate, p.language AS Language, p.id AS ID, p.location_ip AS LocationIP, p.birthday AS Birthday, p.gender AS Gender, p.surname AS Surname,\n       t.length AS Length, t.location_ip AS PostLocationIP, t.content AS Content, t.language AS PostLanguage, t.created_date AS PostCreationDate, t.browser AS Browser, type(p)-[:LIKES]->t AS LikesCreationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Emperor of Brazil的人喜欢的帖子的信息，包括帖子的语言、浏览器、IP地址、id、内容、图片文件、长度，以及该人的语言、id、创建日期、IP地址、浏览器、性别、名字、姓氏、生日，还有喜欢操作的创建日期。",
+        "output": "MATCH (p:Post)-[:LIKES]->(person:Person {name: \"Emperor of Brazil\"})\nRETURN p.language, p.browser, p.ip, p.id, p.content, p.image, p.length,\n       person.language, person.id, person.creationDate, person.ip, person.browser, \n       person.gender, person.name, person.surname, person.birthdate, \n       p.likesCreationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Emperor of Brazil的人喜欢的帖子的内容、该人的浏览器使用情况、帖子的id、该人的IP地址、姓氏、电子邮件、id、性别、帖子的创建日期、长度、IP地址、生日、创建日期和语言信息，以及喜欢行为的创建日期。",
+        "output": "MATCH (p:Person {name: \"Emperor of Brazil\"}) \nWITH p\nMATCH (p)-[:LIKES]->(post:Post) \nWITH p, post\nMATCH (p)-[:USES]->(browser:BrowserUsage)\nWITH p, post, browser\nMATCH (p)-[:HAS_IP]->(ip:IP)\nWITH p, post, browser, ip\nRETURN post.content AS Content, \n       browser.browserUsage AS BrowserUsage, \n       post.id AS PostID, \n       ip.ipAddress AS IPAddress, \n       p.surname AS Surname, \n       p.email AS Email, \n       p.id AS PersonID, \n       p.gender AS Gender, \n       post.creationDate AS CreationDate, \n       post.length AS Length, \n       ip.ipAddress AS IPAddress, \n       p.birthday AS Birthday, \n       post.creationDate AS PostCreationDate, \n       post.language AS Language, \n       p.creationDate AS LikeCreationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Alfonso的人喜欢的帖子的点赞时间、他的语言、帖子的创建时间、他的性别、姓氏、位置IP、帖子的长度、他使用的浏览器以及帖子的内容",
+        "output": "MATCH (p:Person {name: 'Alfonso'})-[:LIKES]->(post:Post)\nRETURN post.likeTime, p.language, post.createTime, p.gender, p.surname, p.locationIP, post.length, p.browser, post.content"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Grigore喜欢的帖子的信息，包括Grigore使用的浏览器、他的名字、帖子使用的浏览器、Grigore的生日、帖子的创建日期以及Grigore的创建日期",
+        "output": "MATCH (g:User {name: 'Grigore'})<-[f:FAVORITES]->\n  (p:Post)-[b:USED_BROWSER]->(browser:Browser),\n  (g)-[u:USED_BROWSER]->(browser),\n  (g)-[b:HAS_BIRTHDAY]->(birthday:Birthday),\n  (p)-[c:CREATED_ON]->(post_date:Date),\n  (g)-[c:CREATED_ON]->(user_date:Date)\nRETURN p, browser, g.name, birthday, post_date, user_date"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为K.的人喜欢的帖子的IP位置、内容、创建日期、帖子ID、浏览器使用情况、帖子的语言、帖子长度、人的创建日期、性别、生日、关系创建日期、人的ID和姓氏",
+        "output": "MATCH (p:Person {name: 'K.'})-[:LIKES]->(post:Post)\nRETURN post.ip_location, post.content, post.creation_date, post.post_id, post.browser_usage, post.language, post.length, p.creation_date, p.gender, p.birthday, TYPE(p)-[:LIKES]->(post), p.id, p.surname"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Grigore的人喜欢的帖子的详细信息，包括Grigore的生日、姓氏，以及帖子的图片文件、内容、创建日期、长度和IP地址。同时返回帖子的ID和Grigore的创建日期。",
+        "output": "MATCH (p:Post)-[:LIKES]->(g:Person {name: 'Grigore'}) \nRETURN p.id, p.imageFile, p.content, p.createDate, length(p.content) as contentLength, p.ipAddress, g.birthday, g.surname, g.createDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为K.的人喜欢的帖子的性别、帖子的位置IP、长度、创建日期、语言以及K.的姓氏",
+        "output": "MATCH (p:Post)-[:LIKES]->(k:Person {name: 'K.'})\nWITH p, k\nWHERE k.surname IS NOT NULL\nRETURN p.gender, p.ip, p.length, p.creationDate, p.language, k.surname"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Jorge的人的id，这些人都喜欢过某些帖子",
+        "output": "MATCH (p:Person {name: 'Jorge'})-[:LIKES]->(post:Post)\nRETURN p.id, post.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Abdul-Malik的人喜欢的帖子的长度、创建日期、位置IP、浏览器使用情况、语言、喜欢的创建日期、人的创建日期、名、内容、语言、邮箱、姓、性别、图片文件、人和帖子的ID、生日、浏览器使用情况，限制返回19条结果。",
+        "output": "MATCH (p:Post)-[:LIKES]->(a:Person {name: 'Abdul-Malik'})\nRETURN p.length, p.creationDate, p.locationIP, p.browserUsage, p.language, p.likedCreationDate, a.creationDate, a.name, p.content, p.language, a.email, a.surname, a.gender, a.photoFile, id(p), id(a), a.birthDate, p.browserUsage\nLIMIT 19"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Chris的人喜欢的帖子的信息，包括帖子使用的浏览器、Chris的id、帖子的id、Chris的生日、帖子的长度、Chris的性别，限制返回5条结果",
+        "output": "MATCH (p:Post)-[:LIKES]->(c:Person {name: 'Chris'}) \nRETURN p.id AS PostID, p.browser, c.id AS ChrisID, c.birthday, c.gender, LENGTH(p.content) AS PostLength\nLIMIT 5"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名字为K.的人喜欢的帖子的id，该人的创建日期，帖子的创建日期，帖子的位置IP以及该人的语言信息",
+        "output": "MATCH (p:Person)-[:likes]->(post:Post)\nWHERE p.name = 'K.'\nRETURN post.id AS PostID, post.creationDate AS PostCreationDate, post.ip AS PostIP, p.language AS PersonLanguage"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Abdul-Malik的人喜欢的帖子的长度、创建日期、位置IP和性别，跳过前2条结果，返回接下来的7条记录",
+        "output": "MATCH (p:Post)-[:LIKES]->(u:User {name: 'Abdul-Malik'})\nRETURN p.length, p.creationDate, p.locationIP, u.gender\nORDER BY p.creationDate DESC\nSKIP 2\nLIMIT 7"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Emperor of Brazil的人的邮箱、语言、创建日期、性别、以及他喜欢的帖子的id和内容，同时返回该人的生日和使用的浏览器。",
+        "output": "MATCH (p:Person {name: \"Emperor of Brazil\"})\nRETURN p.email, p.language, p.creationDate, p.gender, p.postId, p.postContent, p.birthDate, p.browser"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Horst的人喜欢的帖子的电子邮件、浏览器使用情况、语言、帖子长度、创建日期和帖子的语言",
+        "output": "MATCH (p:Post)-[:LIKES]->(person:Person {name: 'Horst'})\nRETURN p.email, p.browser, p.language, p.length, p.creationDate, p.postLanguage"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Lin的人喜欢的评论的创建日期、内容、长度、使用的浏览器、IP地址以及该人的性别",
+        "output": "MATCH (p:Person {name: 'Lin'})-[:LIKE]->(c:Comment)\nRETURN c.creationDate, c.content, LENGTH(c.content) AS contentLength, c.browser, c.ip, p.gender"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Max的人喜欢的评论的id，Max的姓氏、生日以及评论的长度，最多返回19条结果",
+        "output": "MATCH (p:Person {name: 'Max'})-[:likes]->(c:Comment)\nRETURN c.id AS commentId, p.surname AS surname, p.birthday AS birthday, LENGTH(c.content) AS commentLength\nLIMIT 19"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Francisco的人喜欢的评论的内容、Francisco的性别、评论的长度、Francisco的创建日期、浏览器使用情况、语言、生日、邮箱、位置IP、评论的创建日期、浏览器使用情况，限制返回12条结果",
+        "output": "MATCH (p:Person {name: 'Francisco'})-[:LIKES]->(c:Comment)\nRETURN c.content AS CommentContent, p.gender AS Gender, LENGTH(c.content) AS CommentLength, p.creationDate AS CreationDate, p.browserUsage AS BrowserUsage, p.language AS Language, p.birthDate AS BirthDate, p.email AS Email, p.locationIP AS LocationIP, c.creationDate AS CommentCreationDate, c.browserUsage AS CommentBrowserUsage\nORDER BY p.creationDate DESC\nLIMIT 12"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Chen的人喜欢的评论的长度、该人的id、名字、评论的创建日期、该人的创建日期、生日、姓氏、使用的浏览器、语言和性别，以及评论的id。",
+        "output": "MATCH (p:Person {name: 'Chen'})-[:LIKES]->(c:Comment)\nRETURN c.length, p.id, p.name, c.creationDate, p.creationDate, p.birthday, p.surname, p.browser, p.language, p.gender, c.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Michel的人喜欢的评论的IP地址、评论ID，以及该人的语言、电子邮件、性别、创建日期、姓氏和名字",
+        "output": "MATCH (p:Person {name: 'Michel'})-[:likes]->(c:Comment)\nRETURN c.ipAddress AS ipAddress, c.id AS commentId, \n       p.language AS language, p.email AS email, p.gender AS gender, \n       p.creationDate AS creationDate, p.surname AS surname, p.givenName AS givenName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Sergio的人所喜欢的评论，返回该人的邮箱、性别、id、语言、位置IP、姓氏、浏览器使用情况、创建日期、生日，以及评论的浏览器使用情况、位置IP、创建日期，还有喜欢关系的创建日期和评论的id",
+        "output": "MATCH (p:Person {name: 'Sergio'})-[:LIKES]->(c:Comment)\nRETURN p.email, p.gender, p.id, p.language, p.locationIP, p.surname, p.browserUsage, p.creationDate, p.birthdate,\n       c.browserUsage, c.locationIP, c.creationDate, relationships(:Person-[:LIKES]->:Comment).creationDate, c.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为K.的人喜欢的评论的内容、长度以及该人的姓氏和语言",
+        "output": "MATCH (p:Person {name: 'K.'})-[:LIKES]->(c:Comment)\nRETURN c.content AS CommentContent, LENGTH(c.content) AS CommentLength, p.surname AS Surname, p.language AS Language"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Abdoulatifou的人喜欢的评论，返回该人的语言、浏览器、电子邮件、性别、生日以及评论的id、内容、评论的创建日期和喜欢关系的创建日期，跳过前12条记录，限制返回17条记录。",
+        "output": "MATCH (p:Person {name: 'Abdoulatifou'})-[r:LIKES]->(c:Comment)\nRETURN p.language, p.browser, p.email, p.gender, p.birthdate, c.id, c.content, c.creationDate, r.creationDate\nORDER BY c.creationDate DESC\nSKIP 12\nLIMIT 17"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Mohamed的人喜欢的评论的长度、IP地址、id，以及该人的IP地址、生日、姓氏、语言、名字和id，还有评论的内容。",
+        "output": "MATCH (p:Person {name: 'Mohamed'})-[:LIKES]->(c:Comment)\nWITH p, c, LENGTH(c.content) as commentLength\nMATCH (p)-[ip:HAS_IP]->(p_ip:IPAddress)\nWITH p, c, commentLength, p_ip.ipAddress as personIp, p_ip.birthday as personBirthday, p_ip.surname as personSurname, p_ip.language as personLanguage, p_ip.name as personName, p_ip.id as personId\nRETURN c.id as commentId, commentLength, c.ipAddress as commentIp, c.id as commentId, personIp, personBirthday, personSurname, personLanguage, personName, personId, c.content as commentContent"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Jan的人的生日，以及他喜欢的评论所使用的浏览器、评论内容、评论长度、评论创建日期和Jan的创建日期",
+        "output": "基于上述模型，以下是将自然语言描述转换为Cypher查询的过程："
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Arap的人喜欢的评论的创建日期",
+        "output": "MATCH (p:Person {name: 'Arap'})-[:likes]->(c:Comment)\nRETURN c.creationDate AS CommentCreationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Peter的人喜欢的评论的详细信息，包括Peter的性别、喜欢的时间、位置IP、评论的id和内容、Peter的邮箱、评论的创建时间、Peter的语言、Peter的生日、评论使用的浏览器、Peter的id、评论的位置IP、Peter使用的浏览器以及Peter的姓氏。",
+        "output": "MATCH (p:Person {name: 'Peter'})-[:LIKES]->(c:Comment)\nRETURN p.gender, p.likesTime, c.locationIP, c.id, c.content, p.email, c.creationTime, p.language, p.birthday, c.browser, p.id, c.locationIP, p.browser, p.surname"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Rainford的人喜欢的评论的IP地址、性别、姓氏、评论长度、语言、喜欢的时间、评论内容、电子邮件、评论创建时间、名、生日、创建时间、IP地址、ID、浏览器信息。同时返回该人的相关信息。",
+        "output": "MATCH (p:Person {name: 'Rainford'})-[:LIKES]->(c:Comment)\nRETURN \n    c.ipAddress AS IPAddress,\n    c.gender AS Gender,\n    c.surname AS Surname,\n    length(c.content) AS CommentLength,\n    c.language AS Language,\n    c.likeTime AS LikeTime,\n    c.content AS CommentContent,\n    c.email AS Email,\n    c.createTime AS CommentCreateTime,\n    p.name AS Name,\n    p.birthDate AS BirthDate,\n    c.createTime AS CreationTime,\n    c.ipAddress AS CommentIPAddress,\n    c.id AS CommentID,\n    c.browserInfo AS BrowserInfo"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Wilhelm的人的创建日期、使用的浏览器、位置IP和生日",
+        "output": "MATCH (p:Person {name: 'Wilhelm'})\nRETURN p.creationDate, p.browserUsed, p.locationIP, p.birthday"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Zanjan University学习且名为Hossein的人的创建日期和性别",
+        "output": "MATCH (p:Person {name: 'Hossein'})-[:STUDIES_AT]->(u:University {name: 'Zanjan University'})\nRETURN p.createdDate, p.gender"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Jan的人的学习经历，包括他的名字、关系的创建日期、毕业年份、位置IP、浏览器使用情况、电子邮件、性别、创建日期、姓氏、生日、学习的组织名称以及他的id",
+        "output": "MATCH (p:Person {name: 'Jan'})-[r:STUDIED]->(e:Education)\nRETURN p.name AS Name, \n       type(r) AS RelationshipType, \n       r.creationDate AS CreationDate, \n       e.graduationYear AS GraduationYear, \n       e.locationIP AS LocationIP, \n       e.browserUsage AS BrowserUsage, \n       p.email AS Email, \n       p.gender AS Gender, \n       p.creationDate AS PersonCreationDate, \n       p.surname AS Surname, \n       p.birthday AS Birthday, \n       e.organization AS OrganizationName, \n       p.id AS PersonID, \n       e.id AS EducationID"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Wojciech的人的姓氏，这些人在某个组织学习过",
+        "output": "MATCH (p:Person {name: 'Wojciech'})-[:Learning]->(org:Organization)\nRETURN p.name AS FirstName, org.name AS LastName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名字为Albaye Papa且在RUSTA学习的人的邮箱、RUSTA的id、该人的id以及他使用的语言",
+        "output": "MATCH (p:Person)-[:attends]->(s:School {id: 'RUSTA'}) WHERE p.name = 'Albaye Papa'\nMATCH (p)-[:speaks]->(l:Language)\nRETURN p.email, s.id, p.id, l.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Zdenek的人在Palacký University学习的信息，包括关系的创建日期、该人的浏览器使用情况、性别、组织的网址、该人的语言、id、生日、组织的id、该人的姓氏、创建日期、组织名称、名字和电子邮件。",
+        "output": "MATCH (p:Person {name: 'Zdenek'})-[:STUDIES_AT]->(o:Organization {name: 'Palacký University'})\nRETURN p.id AS PersonID, p.surname AS Surname, p.name AS Name, p.gender AS Gender, p.birthday AS Birthday, p.language AS Language, p.email AS Email, \n       r.createDate AS RelationshipCreate, o.url AS OrganizationURL, o.id AS OrganizationID, o.name AS OrganizationName, \n       r.createDate AS RelationshipCreateDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Cam的人在Electric_Power_University学习的信息，包括组织的id、人的位置IP、邮箱、浏览器、入学年份、语言、人的id、名、关系的创建日期、性别、生日、组织的网址、人的姓、人的创建日期，并按组织名称排序。",
+        "output": "MATCH (p:Person {name: 'Cam'})-[:STUDIES_AT]->(org:Organization)\nRETURN p.id AS PersonID, p.name AS PersonName, p.email AS Email, p.browser AS Browser, p.enrollmentYear AS EnrollmentYear, p.language AS Language, p.id AS PersonID, p.firstName AS FirstName, p.gender AS Gender, p.birthdate AS Birthdate, org.id AS OrganizationID, org.name AS OrganizationName, org.url AS OrganizationURL, org.creationDate AS OrganizationCreationDate, p.lastName AS LastName, p.creationDate AS PersonCreationDate\nORDER BY org.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Karen Baptist Convention学习的人的生日、毕业年份、语言、组织id、使用的浏览器、性别、IP地址、姓氏、id和名字",
+        "output": "MATCH (p:Person)-[:STUDIED_AT]->(o:Organization {name: 'Karen Baptist Convention'})\nRETURN p.birthday, p.graduationYear, p.language, o.id, p.browser, p.gender, p.ipAddress, p.surname, p.id, p.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为David且在Latitude Varsity学习的人的电子邮件、组织ID、位置IP、名、浏览器、ID、创建日期、语言、组织URL、姓、性别、生日以及他们在该组织的学习年份和关系的创建日期。",
+        "output": "MATCH (p:Person {name: 'David', studyingAt: 'Latitude Varsity'})-[:STUDYING_IN]->(o:Organization)\nRETURN p.email, p.organizationId, p.locationIp, p.name, p.browser, p.id, p.creationDate, p.language, o.url, p.surname, p.gender, p.birthdate, o.learningYear, p.creationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在海伦布隆大学学习过的人的信息，包括他们使用的浏览器、毕业年份、组织id、个人id、关系创建日期、组织名称、性别、语言和组织网址。",
+        "output": "MATCH (p:Person)-[:STUDIED_AT]->(u:University {name: \"海伦布隆大学\"})\nRETURN p.personId, p.browser, p.graduationYear, p.organizationId, p.relationshipCreationDate, u.name, p.gender, p.language, u.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Victoria University学习且名为Frank的人的信息，包括组织名称、人的名字、生日、邮箱、语言、入学年份、IP地址、创建日期、浏览器信息、组织ID、人ID和姓氏",
+        "output": "MATCH (u:University {name: 'Victoria University'})-[:STUDENTS_AT]->(p:Person {name: 'Frank'})\nRETURN u.name AS OrganizationName, p.name AS PersonName, p.birthday AS Birthday, p.email AS Email, p.language AS Language, p.admissionYear AS AdmissionYear, p.ipAddress AS IPAddress, p.creationDate AS CreationDate, p.browserInfo AS BrowserInfo, u.id AS OrganizationID, p.id AS PersonID, p.surname AS Surname"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在沈阳航空航天大学学习的人的学习年份、语言、创建日期、性别、id、姓氏、位置IP、浏览器使用情况、关系创建日期、电子邮件、生日和名字",
+        "output": "在这个模式中，`Person` 表示一个人，`University` 表示一个大学，`Enrollment` 表示一个人在某个大学的一个注册记录。每个`Enrollment`都与一个`Person`和一个`University`相关联。\n\n以下是将上述自然语言描述转换为Cypher查询的步骤：\n\n1. 从`Enrollment`节点开始，选择与沈阳航空航天大学相关的注册记录。\n2. 通过`person_id`属性连接到`Person`节点，以获取所需的信息。\n\n这里是Cypher查询："
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在University of the Arctic学习的人使用的浏览器、性别以及关系的创建日期",
+        "output": "基于上述结构，以下是将自然语言转换为Cypher查询的步骤：\n\n1. 选择`Person`节点。\n2. 应用`Student`标签来筛选在University of the Arctic学习的人。\n3. 使用`OUTGOING`关系来获取与该`Person`节点关联的`Browser`节点。\n4. 使用`OUTGOING`关系来获取与该`Person`节点关联的`Gender`信息。\n5. 获取关系的创建日期。\n\n下面是Cypher查询："
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名字为Dith的人的生日、位置IP以及他们毕业的年份和组织的id，最多返回8条记录",
+        "output": "MATCH (p:Person {name: 'Dith'})-[:HAS_BIRTHDAY]->(b:Birthday)<-[:GRADUATED_FROM]-(s:School)-[:HAS_ORGANIZATION]->(o:Organization)\nRETURN p.birthday, p.locationIP, s.year, o.id\nLIMIT 8"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为James的人学习过的组织机构的详细信息，包括James的语言、IP地址、邮箱、生日、使用的浏览器、性别、创建日期，以及组织机构的id、URL、名称和关系的创建年份，并按组织机构名称排序。",
+        "output": "MATCH (p:Person)-[:LEARNED_AT]->(o:Organization)\nWHERE p.name = 'James'\nRETURN p.name AS PersonName, p.language AS Language, p.ip_address AS IPAddress, p.email AS Email, p.birthday AS Birthday, p.browser AS Browser, p.gender AS Gender, p.created_at AS CreatedDate, o.id AS OrganizationID, o.url AS OrganizationURL, o.name AS OrganizationName, year(p.created_at) AS RelationshipYear\nORDER BY o.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Rajiv Gandhi University of Health Sciences学习且名字为Aditya的人的邮箱、创建日期、位置IP、组织的网址、名、浏览器使用情况、姓、组织ID、人ID、性别、组织名称、生日以及关系的创建日期，并按组织名称排序，限制结果为10条。",
+        "output": "MATCH (p:Person)-[:STUDIES_AT]->(org:Organization)\nWHERE p.name = 'Aditya' AND org.name = 'Rajiv Gandhi University of Health Sciences'\nRETURN p.email, p.creationDate, p.locationIP, org.website, org.name, p.browserUsage, p.firstName, p.lastName, p.personID, p.gender, org.name, p.birthday, type(p)-[:STUDIES_AT]->(org) as relation_creation_date\nORDER BY org.name\nLIMIT 10"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在PPGMAp学习的人所使用的浏览器、组织名称、语言、姓氏、电子邮件和性别，并按组织名称排序",
+        "output": "MATCH (u:User)-[:LEARNED_IN]->(ppgma:PPGMAp)-[:USED]->(browser:Browser),\n      (u)-[:WORKS_FOR]->(org:Organization),\n      (u)-[:SPEAKS]->(language:Language),\n      (u)-[:HAS_LAST_NAME]->(surname:LastName),\n      (u)-[:HAS_EMAIL]->(email:Email),\n      (u)-[:HAS_GENDER]->(gender:Gender)\nRETURN browser.name AS Browser, org.name AS Organization, language.name AS Language, surname.name AS Surname, email.address AS Email, gender.name AS Gender\nORDER BY org.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Tallinn University of Applied Sciences学习的人的id、学校网址、个人语言、创建日期、学习关系的创建日期、生日、浏览器使用情况、学校id、毕业年份、位置IP、名字和性别，限制返回4条结果。",
+        "output": "MATCH (p:Person)-[r:STUDY_AT]->(s:School)\nWHERE s.name = 'Tallinn University of Applied Sciences'\nRETURN p.id, s.url, p.language, p.creationDate, r.creationDate, p.birthday, p.browserUsage, s.id, p.graduationYear, p.locationIP, p.name, p.gender\nLIMIT 4"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Hans且在Cluster of Excellence Asia and Europe in a Global Context学习的人的姓氏、创建日期、电子邮件、毕业年份、浏览器使用情况、id和性别",
+        "output": "MATCH (p:Person {name: 'Hans', cluster: 'Cluster of Excellence Asia and Europe in a Global Context'})\nRETURN p.surname, p.created_at, p.email, p.graduation_year, p.browser_usage, p.id, p.gender"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Ghulam Ishaq Khan Institute of Engineering Sciences and Technology学习的人的IP地址、姓氏、生日、语言、浏览器、入学年份、学校名称、关系创建日期和学校网址",
+        "output": "MATCH (p:Person)-[:EDUCATION]->(s:School)\nWHERE s.Name = 'Ghulam Ishaq Khan Institute of Engineering Sciences and Technology'\nRETURN p.IP_address AS IP_address, p.Last_name AS Last_name, p.Birthday AS Birthday, p.Language AS Language, p.Browser AS Browser, \n       p.Education.Enrollment_year AS Enrollment_year, s.Name AS School_name, p.Education Relationship_creation_date AS Relationship_creation_date, \n       s.Website AS School_Website"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Khyber Afghan Airlines工作的人员的姓名、语言、id、IP地址、电子邮件和生日，以及他们开始工作的时间和公司的名称与id。",
+        "output": "MATCH (p:Person)-[:WORKS_FOR]->(c:Company)\nWHERE c.name = 'Khyber Afghan Airlines'\nRETURN p.name AS Name, p.language AS Language, p.id AS ID, p.ip_address AS IPAddress, p.email AS Email, p.birthday AS Birthday, p.start_date AS StartDate, c.name AS CompanyName, c.id AS CompanyID"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在MarcoPolo Airways工作的Mamoon Eshaq 0的电子邮件、组织id、姓氏、语言、工作关系的创建日期、浏览器使用情况、性别、个人id、工作开始时间、名字和个人创建日期",
+        "output": "MATCH (e:Employee {first_name: 'Mamoon', surname: 'Eshaq', organization_id: '0'})\nRETURN e.email, e.organization_id, e.surname, e.language, e.gender, e.personal_id, e.first_name, e.personal_creation_date,\n       (e)-[wr:HAS_WORK_RELATIONSHIP]->(wrNode)<-[:WORKS_AT]-(j:Job) AS job,\n       wrNode.creation_date, wrNode.browser_usage, j.start_date"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在MarcoPolo Airways工作的Djelaludin的个人信息，包括他的姓氏、生日、创建日期、名、浏览器使用情况、语言、关系的创建日期、工作开始日期以及他的id和组织的id。",
+        "output": "MATCH (p:Person {name: 'Djelaludin'})-[:WORKS_AT]->(org:Organization {name: 'MarcoPolo Airways'})\nRETURN p.surname, p.birthday, p.creationDate, p.name, p.browserUsage, p.language, p.creationDate, p.workStartDate, p.id, org.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Abdul Rahim的人的工作开始时间、性别、姓氏、名字、关系创建日期和生日，以及他工作的组织信息。",
+        "output": "MATCH (p:Person {name: 'Abdul Rahim'})-[:WORKS_AT]->(o:Organization),\n      (p)-[:HAS_NAME]->(name:Name),\n      (p)-[:HAS_GENDER]->(gender:Gender),\n      (p)-[:HAS_BIRTHDAY]->(birthday:Birthday),\n      (p)-[:HAS_RELATIONSHIP_CREATED_DATE]->(relationDate:RelationshipDate)\nRETURN p.startOfWork AS startOfWork, gender.gender AS gender, name.surname AS surname, name.name AS name, relationDate.date AS relationshipCreatedDate, birthday.date AS birthday, o.name AS organizationName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Pamir Airways工作的名为Ahmad Shah的人的组织网址、个人id、姓氏、电子邮件、工作关系的创建日期、组织id、开始工作日期、性别和组织名称，限制返回18条记录",
+        "output": "MATCH (p:Person)-[:WORKS_FOR]->(o:Organization)\nWHERE p.name = 'Ahmad Shah' AND p.affiliation = 'Pamir Airways'\nRETURN p.website, p.personId, p.surname, p.email, (p)-[:WORKS_FOR]->(o).dateCreated, o.organizationId, (p)-[:WORKS_FOR]->(o).startDate, p.gender, o.name\nLIMIT 18"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Alif的人的工作单位的id、网址，以及该人的性别、生日、电子邮件、使用的浏览器、语言、账户创建日期和工作关系的创建日期",
+        "output": "MATCH (p:Person {name: 'Alif'})-[:WORKS_AT]->(workUnit:WorkUnit)\nRETURN workUnit.id AS workUnitId, workUnit.website AS website,\n       p.gender AS gender, p.birthday AS birthday, p.email AS email,\n       p.browser AS browser, p.language AS language, p.account_creation_date AS accountCreationDate,\n       p.work_relationship_creation_date AS workRelationshipCreationDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Abdul Baseer在Bakhtar Afghan Airlines工作的开始时间",
+        "output": "MATCH (p:Person {name: 'Abdul Baseer'})-[:WORKS_FOR]->(c:Company {name: 'Bakhtar Afghan Airlines'})\nRETURN c.worksFrom"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Rahim的人的工作开始时间",
+        "output": "MATCH (p:Person {name: 'Rahim'})-[:HAS_JOB]->(j:Job)\nRETURN j.startDate AS WorkStartDate"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Bakhtar Afghan Airlines工作的名为Alif的人的电子邮件、关系创建日期、语言、性别、生日、创建日期、组织ID、位置IP、浏览器使用情况、组织URL、组织名称和姓氏",
+        "output": "MATCH (p:Person {name: 'Alif', employer: 'Bakhtar Afghan Airlines'}) \nRETURN p.email, p.relationshipCreationDate, p.language, p.gender, p.birthDate, p.creationDate, p.organizationId, p.locationIp, p.browserUsage, p.organizationUrl, p.organizationName, p.surname"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Abdul Rahim的人的电子邮件、工作开始日期、使用的浏览器和性别",
+        "output": "MATCH (p:Person {name: 'Abdul Rahim'}) \nRETURN p.email, p.startDate, [b IN (p)-[:uses]->(:Browser) | b.name] AS browsers, p.gender"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Mamoon Eshaq 0且在Safi Airways工作的人员的详细信息，包括组织的id，人员的姓氏、使用的浏览器、工作开始时间、语言、关系创建日期、创建日期、组织名称、生日、邮箱、名字、性别、位置IP、人员id和组织的网址。",
+        "output": "MATCH (p:Person {name: 'Mamoon Eshaq 0', employer: 'Safi Airways'})-[:WORKS_AT]->(o:Organization)\nRETURN p.id AS PersonID, p.surname AS Surname, p.browser AS Browser, p.startOfWork AS StartOfWork, p.language AS Language, p.creationDate AS CreationDate, p.birthDate AS BirthDate, p.email AS Email, p.name AS Name, p.gender AS Gender, p.locationIP AS LocationIP, o.id AS OrganizationID, o.name AS OrganizationName, o.url AS OrganizationURL"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Air Algérie工作的人员的详细信息，包括工作开始时间、人员的创建日期、姓名、性别、组织的网址和名称、使用的浏览器、关系的创建日期、组织的id、人员的id、电子邮件和语言。",
+        "output": "MATCH (p:Person)-[worksFor:WorksFor]->(org:Organization)\nWHERE org.name = 'Air Algérie'\nRETURN p.name AS Name, p.gender AS Gender, p.creationDate AS CreationDate, p.email AS Email, p.language AS Language,\n       org.name AS OrganizationName, org.website AS Website, worksFor.startDate AS StartDate, worksFor.creationDate AS RelationshipCreationDate,\n       org.id AS OrganizationID, p.id AS PersonID"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Yacine的人的工作地点、位置IP、语言、组织名称、名字、关系创建日期、姓氏、个人创建日期、浏览器、组织URL、个人ID、电子邮件、性别，并按组织名称排序，限制返回6条记录",
+        "output": "MATCH (p:Person {name: 'Yacine'})-[r:WORKS_AT]->(o:Organization)\nRETURN p.name AS Name, p.locationIP AS LocationIP, p.language AS Language, o.name AS OrganizationName, \n       p.name AS PersonalName, r.createdDate AS RelationshipCreatedDate, p.surname AS Surname, \n       p.createdDate AS PersonalCreatedDate, p.browser AS Browser, o.url AS OrganizationURL, \n       p.id AS PersonalID, p.email AS Email, p.gender AS Gender\nORDER BY o.name\nLIMIT 6"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Khalifa_Airways工作的人员的姓氏、位置IP、关系的创建日期、组织名称、组织URL和人员性别，并按组织名称排序",
+        "output": "MATCH (p:Person)-[e:Employee]->(o:Organization)\nWHERE o.name = 'Khalifa_Airways'\nRETURN p.surname, p.location_ip, e.created_at, o.name, o.url, p.gender\nORDER BY o.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Khalifa_Airways工作的前4个人的浏览器使用情况、组织名称、位置IP、工作开始时间、人员ID和名字",
+        "output": "MATCH (p:Person)-[:WORKS_AT]->(c:Company {name: 'Khalifa_Airways'})\nRETURN p.browser_usage, p.organization_name, p.location_ip, p.work_start_date, p.person_id, p.name\nORDER BY p.work_start_date ASC\nLIMIT 4"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找在Khalifa_Airways工作的人员的语言和生日",
+        "output": "基于这个模型，以下是将自然语言查询“查找在Khalifa_Airways工作的人员的语言和生日”转换为Cypher查询的步骤：\n\n1. 从`Person`节点开始。\n2. 使用`WorksFor`关系筛选出在`Khalifa_Airways`工作的人员。\n3. 选择这些人员的`Language`和`Birthday`属性。\n\n对应的Cypher查询如下："
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找属于非洲的地方的名称",
+        "output": "MATCH (p:Place)-[:LOCATED_IN]->(:Country)-[:CONTINENT]->(:Continent {name: \"Africa\"})\nRETURN p.name AS PlaceName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找属于欧洲的克罗地亚的名称",
+        "output": "MATCH (c:Country)-[:located_in]->(location)<-[:part_of]-(e:Continent {NAME: \"Europe\"}) WHERE c.NAME = \"Croatia\" RETURN location.NAME"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找属于亚洲的地方的id、名称以及亚洲的URL",
+        "output": "MATCH (p:Place)-[:LOCATED_IN]->(c:Country)-[:CONTINENT]->(co:Continent)\nWHERE co.name = 'Asia'\nRETURN p.id, p.name, co.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找亚洲下的老挝的名称和网址，并按名称排序，返回前11条结果",
+        "output": "MATCH (l:Location {name: \"老挝\", region: \"亚洲\"})<-[:LOCATED_IN]-(country:Country)\nRETURN l.name AS Name, l.url AS URL\nORDER BY l.name\nLIMIT 11"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找属于Europe的地方的URL和id，以及Europe的id和URL",
+        "output": "MATCH (e:Europe)-[:LOCATED_IN]->(place:Place)\nRETURN place.url AS Place_URL, place.id AS Place_ID, e.url AS Europe_URL, e.id AS Europe_ID"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找属于非洲的地方的URL",
+        "output": "MATCH (p:Place {continent: '非洲'}) RETURN p.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找蒙古所属的地方的名称、id、网址以及蒙古自身的名称、id和网址",
+        "output": "MATCH (m: Mongolia)-[:BELONGS_TO]->(location: Location)\nRETURN \n    location.name AS LocationName,\n    location.id AS LocationId,\n    location.url AS LocationUrl,\n    m.name AS MongoliaName,\n    m.id AS MongoliaId,\n    m.url AS MongoliaUrl"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找属于非洲的地方的id和非洲的网址",
+        "output": "MATCH (p:Place)-[:locatedIn]->(r:Region {name: \"非洲\"})\nRETURN p.id, r.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Northern_Ireland所属的欧洲地区的id和Northern_Ireland的名称",
+        "output": "MATCH (region:Region {name: \"Northern Ireland\"})-[:BELONGS_TO]->(europeanRegion:Region)\nRETURN europeanRegion.id, region.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Oman所属的亚洲地区的url、id，以及Oman的id、名称和url，并按Oman的名称排序",
+        "output": "MATCH (a:Asia)-[:ASSOCIATED_REGION]->(b:Country {name: 'Oman'}) \nMATCH (b)-[:HAS_REGION]->(c:Asia)\nRETURN c.url AS Asia_URL, c.id AS Asia_ID, b.id AS Oman_ID, b.name AS Oman_Name, b.url AS Oman_URL\nORDER BY b.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找澳大利亚包含的巴布亚新几内亚的id以及澳大利亚的id",
+        "output": "MATCH (a:Australia)-[:CONTAINS]->(p:PNG {name: '巴布亚新几内亚'})\nRETURN p.id AS PNG_id, a.id AS Australia_id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Puerto_Rico所属的北美洲的URL，以及Puerto_Rico的名称和ID",
+        "output": "MATCH (c:continent)-[:located_in]->(country:country {name: 'Puerto Rico'})-[:has_url]->(webpage:webpage)\nMATCH (country)-[:located_in]->(continent:continent {name: 'North America'})\nRETURN country.name AS CountryName, country.id AS CountryID, webpage.url AS WebpageURL"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找非洲所属的地方的url和id",
+        "output": "MATCH (c:Continent {name: '非洲'})-[:LOCATED_IN]->(p:Place)\nRETURN p.id AS id, p.url AS url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Swaziland所属的地区名称，以及该地区的上级地区名称",
+        "output": "MATCH (r:Region {name: \"Swaziland\"})-[:IS_PART_OF]->(regionName:Region), (regionName)-[:IS_PART_OF]->(parentRegion:Region)\nRETURN regionName.name AS RegionName, parentRegion.name AS ParentRegionName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Tajikistan所属的地区名称、Tajikistan的id、该地区的id以及Tajikistan的URL，并按地区名称降序排列",
+        "output": "MATCH (country:Country {name: \"Tajikistan\"})-[:BELONGS_TO]->(region:Region)\nRETURN region.name AS RegionName, country.id AS CountryId, region.id AS RegionId, country.url AS CountryURL\nORDER BY region.name DESC"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Wales所属的地区的id",
+        "output": "MATCH (wales:Wales)-[:BELONGS_TO]->(region:Region)\nRETURN region.id AS regionId"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Mohammed_Zahir_Shah的标签及其属于的名为BritishRoyalty的标签类的URL信息",
+        "output": "MATCH (p:Person {name: 'Mohammed_Zahir_Shah'})-[:BELONGS_TO]->(r:BritishRoyalty)\nRETURN p, r, r.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找标签Che Guevara的URL、名称、ID及其所属的标签类的ID、名称和URL，其中标签类的名称为Person",
+        "output": "MATCH (t:Tag {name: 'Che Guevara'})-[:BELONGS_TO]->(tc:TagClass {name: 'Person'})\nRETURN t.url AS URL, t.name AS Name, t.id AS ID, tc.id AS TagClassID, tc.name AS TagClassName, tc.url AS TagClassURL"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找与Juan_Perón相关的标签类别的名称、id和URL，并按类别名称排序",
+        "output": "MATCH (p:Person {name: 'Juan_Perón'})-[r:RELATED_TO]->(category)\nRETURN category.name AS CategoryName, category.id AS CategoryId, category.url AS CategoryUrl\nORDER BY category.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找TennisPlayer标签类及其关联的标签的id、url和名称，同时返回TennisPlayer的id和url。",
+        "output": "MATCH (tp:TennisPlayer)-[r:*]->(related:Label)\nRETURN tp.id AS TennisPlayer_id, tp.url AS TennisPlayer_url, related.id AS Label_id, related.url AS Label_url, related.name AS Label_name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找TennisPlayer类别下的Gastón_Gaudio标签的信息，返回类别id、类别名称、类别URL、标签名称和标签id，并按类别名称降序排列",
+        "output": "MATCH (p:Person {name: 'Gastón_Gaudio'})<-[:HAS_TAG]-(t:Tag)\nWHERE EXISTS ((p)-[:IS_A]->(c:Category {name: 'TennisPlayer'}))\nRETURN c.id AS category_id, c.name AS category_name, c.url AS category_url, t.name AS tag_name, t.id AS tag_id\nORDER BY c.name DESC"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找类型为TennisPlayer的标签类别的id，最多返回20个结果",
+        "output": "MATCH (p:Person {type: 'TennisPlayer'}) RETURN p.id LIMIT 20"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Lionel_Messi的标签及其所属的SoccerPlayer类别，返回Lionel_Messi的id、名称、URL，以及SoccerPlayer类别的URL、id和名称，并按Lionel_Messi的名称排序",
+        "output": "MATCH (p:Person {name: 'Lionel_Messi'})<-[:PLAYS_FOR]-(s:Sportsperson:Person)-[:CLASSIFIED_AS]->(category:Category)\nRETURN p.id, p.name, p.url, category.url, category.id, category.name\nORDER BY p.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为MusicalArtist的标签类的URL及其关联的标签的URL",
+        "output": "MATCH (a:MusicalArtist)<-[:ASSOCIATED_WITH]->(tag:Tag)\nRETURN a.url, tag.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Juan_Martín_del_Potro所属的标签类别的URL和名称，以及Juan_Martín_del_Potro的URL和id",
+        "output": "MATCH (p:Person {name: 'Juan_Martín_del_Potro'})\nWITH p, p.url AS personUrl, p.id AS personId\nMATCH (p)-[:BELONGS_TO]->(category:Category)\nWITH p, personUrl, personId, category.url AS categoryUrl, category.name AS categoryName\nRETURN categoryUrl, categoryName, personUrl, personId"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n跳过前9个，查找属于TennisPlayer类别的标签的名称，类别URL，类别名称和类别ID，限制返回10条结果",
+        "output": "MATCH (p:Person)-[:IS_A]->(c:Category {name: 'TennisPlayer'})\nWITH p, c\nWHERE NOT (p)-[:IS_A]->(c)\nWITH p, c\nORDER BY p.name\nSKIP 9\nLIMIT 10\nRETURN p.name AS PlayerName, c.url AS CategoryURL, c.name AS CategoryName, c.id AS CategoryID"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Pablo_Cuevas的标签及其所属的TennisPlayer类别，返回Pablo_Cuevas的名称和id，以及TennisPlayer类别的id、名称和url，限制返回20条结果",
+        "output": "MATCH (p:Person {name: 'Pablo_Cuevas'})-[:MEMBER_OF]->(tp:TennisPlayer)\nRETURN p.name AS Name, p.id AS ID, tp.id AS TennisPlayerID, tp.name AS TennisPlayerName, tp.url AS TennisPlayerURL\nLIMIT 20"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找TennisPlayer类型标签的名称、id、URL以及其子标签的名称、id和URL",
+        "output": "MATCH (p:TennisPlayer) \nWITH p, [(:TennisPlayer)-[:HAS_CHILD]->() AS childRel] \nMATCH (p)<-[:HAS_CHILD]-(child:TennisPlayer) \nRETURN p.name AS Name, p.id AS ID, p.url AS URL, child.name AS ChildName, child.id AS ChildID, child.url AS ChildURL"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Guillermo Coria的标签属于的TennisPlayer类别的URL",
+        "output": "MATCH (p:TennisPlayer {name: 'Guillermo Coria'})-[:HAS_URL]->(url)\nRETURN url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Carlos_Tévez的标签及其类型为SoccerPlayer的标签类的信息，返回Carlos_Tévez的URL和id，以及SoccerPlayer的名称、URL和id。",
+        "output": "MATCH (p:Person {name: 'Carlos_Tévez'})-[:IS_A]->(s:SoccerPlayer)\nRETURN p.url AS Carlos_Tévez_URL, p.id AS Carlos_Tévez_ID, s.name AS SoccerPlayer_Name, s.url AS SoccerPlayer_URL, s.id AS SoccerPlayer_ID"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找属于TennisPlayer类别的标签名称及其对应的类别URL和类别ID",
+        "output": "MATCH (p:Person)-[:IS_A]->(c:Category {name: 'TennisPlayer'})\nRETURN p.label AS LabelName, c.url AS CategoryURL, c.id AS CategoryID"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Florencia Labat的标签信息的id、名称和URL，以及其所属的TennisPlayer类别信息的名称和URL",
+        "output": "MATCH (p:Person {name: \"Florencia Labat\"})-[:HAS_TAG]->(t:Tag)\nRETURN t.id, t.name, t.url\nMATCH (p:Person {name: \"Florencia Labat\"})-[:BELONGS_TO]->(c:Category {name: \"TennisPlayer\"})\nRETURN c.name, c.url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Person的所有子类的名称",
+        "output": "MATCH (p:Person)-[:IS_A]->(subClass)\nRETURN subClass.name AS SubclassName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为BritishRoyalty的标签类属于名为Royalty的标签类的信息，返回Royalty的url、id、名称以及BritishRoyalty的id和url，限制返回结果为2条。",
+        "output": "MATCH (r:Royalty)<-[:CLASS_OF]-(br:BritishRoyalty)\nRETURN r.url, r.id, r.name, br.id, br.url\nLIMIT 2"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Person类下的子类信息，包括子类的URL、父类名称、子类ID、子类名称和父类URL，限制返回13条记录",
+        "output": "MATCH (p:Person)-[:IS_SUBCLASS_OF]->(sub:Person)\nRETURN sub.url AS SubClassURL, p.name AS ParentClassName, sub.id AS SubClassID, sub.name AS SubClassName, p.url AS ParentClassURL\nLIMIT 13"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为PrimeMinister的标签类属于哪个名为Politician的父类标签，返回父类标签的名称，最多返回3个结果",
+        "output": "MATCH (p:PrimeMinister)-[:IS_A]->(parent:Politician)\nRETURN parent.name\nLIMIT 3"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Cricketer类别的父类别Athlete的url、名称、Cricketer的id、Athlete的id以及Cricketer的url，并按Athlete的名称降序排列",
+        "output": "MATCH (a:Athlete)-[:IS_A]->(c:Cricketer)\nRETURN a.url AS AthleteURL, a.name AS AthleteName, c.id AS CricketerID, a.id AS AthleteID, c.url AS CricketerURL\nORDER BY a.name DESC"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Athlete类别下的GolfPlayer子类别的URL、名称以及GolfPlayer的id和名称",
+        "output": "MATCH (g:GolfPlayer)<-[:IS_A]-(a:Athlete)\nRETURN g.url AS URL, a.name AS Name, g.id AS GolfPlayerID, g.name AS GolfPlayerName"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Cyclist所属的标签类别的id",
+        "output": "MATCH (c:Cyclist) RETURN c.category_id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找MilitaryPerson类别的id和名称，以及它的父类别Person的url和名称",
+        "output": "MATCH (m:MilitaryPerson)-[:IS_A]->(p:Person)\nRETURN m.id, m.name, p.url, p.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找名为Architect的标签类的父类信息的id和名称，并按父类名称排序",
+        "output": "MATCH (a:Architect)-[:IS_A]->(p:Person)\nRETURN p.id AS ParentId, p.name AS ParentName\nORDER BY p.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Politician的所有子类的id、URL以及它们自身的id、URL和名称",
+        "output": "MATCH (p:Politician)-[:IS_A]->(sub:Politician)\nRETURN sub.id, sub.url, p.id, p.url, p.name"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找ChristianBishop所属的Cleric类别的URL",
+        "output": "MATCH (c:ChristianBishop)-[:HAS_TYPE]->(cl:Cleric)<-[:HAS_URL]-(url)\nRETURN url"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Athlete的子类标签类别的id和名称，以及父类的id",
+        "output": "MATCH (a:Athlete)<-[:IS_A]-(subClass:SubClass)\nRETURN subClass.id AS subClassId, subClass.name AS subClassName, a.id AS parentId"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Athlete这个标签类的子类的url和id",
+        "output": "MATCH (n:Athlete)-[:IS_A]->(sub:SubClass)\nRETURN sub.url, sub.id"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找类别为Person的子类别Model的id，同时返回Person的id",
+        "output": "MATCH (p:Person)-[:IS_A]->(model:Model)\nRETURN p.id AS PersonId, model.id AS ModelId"
+    },
+    {
+        "instruction": "请将以下自然语言转换为图数据库的Cypher查询:\n查找Person类下的FictionalCharacter类的名称",
+        "output": "MATCH (p:Person)-[:IS_A]->(fc:FictionalCharacter)\nRETURN fc.name"
+    }
+]

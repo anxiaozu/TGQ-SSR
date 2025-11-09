@@ -1,0 +1,1 @@
+DELETE  from ldbc.hasmoderator where "end" not in (select id from ldbc.person);

@@ -1,0 +1,20 @@
+http://data.openkg.cn/dataset/medicalgraph/resource/2a3d9d36-2728-445e-8761-9c246a685c93
+
+neo4j-admin load --from=test/car.dump --database=car1 --force
+
+neo4j 4.4.38  neo4j  密码 000000
+/home/work/liuytest/jdk-11.0.24
+
+https://blog.csdn.net/qq_45133760/article/details/128930710#csv_20
+
+
+CALL apoc.export.csv.all(
+  "a.csv",
+   { 
+    quotes:'none',
+    useTypes:true,
+    bulkImport:true
+   }
+)
+
+数据导出到了 /home/work/liuytest/大论文/医疗数据集/neo4j-community-4.4.38/import

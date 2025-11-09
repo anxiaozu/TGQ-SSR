@@ -1,0 +1,450 @@
+2024-10-14 21:59:54 - root - INFO      - load_opengauss_age.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/liuyang/sf01/
+2024-10-14 21:59:54 - root - INFO      - load_opengauss_age.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-10-14 21:59:54 - root - INFO      - load_opengauss_age.py : 52 line - create graph
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 160 line - create in Postgres in 0.3198 seconds
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 88 line - load node
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 97 line - load edge
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'tagclass',   '/home/liuyang/sf01/static/TagClass.csv');---result:[('',)]
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'place',   '/home/liuyang/sf01/static/Place.csv');---result:[('',)]
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','issubclassof','/home/liuyang/sf01/static/TagClass_isSubclassOf_TagClass.csv');---result:[('',)]
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','ispartof','/home/liuyang/sf01/static/Place_isPartOf_Place.csv');---result:[('',)]
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'person',   '/home/liuyang/sf01/dynamic/Person.csv');---result:[('',)]
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','islocatedinperson','/home/liuyang/sf01/dynamic/Person_isLocatedIn_City.csv');---result:[('',)]
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','studyat','/home/liuyang/sf01/dynamic/Person_studyAt_University.csv');---result:[('',)]
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','workat','/home/liuyang/sf01/dynamic/Person_workAt_Company.csv');---result:[('',)]
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','islocatedinorgan','/home/liuyang/sf01/static/Organisation_isLocatedIn_Place.csv');---result:[('',)]
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'organisation',   '/home/liuyang/sf01/static/Organisation.csv');---result:[('',)]
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','knows','/home/liuyang/sf01/dynamic/Person_knows_Person.csv');---result:[('',)]
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hastype','/home/liuyang/sf01/static/Tag_hasType_TagClass.csv');---result:[('',)]
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hasmoderator','/home/liuyang/sf01/dynamic/Forum_hasModerator_Person.csv');---result:[('',)]
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'forum',   '/home/liuyang/sf01/dynamic/Forum.csv');---result:[('',)]
+2024-10-14 21:59:55 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'tag',   '/home/liuyang/sf01/static/Tag.csv');---result:[('',)]
+2024-10-14 21:59:56 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hasinterest','/home/liuyang/sf01/dynamic/Person_hasInterest_Tag.csv');---result:[('',)]
+2024-10-14 21:59:56 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hastagforum','/home/liuyang/sf01/dynamic/Forum_hasTag_Tag.csv');---result:[('',)]
+2024-10-14 21:59:56 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','likespost','/home/liuyang/sf01/dynamic/Person_likes_Post.csv');---result:[('',)]
+2024-10-14 21:59:56 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hastagpost','/home/liuyang/sf01/dynamic/Post_hasTag_Tag.csv');---result:[('',)]
+2024-10-14 21:59:56 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','replyofcomment','/home/liuyang/sf01/dynamic/Comment_replyOf_Comment.csv');---result:[('',)]
+2024-10-14 21:59:57 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','likescomment','/home/liuyang/sf01/dynamic/Person_likes_Comment.csv');---result:[('',)]
+2024-10-14 21:59:57 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','replyofpost','/home/liuyang/sf01/dynamic/Comment_replyOf_Post.csv');---result:[('',)]
+2024-10-14 21:59:58 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','islocatedincomment','/home/liuyang/sf01/dynamic/Comment_isLocatedIn_Country.csv');---result:[('',)]
+2024-10-14 21:59:58 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','islocatedinpost','/home/liuyang/sf01/dynamic/Post_isLocatedIn_Country.csv');---result:[('',)]
+2024-10-14 21:59:58 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','containerof','/home/liuyang/sf01/dynamic/Forum_containerOf_Post.csv');---result:[('',)]
+2024-10-14 21:59:58 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hascreatorpost','/home/liuyang/sf01/dynamic/Post_hasCreator_Person.csv');---result:[('',)]
+2024-10-14 21:59:58 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hascreatorcomment','/home/liuyang/sf01/dynamic/Comment_hasCreator_Person.csv');---result:[('',)]
+2024-10-14 21:59:58 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hastagcomment','/home/liuyang/sf01/dynamic/Comment_hasTag_Tag.csv');---result:[('',)]
+2024-10-14 21:59:59 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hasmember','/home/liuyang/sf01/dynamic/Forum_hasMember_Person.csv');---result:[('',)]
+2024-10-14 21:59:59 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'comment',   '/home/liuyang/sf01/dynamic/Comment.csv');---result:[('',)]
+2024-10-14 21:59:59 - root - INFO      - load_opengauss_age.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'post',   '/home/liuyang/sf01/dynamic/Post.csv');---result:[('',)]
+2024-10-14 21:59:59 - root - INFO      - load_opengauss_age.py : 165 line - Loaded data in Postgres in 4.5428 seconds
+2024-10-14 21:59:59 - root - INFO      - load_opengauss_age.py : 73 line - create index
+2024-10-14 21:59:59 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON forum ("id");---err:the last operation didn't produce a result
+2024-10-14 21:59:59 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON message      ("id");---err:the last operation didn't produce a result
+2024-10-14 22:00:00 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON post         ("id");---err:the last operation didn't produce a result
+2024-10-14 22:00:00 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON Comment    ("id");---err:the last operation didn't produce a result
+2024-10-14 22:00:00 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON organisation ("id");---err:the last operation didn't produce a result
+2024-10-14 22:00:00 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON person       ("id");---err:the last operation didn't produce a result
+2024-10-14 22:00:00 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON place        ("id");---err:the last operation didn't produce a result
+2024-10-14 22:00:00 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON tag          ("id");---err:the last operation didn't produce a result
+2024-10-14 22:00:00 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON tagclass     ("id");---err:the last operation didn't produce a result
+2024-10-14 22:00:00 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON message   ( "creationDate");---err:the last operation didn't produce a result
+2024-10-14 22:00:01 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON post      ( "creationDate");---err:the last operation didn't produce a result
+2024-10-14 22:00:03 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON Comment ( "creationDate");---err:the last operation didn't produce a result
+2024-10-14 22:00:05 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON hasmember ( "creationDate");---err:the last operation didn't produce a result
+2024-10-14 22:00:05 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON knows ( "creationDate");---err:the last operation didn't produce a result
+2024-10-14 22:00:05 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON hasCreator ( "creationDate");---err:the last operation didn't produce a result
+2024-10-14 22:00:06 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON hascreatorcomment ( "creationDate");---err:the last operation didn't produce a result
+2024-10-14 22:00:07 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON hascreatorpost ( "creationDate");---err:the last operation didn't produce a result
+2024-10-14 22:00:07 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:07 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:07 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX hascreatorcomment_start ON ldbc.hascreatorcomment ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX hascreatorcomment_end ON ldbc.hascreatorcomment ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX hascreatorpost_start ON ldbc.hascreatorpost ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX hascreatorpost_end ON ldbc.hascreatorpost ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX hascreator_start ON ldbc.hascreator ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX hascreator_end ON ldbc.hascreator ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX knows_start ON ldbc.knows ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX knows_end ON ldbc.knows ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX hastag_start ON ldbc.hastag ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX hastag_end ON ldbc.hastag ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:08 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:09 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX hastagpost_start ON ldbc.hastagpost ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:09 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX hastagpost_end ON ldbc.hastagpost ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:09 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:09 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX  hasInterest_start ON ldbc.hasInterest ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:09 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX  hasInterest_end ON ldbc.hasInterest ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:09 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:09 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX  hasMember_start ON ldbc.hasMember ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:10 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX  hasMember_end ON ldbc.hasMember ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:10 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX  containerOf_start ON ldbc.containerOf ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX  containerOf_end ON ldbc.containerOf ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX  studyAt_start ON ldbc.studyAt ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX  studyAt_end ON ldbc.studyAt ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX  workAt_start ON ldbc.workAt ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX  workAt_end ON ldbc.workAt ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX  isLocatedInOrgan_start ON ldbc.isLocatedInOrgan ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX  isLocatedInOrgan_end ON ldbc.isLocatedInOrgan ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX  isLocatedInPerson_start ON ldbc.isLocatedInPerson ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:CREATE INDEX  isLocatedInPerson_end ON ldbc.isLocatedInPerson ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:create index replyofpost_start  on ldbc.replyofpost ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:11 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:create index replyofpost_end  on ldbc.replyofpost ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:create index replyofcomment_start  on ldbc.replyofpost ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:create index replyofcomment_end  on ldbc.replyofpost ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:create index hasmoderator_start on ldbc.hasmoderator ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:create index hasmoderator_end on ldbc.hasmoderator ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:create index likespost_start  on ldbc.likespost ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:create index likespost_end  on ldbc.likespost ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:create index likescomment_start  on ldbc.likescomment ("start");---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:create index likescomment_end  on ldbc.likescomment ("end");---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 170 line - create index in Postgres in 13.0762 seconds
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 30 line - Run vacuum
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.place;---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.tagclass;---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.person;---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.isPartOf;---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.isSubclassOf;---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.isLocatedInPerson;---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.organisation;---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.isLocatedInOrgan;---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasType;---err:the last operation didn't produce a result
+2024-10-14 22:00:12 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.studyAt;---err:the last operation didn't produce a result
+2024-10-14 22:00:13 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.workAt;---err:the last operation didn't produce a result
+2024-10-14 22:00:13 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.tag;---err:the last operation didn't produce a result
+2024-10-14 22:00:13 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.forum;---err:the last operation didn't produce a result
+2024-10-14 22:00:13 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasModerator;---err:the last operation didn't produce a result
+2024-10-14 22:00:13 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.knows;---err:the last operation didn't produce a result
+2024-10-14 22:00:13 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasInterest;---err:the last operation didn't produce a result
+2024-10-14 22:00:13 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.message;---err:the last operation didn't produce a result
+2024-10-14 22:00:13 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasTagForum;---err:the last operation didn't produce a result
+2024-10-14 22:00:13 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.Comment;---err:the last operation didn't produce a result
+2024-10-14 22:00:13 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.post;---err:the last operation didn't produce a result
+2024-10-14 22:00:13 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.likesPost;---err:the last operation didn't produce a result
+2024-10-14 22:00:13 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.likesComment;---err:the last operation didn't produce a result
+2024-10-14 22:00:14 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasTagPost;---err:the last operation didn't produce a result
+2024-10-14 22:00:14 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.replyOfComment;---err:the last operation didn't produce a result
+2024-10-14 22:00:14 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.replyOfPost;---err:the last operation didn't produce a result
+2024-10-14 22:00:15 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.likes;---err:the last operation didn't produce a result
+2024-10-14 22:00:15 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.isLocatedInPost;---err:the last operation didn't produce a result
+2024-10-14 22:00:15 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.isLocatedInComment;---err:the last operation didn't produce a result
+2024-10-14 22:00:15 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.containerOf;---err:the last operation didn't produce a result
+2024-10-14 22:00:15 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.replyOf;---err:the last operation didn't produce a result
+2024-10-14 22:00:16 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasTagComment;---err:the last operation didn't produce a result
+2024-10-14 22:00:17 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasCreatorComment;---err:the last operation didn't produce a result
+2024-10-14 22:00:17 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.isLocatedIn;---err:the last operation didn't produce a result
+2024-10-14 22:00:18 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasCreatorPost;---err:the last operation didn't produce a result
+2024-10-14 22:00:18 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasCreator;---err:the last operation didn't produce a result
+2024-10-14 22:00:18 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasTag;---err:the last operation didn't produce a result
+2024-10-14 22:00:20 - root - INFO      - load_opengauss_age.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasMember;---err:the last operation didn't produce a result
+2024-10-14 22:00:20 - root - INFO      - load_opengauss_age.py : 66 line - clear_dirty_data
+2024-10-14 22:00:20 - root - INFO      - load_opengauss_age.py : 177 line - vacuum analyse Postgres in 7.3153 seconds
+2024-10-14 22:00:20 - root - INFO      - load_opengauss_age.py : 218 line - Loaded total in Postgres in 25.2750 seconds
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/liuyang/openGauss_AGE/sf0.01/snapshot/
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 52 line - create graph
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 160 line - create in Postgres in 0.1601 seconds
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 88 line - load node
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 97 line - load edge
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:select * from load_edges_from_file('finbench','personapplyLoan','/home/liuyang/openGauss_AGE/sf0.01/snapshot/PersonApplyLoan.csv');---err:could not open relation with OID 0
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:select * from load_edges_from_file('finbench','personguaranteePerson','/home/liuyang/openGauss_AGE/sf0.01/snapshot/PersonGuaranteePerson.csv');---err:could not open relation with OID 0
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:select * from load_edges_from_file('finbench','personinvestCompany','/home/liuyang/openGauss_AGE/sf0.01/snapshot/PersonInvestCompany.csv');---err:could not open relation with OID 0
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'company',   '/home/liuyang/openGauss_AGE/sf0.01/snapshot/Company.csv');---result:[('',)]
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:select * from load_edges_from_file('finbench','personownAccount','/home/liuyang/openGauss_AGE/sf0.01/snapshot/PersonOwnAccount.csv');---err:could not open relation with OID 0
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','companyguaranteecompany','/home/liuyang/openGauss_AGE/sf0.01/snapshot/CompanyGuaranteeCompany.csv');---result:[('',)]
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','companyapplyloan','/home/liuyang/openGauss_AGE/sf0.01/snapshot/CompanyApplyLoan.csv');---result:[('',)]
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'medium',   '/home/liuyang/openGauss_AGE/sf0.01/snapshot/Medium.csv');---result:[('',)]
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','companyinvestcompany','/home/liuyang/openGauss_AGE/sf0.01/snapshot/CompanyInvestCompany.csv');---result:[('',)]
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'person',   '/home/liuyang/openGauss_AGE/sf0.01/snapshot/Person.csv');---result:[('',)]
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'loan',   '/home/liuyang/openGauss_AGE/sf0.01/snapshot/Loan.csv');---result:[('',)]
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','accountrepayloan','/home/liuyang/openGauss_AGE/sf0.01/snapshot/AccountRepayLoan.csv');---result:[('',)]
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','mediumsigninaccount','/home/liuyang/openGauss_AGE/sf0.01/snapshot/MediumSignInAccount.csv');---result:[('',)]
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','loandepositaccount','/home/liuyang/openGauss_AGE/sf0.01/snapshot/LoanDepositAccount.csv');---result:[('',)]
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'account',   '/home/liuyang/openGauss_AGE/sf0.01/snapshot/Account.csv');---result:[('',)]
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','accountwithdrawaccount','/home/liuyang/openGauss_AGE/sf0.01/snapshot/AccountWithdrawAccount.csv');---result:[('',)]
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','accounttransferaccount','/home/liuyang/openGauss_AGE/sf0.01/snapshot/AccountTransferAccount.csv');---result:[('',)]
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 165 line - Loaded data in Postgres in 0.1892 seconds
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 73 line - create index
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 170 line - create index in Postgres in 0.0002 seconds
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 30 line - Run vacuum
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.company ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.person ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.CompanyOwnAccount ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.PersonApplyLoan ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.CompanyGuaranteeCompany ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.PersonGuaranteePerson ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.PersonInvestCompany ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.PersonOwnAccount ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.CompanyApplyLoan ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.loan ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.medium ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.CompanyInvestCompany ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.account ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.AccountRepayLoan ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.MediumSignInAccount ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.LoanDepositAccount ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.AccountWithdrawAccount ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.AccountTransferAccount ;---err:the last operation didn't produce a result
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 66 line - clear_dirty_data
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 177 line - vacuum analyse Postgres in 0.1760 seconds
+2024-11-09 16:52:38 - root - INFO      - load_agens_finbench.py : 218 line - Loaded total in Postgres in 0.5648 seconds
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/liuyang/openGauss_AGE/sf0.01/snapshot/
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 52 line - create graph
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 160 line - create in Postgres in 0.1597 seconds
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 88 line - load node
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 97 line - load edge
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:select * from load_edges_from_file('finbench','personapplyLoan','/home/liuyang/openGauss_AGE/sf0.01/snapshot/PersonApplyLoan.csv');---err:could not open relation with OID 0
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:select * from load_edges_from_file('finbench','personguaranteePerson','/home/liuyang/openGauss_AGE/sf0.01/snapshot/PersonGuaranteePerson.csv');---err:could not open relation with OID 0
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'company',   '/home/liuyang/openGauss_AGE/sf0.01/snapshot/Company.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','companyguaranteecompany','/home/liuyang/openGauss_AGE/sf0.01/snapshot/CompanyGuaranteeCompany.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','companyapplyloan','/home/liuyang/openGauss_AGE/sf0.01/snapshot/CompanyApplyLoan.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','companyinvestcompany','/home/liuyang/openGauss_AGE/sf0.01/snapshot/CompanyInvestCompany.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'medium',   '/home/liuyang/openGauss_AGE/sf0.01/snapshot/Medium.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'person',   '/home/liuyang/openGauss_AGE/sf0.01/snapshot/Person.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','personinvestcompany','/home/liuyang/openGauss_AGE/sf0.01/snapshot/PersonInvestCompany.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'loan',   '/home/liuyang/openGauss_AGE/sf0.01/snapshot/Loan.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','personownaccount','/home/liuyang/openGauss_AGE/sf0.01/snapshot/PersonOwnAccount.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','accountrepayloan','/home/liuyang/openGauss_AGE/sf0.01/snapshot/AccountRepayLoan.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','loandepositaccount','/home/liuyang/openGauss_AGE/sf0.01/snapshot/LoanDepositAccount.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','mediumsigninaccount','/home/liuyang/openGauss_AGE/sf0.01/snapshot/MediumSignInAccount.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'account',   '/home/liuyang/openGauss_AGE/sf0.01/snapshot/Account.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','accountwithdrawaccount','/home/liuyang/openGauss_AGE/sf0.01/snapshot/AccountWithdrawAccount.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','accounttransferaccount','/home/liuyang/openGauss_AGE/sf0.01/snapshot/AccountTransferAccount.csv');---result:[('',)]
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 165 line - Loaded data in Postgres in 0.1909 seconds
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 73 line - create index
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 170 line - create index in Postgres in 0.0002 seconds
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 30 line - Run vacuum
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.person ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.CompanyOwnAccount ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.medium ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.CompanyGuaranteeCompany ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.PersonGuaranteePerson ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.PersonApplyLoan ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.loan ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.company ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.CompanyApplyLoan ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.CompanyInvestCompany ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.PersonOwnAccount ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.account ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.PersonInvestCompany ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.AccountRepayLoan ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.MediumSignInAccount ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.LoanDepositAccount ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.AccountWithdrawAccount ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.AccountTransferAccount ;---err:the last operation didn't produce a result
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 66 line - clear_dirty_data
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 177 line - vacuum analyse Postgres in 0.1744 seconds
+2024-11-11 00:29:28 - root - INFO      - load_agens_finbench.py : 218 line - Loaded total in Postgres in 0.5982 seconds
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/0数据导入/sf01/
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 52 line - create graph
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 160 line - create in Postgres in 0.3154 seconds
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 88 line - load node
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 97 line - load edge
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'tagclass',   '/home/work/liuytest/大论文/0数据导入/sf01/static/TagClass.csv');---result:[('',)]
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'place',   '/home/work/liuytest/大论文/0数据导入/sf01/static/Place.csv');---result:[('',)]
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','issubclassof','/home/work/liuytest/大论文/0数据导入/sf01/static/TagClass_isSubclassOf_TagClass.csv');---result:[('',)]
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','islocatedinperson','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Person_isLocatedIn_City.csv');---result:[('',)]
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'person',   '/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Person.csv');---result:[('',)]
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','ispartof','/home/work/liuytest/大论文/0数据导入/sf01/static/Place_isPartOf_Place.csv');---result:[('',)]
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','studyat','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Person_studyAt_University.csv');---result:[('',)]
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','workat','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Person_workAt_Company.csv');---result:[('',)]
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','islocatedinorgan','/home/work/liuytest/大论文/0数据导入/sf01/static/Organisation_isLocatedIn_Place.csv');---result:[('',)]
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'organisation',   '/home/work/liuytest/大论文/0数据导入/sf01/static/Organisation.csv');---result:[('',)]
+2024-11-18 15:52:51 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hastype','/home/work/liuytest/大论文/0数据导入/sf01/static/Tag_hasType_TagClass.csv');---result:[('',)]
+2024-11-18 15:52:52 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hasmoderator','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Forum_hasModerator_Person.csv');---result:[('',)]
+2024-11-18 15:52:52 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','knows','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Person_knows_Person.csv');---result:[('',)]
+2024-11-18 15:52:52 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'forum',   '/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Forum.csv');---result:[('',)]
+2024-11-18 15:52:52 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'tag',   '/home/work/liuytest/大论文/0数据导入/sf01/static/Tag.csv');---result:[('',)]
+2024-11-18 15:52:52 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hasinterest','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Person_hasInterest_Tag.csv');---result:[('',)]
+2024-11-18 15:52:52 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hastagforum','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Forum_hasTag_Tag.csv');---result:[('',)]
+2024-11-18 15:52:52 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','likespost','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Person_likes_Post.csv');---result:[('',)]
+2024-11-18 15:52:53 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','likescomment','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Person_likes_Comment.csv');---result:[('',)]
+2024-11-18 15:52:53 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hastagpost','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Post_hasTag_Tag.csv');---result:[('',)]
+2024-11-18 15:52:53 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','replyofcomment','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Comment_replyOf_Comment.csv');---result:[('',)]
+2024-11-18 15:52:53 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','replyofpost','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Comment_replyOf_Post.csv');---result:[('',)]
+2024-11-18 15:52:54 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','islocatedincomment','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Comment_isLocatedIn_Country.csv');---result:[('',)]
+2024-11-18 15:52:54 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','islocatedinpost','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Post_isLocatedIn_Country.csv');---result:[('',)]
+2024-11-18 15:52:54 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','containerof','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Forum_containerOf_Post.csv');---result:[('',)]
+2024-11-18 15:52:54 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hascreatorcomment','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Comment_hasCreator_Person.csv');---result:[('',)]
+2024-11-18 15:52:54 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hascreatorpost','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Post_hasCreator_Person.csv');---result:[('',)]
+2024-11-18 15:52:54 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hastagcomment','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Comment_hasTag_Tag.csv');---result:[('',)]
+2024-11-18 15:52:55 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_edges_from_file('ldbc','hasmember','/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Forum_hasMember_Person.csv');---result:[('',)]
+2024-11-18 15:52:56 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'post',   '/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Post.csv');---result:[('',)]
+2024-11-18 15:52:56 - root - INFO      - load_agens_ldbc.py : 130 line - 执行sql:select * from load_labels_from_file('ldbc',   'comment',   '/home/work/liuytest/大论文/0数据导入/sf01/dynamic/Comment.csv');---result:[('',)]
+2024-11-18 15:52:56 - root - INFO      - load_agens_ldbc.py : 165 line - Loaded data in Postgres in 4.5172 seconds
+2024-11-18 15:52:56 - root - INFO      - load_agens_ldbc.py : 73 line - create index
+2024-11-18 15:52:56 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON forum ("id");---err:the last operation didn't produce a result
+2024-11-18 15:52:56 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON message      ("id");---err:the last operation didn't produce a result
+2024-11-18 15:52:56 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON post         ("id");---err:the last operation didn't produce a result
+2024-11-18 15:52:56 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON Comment    ("id");---err:the last operation didn't produce a result
+2024-11-18 15:52:56 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON organisation ("id");---err:the last operation didn't produce a result
+2024-11-18 15:52:56 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON person       ("id");---err:the last operation didn't produce a result
+2024-11-18 15:52:56 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON place        ("id");---err:the last operation didn't produce a result
+2024-11-18 15:52:56 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON tag          ("id");---err:the last operation didn't produce a result
+2024-11-18 15:52:56 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE UNIQUE PROPERTY INDEX ON tagclass     ("id");---err:the last operation didn't produce a result
+2024-11-18 15:52:56 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON message   ( "creationDate");---err:the last operation didn't produce a result
+2024-11-18 15:52:57 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON post      ( "creationDate");---err:the last operation didn't produce a result
+2024-11-18 15:52:57 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON Comment ( "creationDate");---err:the last operation didn't produce a result
+2024-11-18 15:52:57 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON hasmember ( "creationDate");---err:the last operation didn't produce a result
+2024-11-18 15:52:57 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON knows ( "creationDate");---err:the last operation didn't produce a result
+2024-11-18 15:52:57 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON hasCreator ( "creationDate");---err:the last operation didn't produce a result
+2024-11-18 15:52:57 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON hascreatorcomment ( "creationDate");---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE PROPERTY INDEX ON hascreatorpost ( "creationDate");---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX hascreatorcomment_start ON ldbc.hascreatorcomment ("start");---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX hascreatorcomment_end ON ldbc.hascreatorcomment ("end");---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX hascreatorpost_start ON ldbc.hascreatorpost ("start");---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX hascreatorpost_end ON ldbc.hascreatorpost ("end");---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX hascreator_start ON ldbc.hascreator ("start");---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX hascreator_end ON ldbc.hascreator ("end");---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX knows_start ON ldbc.knows ("start");---err:the last operation didn't produce a result
+2024-11-18 15:52:58 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX knows_end ON ldbc.knows ("end");---err:the last operation didn't produce a result
+2024-11-18 15:52:59 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:52:59 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX hastag_start ON ldbc.hastag ("start");---err:the last operation didn't produce a result
+2024-11-18 15:52:59 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX hastag_end ON ldbc.hastag ("end");---err:the last operation didn't produce a result
+2024-11-18 15:52:59 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:52:59 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX hastagpost_start ON ldbc.hastagpost ("start");---err:the last operation didn't produce a result
+2024-11-18 15:52:59 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX hastagpost_end ON ldbc.hastagpost ("end");---err:the last operation didn't produce a result
+2024-11-18 15:52:59 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:52:59 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX  hasInterest_start ON ldbc.hasInterest ("start");---err:the last operation didn't produce a result
+2024-11-18 15:52:59 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX  hasInterest_end ON ldbc.hasInterest ("end");---err:the last operation didn't produce a result
+2024-11-18 15:52:59 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:52:59 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX  hasMember_start ON ldbc.hasMember ("start");---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX  hasMember_end ON ldbc.hasMember ("end");---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX  containerOf_start ON ldbc.containerOf ("start");---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX  containerOf_end ON ldbc.containerOf ("end");---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX  studyAt_start ON ldbc.studyAt ("start");---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX  studyAt_end ON ldbc.studyAt ("end");---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX  workAt_start ON ldbc.workAt ("start");---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX  workAt_end ON ldbc.workAt ("end");---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX  isLocatedInOrgan_start ON ldbc.isLocatedInOrgan ("start");---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX  isLocatedInOrgan_end ON ldbc.isLocatedInOrgan ("end");---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX  isLocatedInPerson_start ON ldbc.isLocatedInPerson ("start");---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:CREATE INDEX  isLocatedInPerson_end ON ldbc.isLocatedInPerson ("end");---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:53:00 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:create index replyofpost_start  on ldbc.replyofpost ("start");---err:the last operation didn't produce a result
+2024-11-18 15:53:01 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:create index replyofpost_end  on ldbc.replyofpost ("end");---err:the last operation didn't produce a result
+2024-11-18 15:53:01 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:create index replyofcomment_start  on ldbc.replyofpost ("start");---err:the last operation didn't produce a result
+2024-11-18 15:53:01 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:create index replyofcomment_end  on ldbc.replyofpost ("end");---err:the last operation didn't produce a result
+2024-11-18 15:53:01 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:53:01 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:create index hasmoderator_start on ldbc.hasmoderator ("start");---err:the last operation didn't produce a result
+2024-11-18 15:53:01 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:create index hasmoderator_end on ldbc.hasmoderator ("end");---err:the last operation didn't produce a result
+2024-11-18 15:53:01 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:53:01 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:create index likespost_start  on ldbc.likespost ("start");---err:the last operation didn't produce a result
+2024-11-18 15:53:01 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:create index likespost_end  on ldbc.likespost ("end");---err:the last operation didn't produce a result
+2024-11-18 15:53:01 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:create index likescomment_start  on ldbc.likescomment ("start");---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:create index likescomment_end  on ldbc.likescomment ("end");---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 170 line - create index in Postgres in 5.8726 seconds
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 30 line - Run vacuum
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.tagclass;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.place;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.person;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.isSubclassOf;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.isPartOf;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.isLocatedInPerson;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.organisation;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.studyAt;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasType;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.isLocatedInOrgan;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.workAt;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.forum;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.tag;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasModerator;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.knows;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasInterest;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.Comment;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.message;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.post;---err:the last operation didn't produce a result
+2024-11-18 15:53:02 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasTagForum;---err:the last operation didn't produce a result
+2024-11-18 15:53:03 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.likesPost;---err:the last operation didn't produce a result
+2024-11-18 15:53:03 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.likesComment;---err:the last operation didn't produce a result
+2024-11-18 15:53:03 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasTagPost;---err:the last operation didn't produce a result
+2024-11-18 15:53:03 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.replyOfComment;---err:the last operation didn't produce a result
+2024-11-18 15:53:03 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.replyOfPost;---err:the last operation didn't produce a result
+2024-11-18 15:53:04 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.likes;---err:the last operation didn't produce a result
+2024-11-18 15:53:04 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.isLocatedInPost;---err:the last operation didn't produce a result
+2024-11-18 15:53:04 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.isLocatedInComment;---err:the last operation didn't produce a result
+2024-11-18 15:53:04 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasCreatorPost;---err:the last operation didn't produce a result
+2024-11-18 15:53:04 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasCreatorComment;---err:the last operation didn't produce a result
+2024-11-18 15:53:04 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.containerOf;---err:the last operation didn't produce a result
+2024-11-18 15:53:04 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.replyOf;---err:the last operation didn't produce a result
+2024-11-18 15:53:05 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasTagComment;---err:the last operation didn't produce a result
+2024-11-18 15:53:06 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasMember;---err:the last operation didn't produce a result
+2024-11-18 15:53:06 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.isLocatedIn;---err:the last operation didn't produce a result
+2024-11-18 15:53:07 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasCreator;---err:the last operation didn't produce a result
+2024-11-18 15:53:07 - root - INFO      - load_agens_ldbc.py : 134 line - 执行sql:VACUUM ANALYZE ldbc.hasTag;---err:the last operation didn't produce a result
+2024-11-18 15:53:07 - root - INFO      - load_agens_ldbc.py : 66 line - clear_dirty_data
+2024-11-18 15:53:07 - root - INFO      - load_agens_ldbc.py : 177 line - vacuum analyse Postgres in 5.9725 seconds
+2024-11-18 15:53:07 - root - INFO      - load_agens_ldbc.py : 218 line - Loaded total in Postgres in 16.6867 seconds
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 52 line - create graph
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 160 line - create in Postgres in 0.1615 seconds
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 88 line - load node
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 97 line - load edge
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'company',   '/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/Company.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:select * from load_edges_from_file('finbench','personguaranteePerson','/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/PersonGuaranteePerson.csv');---err:could not open relation with OID 0
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:select * from load_edges_from_file('finbench','personapplyLoan','/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/PersonApplyLoan.csv');---err:could not open relation with OID 0
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','companyguaranteecompany','/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/CompanyGuaranteeCompany.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','companyapplyloan','/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/CompanyApplyLoan.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','companyinvestcompany','/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/CompanyInvestCompany.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'medium',   '/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/Medium.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'person',   '/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/Person.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'loan',   '/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/Loan.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','personinvestcompany','/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/PersonInvestCompany.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','personownaccount','/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/PersonOwnAccount.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','accountrepayloan','/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/AccountRepayLoan.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_labels_from_file('finbench',   'account',   '/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/Account.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','mediumsigninaccount','/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/MediumSignInAccount.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','loandepositaccount','/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/LoanDepositAccount.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','accountwithdrawaccount','/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/AccountWithdrawAccount.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 130 line - 执行sql:select * from load_edges_from_file('finbench','accounttransferaccount','/home/work/liuytest/大论文/0数据导入/openGauss_AGE/sf0.01/snapshot/AccountTransferAccount.csv');---result:[('',)]
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 165 line - Loaded data in Postgres in 0.1906 seconds
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 73 line - create index
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 170 line - create index in Postgres in 0.0002 seconds
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 30 line - Run vacuum
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.person ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.PersonApplyLoan ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.CompanyOwnAccount ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.CompanyGuaranteeCompany ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.PersonGuaranteePerson ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.medium ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.company ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.CompanyApplyLoan ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.loan ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.CompanyInvestCompany ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.PersonOwnAccount ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.PersonInvestCompany ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.account ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.AccountRepayLoan ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.MediumSignInAccount ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.LoanDepositAccount ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.AccountWithdrawAccount ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 134 line - 执行sql:VACUUM ANALYZE finbench.AccountTransferAccount ;---err:the last operation didn't produce a result
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 66 line - clear_dirty_data
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 177 line - vacuum analyse Postgres in 0.1774 seconds
+2024-11-18 15:53:10 - root - INFO      - load_agens_finbench.py : 218 line - Loaded total in Postgres in 0.5383 seconds

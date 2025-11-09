@@ -1,0 +1,10 @@
+select * from load_labels_from_file('medical',   'first_level_departments',   '/data/first_level_departments.csv');
+select * from load_labels_from_file('medical',   'second_level_departments',   '/data/second_level_departments.csv');
+select * from load_labels_from_file('medical',   'inspection_means',   '/data/inspection_means.csv');
+select * from load_labels_from_file('medical',   'treatment_plan',   '/data/treatment_plan.csv');
+select * from load_labels_from_file('medical',   'manufacturer',   '/data/manufacturer.csv');
+select * from load_labels_from_file('medical',   'disease',   '/data/disease.csv');
+select * from load_labels_from_file('medical',   'symptoms',   '/data/symptoms.csv');
+select * from load_labels_from_file('medical',   'drug',   '/data/drug.csv');
+select * from load_labels_from_file('medical',   'food',   '/data/food.csv');
+select * from load_labels_from_file('medical',   'recipe',   '/data/recipe.csv');

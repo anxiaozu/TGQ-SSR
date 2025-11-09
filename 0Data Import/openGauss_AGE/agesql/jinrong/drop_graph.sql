@@ -1,0 +1,1 @@
+DROP GRAPH IF EXISTS finbench CASCADE;

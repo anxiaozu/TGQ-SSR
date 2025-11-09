@@ -1,0 +1,712 @@
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/医疗数据集/数据导入agens/import
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 52 line - create graph
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 160 line - create in Postgres in 0.1920 seconds
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 88 line - load node
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 97 line - load edge
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'second_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/importsecond_level_departments.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importsecond_level_departments.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'inspection_means',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/importinspection_means.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importinspection_means.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'manufacturer',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/importmanufacturer.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importmanufacturer.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'first_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/importfirst_level_departments.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importfirst_level_departments.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'treatment_plan',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/importtreatment_plan.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importtreatment_plan.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'food',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/importfood.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importfood.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'disease',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/importdisease.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importdisease.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'symptoms',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/importsymptoms.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importsymptoms.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'drug',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/importdrug.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importdrug.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'recipe',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/importrecipe.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importrecipe.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','highly_rated_medicines','/home/work/liuytest/大论文/医疗数据集/数据导入agens/importhighly_rated_medicines.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importhighly_rated_medicines.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','suitable_to_eat','/home/work/liuytest/大论文/医疗数据集/数据导入agens/importsuitable_to_eat.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importsuitable_to_eat.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','belong_to','/home/work/liuytest/大论文/医疗数据集/数据导入agens/importbelong_to.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importbelong_to.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','common_used','/home/work/liuytest/大论文/医疗数据集/数据导入agens/importcommon_used.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importcommon_used.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','complication','/home/work/liuytest/大论文/医疗数据集/数据导入agens/importcomplication.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importcomplication.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','affiliation_department','/home/work/liuytest/大论文/医疗数据集/数据导入agens/importaffiliation_department.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importaffiliation_department.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','avoid_eating','/home/work/liuytest/大论文/医疗数据集/数据导入agens/importavoid_eating.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importavoid_eating.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','treatment','/home/work/liuytest/大论文/医疗数据集/数据导入agens/importtreatment.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importtreatment.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','produce_medicine','/home/work/liuytest/大论文/医疗数据集/数据导入agens/importproduce_medicine.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importproduce_medicine.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','diagnostic_tests','/home/work/liuytest/大论文/医疗数据集/数据导入agens/importdiagnostic_tests.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importdiagnostic_tests.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','with_symptoms','/home/work/liuytest/大论文/医疗数据集/数据导入agens/importwith_symptoms.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importwith_symptoms.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','recommended_recipes','/home/work/liuytest/大论文/医疗数据集/数据导入agens/importrecommended_recipes.csv');---err:Failed to open /home/work/liuytest/大论文/医疗数据集/数据导入agens/importrecommended_recipes.csv
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 165 line - Loaded data in Postgres in 0.0369 seconds
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 73 line - create index
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 170 line - create index in Postgres in 0.0002 seconds
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 30 line - Run vacuum
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.other_departments;---err:relation "medical.other_departments" does not exist
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.inspection_means;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.second_level_departments;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment_plan;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recipe;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.first_level_departments;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.disease;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.symptoms;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.food;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.manufacturer;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.drug;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.highly_rated_medicines;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.belong_to;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.suitable_to_eat;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.affiliation_department;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.common_used;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.complication;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.produce_medicine;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.avoid_eating;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.with_symptoms;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.diagnostic_tests;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recommended_recipes;---err:the last operation didn't produce a result
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 66 line - clear_dirty_data
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 177 line - vacuum analyse Postgres in 0.0616 seconds
+2024-11-11 21:52:36 - root - INFO      - load_agens_yiliao.py : 218 line - Loaded total in Postgres in 0.3005 seconds
+2024-11-11 21:54:22 - root - INFO      - load_agens_yiliao.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/医疗数据集/数据导入agens/import/
+2024-11-11 21:54:22 - root - INFO      - load_agens_yiliao.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-11 21:54:22 - root - INFO      - load_agens_yiliao.py : 52 line - create graph
+2024-11-11 21:54:22 - root - INFO      - load_agens_yiliao.py : 160 line - create in Postgres in 0.1923 seconds
+2024-11-11 21:54:22 - root - INFO      - load_agens_yiliao.py : 88 line - load node
+2024-11-11 21:54:22 - root - INFO      - load_agens_yiliao.py : 97 line - load edge
+2024-11-11 21:54:22 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'first_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/first_level_departments.csv');---result:[('',)]
+2024-11-11 21:54:22 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'second_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/second_level_departments.csv');---result:[('',)]
+2024-11-11 21:54:22 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'food',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/food.csv');---result:[('',)]
+2024-11-11 21:54:22 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','belong_to','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/belong_to.csv');---result:[('',)]
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'recipe',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recipe.csv');---result:[('',)]
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','affiliation_department','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/affiliation_department.csv');---result:[('',)]
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','common_used','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/common_used.csv');---result:[('',)]
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','complication','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/complication.csv');---result:[('',)]
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'manufacturer',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/manufacturer.csv');---result:[('',)]
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','suitable_to_eat','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/suitable_to_eat.csv');---result:[('',)]
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','avoid_eating','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/avoid_eating.csv');---result:[('',)]
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','treatment','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment.csv');---result:[('',)]
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'disease',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/disease.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'inspection_means',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/inspection_means.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'treatment_plan',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment_plan.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','diagnostic_tests','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/diagnostic_tests.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','produce_medicine','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/produce_medicine.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','recommended_recipes','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recommended_recipes.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','highly_rated_medicines','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/highly_rated_medicines.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','with_symptoms','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/with_symptoms.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'drug',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/drug.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'symptoms',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/symptoms.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 165 line - Loaded data in Postgres in 0.5394 seconds
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 73 line - create index
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 170 line - create index in Postgres in 0.0003 seconds
+2024-11-11 21:54:23 - root - INFO      - load_agens_yiliao.py : 30 line - Run vacuum
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/医疗数据集/数据导入agens/import/
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 52 line - create graph
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 160 line - create in Postgres in 0.1930 seconds
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 88 line - load node
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 97 line - load edge
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'first_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/first_level_departments.csv');---result:[('',)]
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'second_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/second_level_departments.csv');---result:[('',)]
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','belong_to','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/belong_to.csv');---result:[('',)]
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'food',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/food.csv');---result:[('',)]
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'recipe',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recipe.csv');---result:[('',)]
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','affiliation_department','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/affiliation_department.csv');---result:[('',)]
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','common_used','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/common_used.csv');---result:[('',)]
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'manufacturer',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/manufacturer.csv');---result:[('',)]
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','complication','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/complication.csv');---result:[('',)]
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','treatment','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment.csv');---result:[('',)]
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','suitable_to_eat','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/suitable_to_eat.csv');---result:[('',)]
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','avoid_eating','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/avoid_eating.csv');---result:[('',)]
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'drug',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/drug.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'inspection_means',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/inspection_means.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','highly_rated_medicines','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/highly_rated_medicines.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','with_symptoms','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/with_symptoms.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','diagnostic_tests','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/diagnostic_tests.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','produce_medicine','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/produce_medicine.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','recommended_recipes','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recommended_recipes.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'treatment_plan',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment_plan.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:02:51 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'disease',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/disease.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:02:52 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'symptoms',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/symptoms.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:02:52 - root - INFO      - load_agens_yiliao.py : 165 line - Loaded data in Postgres in 0.4753 seconds
+2024-11-11 22:02:52 - root - INFO      - load_agens_yiliao.py : 73 line - create index
+2024-11-11 22:02:52 - root - INFO      - load_agens_yiliao.py : 170 line - create index in Postgres in 0.0003 seconds
+2024-11-11 22:02:52 - root - INFO      - load_agens_yiliao.py : 30 line - Run vacuum
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/医疗数据集/数据导入agens/import/
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 52 line - create graph
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 160 line - create in Postgres in 0.1904 seconds
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 88 line - load node
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 97 line - load edge
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'disease',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/disease.csv');---err:invalid input syntax for type numeric: "2、切断传播途径：由于百日咳杆菌对外界抵抗力较弱，无需消毒处理，但应保持室内通风，衣物在阳光下曝晒，对痰液及口鼻分泌物则应进行消毒处理。"
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'first_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/first_level_departments.csv');---result:[('',)]
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'second_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/second_level_departments.csv');---result:[('',)]
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'food',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/food.csv');---result:[('',)]
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','belong_to','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/belong_to.csv');---result:[('',)]
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'recipe',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recipe.csv');---result:[('',)]
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','affiliation_department','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/affiliation_department.csv');---result:[('',)]
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','complication','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/complication.csv');---result:[('',)]
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','common_used','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/common_used.csv');---result:[('',)]
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'manufacturer',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/manufacturer.csv');---result:[('',)]
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','treatment','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment.csv');---result:[('',)]
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','suitable_to_eat','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/suitable_to_eat.csv');---result:[('',)]
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','avoid_eating','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/avoid_eating.csv');---result:[('',)]
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'inspection_means',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/inspection_means.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','produce_medicine','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/produce_medicine.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','recommended_recipes','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recommended_recipes.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','diagnostic_tests','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/diagnostic_tests.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','highly_rated_medicines','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/highly_rated_medicines.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','with_symptoms','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/with_symptoms.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'treatment_plan',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment_plan.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'drug',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/drug.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'symptoms',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/symptoms.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 165 line - Loaded data in Postgres in 0.5355 seconds
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 73 line - create index
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 170 line - create index in Postgres in 0.0003 seconds
+2024-11-11 22:11:37 - root - INFO      - load_agens_yiliao.py : 30 line - Run vacuum
+2024-11-11 22:21:20 - root - INFO      - load_agens_yiliao.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/医疗数据集/数据导入agens/import/
+2024-11-11 22:21:20 - root - INFO      - load_agens_yiliao.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-11 22:21:20 - root - INFO      - load_agens_yiliao.py : 52 line - create graph
+2024-11-11 22:21:20 - root - INFO      - load_agens_yiliao.py : 160 line - create in Postgres in 0.1925 seconds
+2024-11-11 22:21:20 - root - INFO      - load_agens_yiliao.py : 88 line - load node
+2024-11-11 22:21:20 - root - INFO      - load_agens_yiliao.py : 97 line - load edge
+2024-11-11 22:21:20 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'first_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/first_level_departments.csv');---result:[('',)]
+2024-11-11 22:21:20 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'second_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/second_level_departments.csv');---result:[('',)]
+2024-11-11 22:21:20 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'disease',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/disease.csv');---err:invalid input syntax for type numeric: "2、切断传播途径：由于百日咳杆菌对外界抵抗力较弱，无需消毒处理，但应保持室内通风，衣物在阳光下曝晒，对痰液及口鼻分泌物则应进行消毒处理。"
+2024-11-11 22:21:20 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'food',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/food.csv');---result:[('',)]
+2024-11-11 22:21:20 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','belong_to','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/belong_to.csv');---result:[('',)]
+2024-11-11 22:21:20 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'recipe',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recipe.csv');---result:[('',)]
+2024-11-11 22:21:20 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','affiliation_department','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/affiliation_department.csv');---result:[('',)]
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','complication','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/complication.csv');---result:[('',)]
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','common_used','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/common_used.csv');---result:[('',)]
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'manufacturer',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/manufacturer.csv');---result:[('',)]
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','treatment','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment.csv');---result:[('',)]
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','avoid_eating','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/avoid_eating.csv');---result:[('',)]
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','suitable_to_eat','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/suitable_to_eat.csv');---result:[('',)]
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'inspection_means',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/inspection_means.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','diagnostic_tests','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/diagnostic_tests.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','with_symptoms','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/with_symptoms.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','highly_rated_medicines','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/highly_rated_medicines.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','recommended_recipes','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recommended_recipes.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','produce_medicine','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/produce_medicine.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'treatment_plan',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment_plan.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'drug',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/drug.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'symptoms',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/symptoms.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 165 line - Loaded data in Postgres in 0.4255 seconds
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 73 line - create index
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 170 line - create index in Postgres in 0.0003 seconds
+2024-11-11 22:21:21 - root - INFO      - load_agens_yiliao.py : 30 line - Run vacuum
+2024-11-11 22:29:54 - root - INFO      - load_agens_yiliao.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/医疗数据集/数据导入agens/import/
+2024-11-11 22:29:54 - root - INFO      - load_agens_yiliao.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-11 22:29:54 - root - INFO      - load_agens_yiliao.py : 52 line - create graph
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 160 line - create in Postgres in 0.1873 seconds
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 88 line - load node
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 97 line - load edge
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'first_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/first_level_departments.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'second_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/second_level_departments.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'treatment_plan',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment_plan.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'food',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/food.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','belong_to','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/belong_to.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'disease',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/disease.csv');---err:invalid input syntax for type numeric: "预防冬季物理性变应性还请减少洗澡次数，如若每天洗澡，建议用温水作短时间冲洗，避免长时间高水温冲洗。平时应多饮水，补充肌体和皮肤的水分丧失，并适当地补充含维生素A、E的食物，如胡萝卜、卷心菜、花生、芝麻等。另外，也可选用甘油、凡士林、橄榄油等滋润性较强的护肤产品，锁住皮肤表面水分，缓解干燥瘙痒。积极锻炼身体。增强自己的体质。减少本病的发生。"
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'inspection_means',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/inspection_means.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'recipe',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recipe.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'drug',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/drug.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','affiliation_department','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/affiliation_department.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','complication','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/complication.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','common_used','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/common_used.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'symptoms',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/symptoms.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'manufacturer',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/manufacturer.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','treatment','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','suitable_to_eat','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/suitable_to_eat.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','avoid_eating','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/avoid_eating.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','recommended_recipes','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recommended_recipes.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','diagnostic_tests','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/diagnostic_tests.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','highly_rated_medicines','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/highly_rated_medicines.csv');---result:[('',)]
+2024-11-11 22:29:55 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','with_symptoms','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/with_symptoms.csv');---result:[('',)]
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','produce_medicine','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/produce_medicine.csv');---result:[('',)]
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 165 line - Loaded data in Postgres in 2.3093 seconds
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 73 line - create index
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 170 line - create index in Postgres in 0.0003 seconds
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 30 line - Run vacuum
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.disease;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.second_level_departments;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.food;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.other_departments;---err:relation "medical.other_departments" does not exist
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.first_level_departments;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment_plan;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recipe;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.belong_to;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.inspection_means;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.drug;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.affiliation_department;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.common_used;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.complication;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.suitable_to_eat;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.avoid_eating;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.symptoms;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.manufacturer;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recommended_recipes;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.diagnostic_tests;---err:the last operation didn't produce a result
+2024-11-11 22:29:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.highly_rated_medicines;---err:the last operation didn't produce a result
+2024-11-11 22:29:58 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.with_symptoms;---err:the last operation didn't produce a result
+2024-11-11 22:29:58 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.produce_medicine;---err:the last operation didn't produce a result
+2024-11-11 22:29:58 - root - INFO      - load_agens_yiliao.py : 66 line - clear_dirty_data
+2024-11-11 22:30:02 - root - INFO      - load_agens_yiliao.py : 177 line - vacuum analyse Postgres in 4.8252 seconds
+2024-11-11 22:30:02 - root - INFO      - load_agens_yiliao.py : 218 line - Loaded total in Postgres in 7.4229 seconds
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/医疗数据集/数据导入agens/import/
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 52 line - create graph
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 160 line - create in Postgres in 0.1939 seconds
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 88 line - load node
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 97 line - load edge
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'first_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/first_level_departments.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'second_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/second_level_departments.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'treatment_plan',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment_plan.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'food',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/food.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','belong_to','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/belong_to.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'recipe',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recipe.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'inspection_means',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/inspection_means.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'drug',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/drug.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','affiliation_department','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/affiliation_department.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','complication','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/complication.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','common_used','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/common_used.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'symptoms',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/symptoms.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'manufacturer',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/manufacturer.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','treatment','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','suitable_to_eat','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/suitable_to_eat.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','avoid_eating','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/avoid_eating.csv');---result:[('',)]
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'disease',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/disease.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','diagnostic_tests','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/diagnostic_tests.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','highly_rated_medicines','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/highly_rated_medicines.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','recommended_recipes','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recommended_recipes.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','produce_medicine','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/produce_medicine.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','with_symptoms','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/with_symptoms.csv');---err:consuming input failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 165 line - Loaded data in Postgres in 0.3053 seconds
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 73 line - create index
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 170 line - create index in Postgres in 0.0003 seconds
+2024-11-11 23:08:11 - root - INFO      - load_agens_yiliao.py : 30 line - Run vacuum
+2024-11-11 23:09:10 - root - INFO      - load_agens_yiliao.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/医疗数据集/数据导入agens/import/
+2024-11-11 23:09:10 - root - INFO      - load_agens_yiliao.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-11 23:09:10 - root - INFO      - load_agens_yiliao.py : 52 line - create graph
+2024-11-11 23:09:10 - root - INFO      - load_agens_yiliao.py : 160 line - create in Postgres in 0.1847 seconds
+2024-11-11 23:09:10 - root - INFO      - load_agens_yiliao.py : 88 line - load node
+2024-11-11 23:09:10 - root - INFO      - load_agens_yiliao.py : 97 line - load edge
+2024-11-11 23:09:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'first_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/first_level_departments.csv');---result:[('',)]
+2024-11-11 23:09:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'second_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/second_level_departments.csv');---result:[('',)]
+2024-11-11 23:09:10 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'disease',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/disease.csv');---err:unknown agtype
+2024-11-11 23:09:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'treatment_plan',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment_plan.csv');---result:[('',)]
+2024-11-11 23:09:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'food',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/food.csv');---result:[('',)]
+2024-11-11 23:09:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','belong_to','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/belong_to.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'recipe',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recipe.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'inspection_means',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/inspection_means.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'drug',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/drug.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','affiliation_department','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/affiliation_department.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','complication','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/complication.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','common_used','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/common_used.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'symptoms',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/symptoms.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'manufacturer',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/manufacturer.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','treatment','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','suitable_to_eat','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/suitable_to_eat.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','avoid_eating','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/avoid_eating.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','recommended_recipes','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recommended_recipes.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','diagnostic_tests','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/diagnostic_tests.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','highly_rated_medicines','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/highly_rated_medicines.csv');---result:[('',)]
+2024-11-11 23:09:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','with_symptoms','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/with_symptoms.csv');---result:[('',)]
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','produce_medicine','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/produce_medicine.csv');---result:[('',)]
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 165 line - Loaded data in Postgres in 2.1088 seconds
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 73 line - create index
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 170 line - create index in Postgres in 0.0003 seconds
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 30 line - Run vacuum
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.other_departments;---err:relation "medical.other_departments" does not exist
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.second_level_departments;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.disease;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.food;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment_plan;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.first_level_departments;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.inspection_means;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.belong_to;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recipe;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.drug;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.affiliation_department;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.common_used;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.complication;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.suitable_to_eat;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.avoid_eating;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.symptoms;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.manufacturer;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recommended_recipes;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.diagnostic_tests;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.highly_rated_medicines;---err:the last operation didn't produce a result
+2024-11-11 23:09:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.with_symptoms;---err:the last operation didn't produce a result
+2024-11-11 23:09:14 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.produce_medicine;---err:the last operation didn't produce a result
+2024-11-11 23:09:14 - root - INFO      - load_agens_yiliao.py : 66 line - clear_dirty_data
+2024-11-11 23:09:17 - root - INFO      - load_agens_yiliao.py : 177 line - vacuum analyse Postgres in 4.8529 seconds
+2024-11-11 23:09:17 - root - INFO      - load_agens_yiliao.py : 218 line - Loaded total in Postgres in 7.2519 seconds
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/医疗数据集/数据导入agens/import/
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 52 line - create graph
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 160 line - create in Postgres in 0.1853 seconds
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 88 line - load node
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 97 line - load edge
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'first_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/first_level_departments.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'second_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/second_level_departments.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'disease',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/disease.csv');---err:unknown agtype
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'treatment_plan',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment_plan.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'food',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/food.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','belong_to','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/belong_to.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'recipe',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recipe.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'inspection_means',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/inspection_means.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'drug',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/drug.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','affiliation_department','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/affiliation_department.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','complication','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/complication.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','common_used','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/common_used.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'symptoms',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/symptoms.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'manufacturer',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/manufacturer.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','treatment','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','suitable_to_eat','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/suitable_to_eat.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','avoid_eating','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/avoid_eating.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','recommended_recipes','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recommended_recipes.csv');---result:[('',)]
+2024-11-11 23:13:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','diagnostic_tests','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/diagnostic_tests.csv');---result:[('',)]
+2024-11-11 23:13:58 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','highly_rated_medicines','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/highly_rated_medicines.csv');---result:[('',)]
+2024-11-11 23:13:58 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','with_symptoms','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/with_symptoms.csv');---result:[('',)]
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','produce_medicine','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/produce_medicine.csv');---result:[('',)]
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 165 line - Loaded data in Postgres in 2.3455 seconds
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 73 line - create index
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 170 line - create index in Postgres in 0.0003 seconds
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 30 line - Run vacuum
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.other_departments;---err:relation "medical.other_departments" does not exist
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.disease;---err:the last operation didn't produce a result
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.second_level_departments;---err:the last operation didn't produce a result
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.first_level_departments;---err:the last operation didn't produce a result
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment_plan;---err:the last operation didn't produce a result
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.food;---err:the last operation didn't produce a result
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.inspection_means;---err:the last operation didn't produce a result
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.belong_to;---err:the last operation didn't produce a result
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recipe;---err:the last operation didn't produce a result
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.drug;---err:the last operation didn't produce a result
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.affiliation_department;---err:the last operation didn't produce a result
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.common_used;---err:the last operation didn't produce a result
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.complication;---err:the last operation didn't produce a result
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.suitable_to_eat;---err:the last operation didn't produce a result
+2024-11-11 23:13:59 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.avoid_eating;---err:the last operation didn't produce a result
+2024-11-11 23:14:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment;---err:the last operation didn't produce a result
+2024-11-11 23:14:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.symptoms;---err:the last operation didn't produce a result
+2024-11-11 23:14:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.manufacturer;---err:the last operation didn't produce a result
+2024-11-11 23:14:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recommended_recipes;---err:the last operation didn't produce a result
+2024-11-11 23:14:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.diagnostic_tests;---err:the last operation didn't produce a result
+2024-11-11 23:14:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.highly_rated_medicines;---err:the last operation didn't produce a result
+2024-11-11 23:14:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.with_symptoms;---err:the last operation didn't produce a result
+2024-11-11 23:14:01 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.produce_medicine;---err:the last operation didn't produce a result
+2024-11-11 23:14:01 - root - INFO      - load_agens_yiliao.py : 66 line - clear_dirty_data
+2024-11-11 23:14:04 - root - INFO      - load_agens_yiliao.py : 177 line - vacuum analyse Postgres in 4.9865 seconds
+2024-11-11 23:14:04 - root - INFO      - load_agens_yiliao.py : 218 line - Loaded total in Postgres in 7.6250 seconds
+2024-11-11 23:20:36 - root - INFO      - load_agens_yiliao.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/医疗数据集/数据导入agens/import/
+2024-11-11 23:20:36 - root - INFO      - load_agens_yiliao.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-11 23:20:36 - root - INFO      - load_agens_yiliao.py : 52 line - create graph
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 160 line - create in Postgres in 0.1867 seconds
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 88 line - load node
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 97 line - load edge
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'second_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/second_level_departments.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'first_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/first_level_departments.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'treatment_plan',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment_plan.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'food',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/food.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','belong_to','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/belong_to.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'inspection_means',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/inspection_means.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'recipe',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recipe.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'drug',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/drug.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','affiliation_department','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/affiliation_department.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','complication','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/complication.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','common_used','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/common_used.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'symptoms',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/symptoms.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'manufacturer',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/manufacturer.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','suitable_to_eat','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/suitable_to_eat.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','avoid_eating','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/avoid_eating.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','treatment','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','recommended_recipes','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recommended_recipes.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','diagnostic_tests','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/diagnostic_tests.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','highly_rated_medicines','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/highly_rated_medicines.csv');---result:[('',)]
+2024-11-11 23:20:37 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','with_symptoms','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/with_symptoms.csv');---result:[('',)]
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','produce_medicine','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/produce_medicine.csv');---result:[('',)]
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'disease',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/disease.csv');---result:[('',)]
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 165 line - Loaded data in Postgres in 2.3104 seconds
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 73 line - create index
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 170 line - create index in Postgres in 0.0002 seconds
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 30 line - Run vacuum
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.second_level_departments;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.other_departments;---err:relation "medical.other_departments" does not exist
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment_plan;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.first_level_departments;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.food;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.inspection_means;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.belong_to;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recipe;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.drug;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.disease;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.affiliation_department;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.common_used;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.complication;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.suitable_to_eat;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.avoid_eating;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.symptoms;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.manufacturer;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recommended_recipes;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.diagnostic_tests;---err:the last operation didn't produce a result
+2024-11-11 23:20:39 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.highly_rated_medicines;---err:the last operation didn't produce a result
+2024-11-11 23:20:40 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.with_symptoms;---err:the last operation didn't produce a result
+2024-11-11 23:20:40 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.produce_medicine;---err:the last operation didn't produce a result
+2024-11-11 23:20:40 - root - INFO      - load_agens_yiliao.py : 66 line - clear_dirty_data
+2024-11-11 23:20:44 - root - INFO      - load_agens_yiliao.py : 177 line - vacuum analyse Postgres in 4.6192 seconds
+2024-11-11 23:20:44 - root - INFO      - load_agens_yiliao.py : 218 line - Loaded total in Postgres in 7.2351 seconds
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/医疗数据集/数据导入agens/import/
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 52 line - create graph
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 160 line - create in Postgres in 0.1834 seconds
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 88 line - load node
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 97 line - load edge
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'first_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/first_level_departments.csv');---result:[('',)]
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'second_level_departments',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/second_level_departments.csv');---result:[('',)]
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'treatment_plan',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment_plan.csv');---result:[('',)]
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'food',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/food.csv');---result:[('',)]
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','belong_to','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/belong_to.csv');---result:[('',)]
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'recipe',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recipe.csv');---result:[('',)]
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'inspection_means',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/inspection_means.csv');---result:[('',)]
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'drug',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/drug.csv');---result:[('',)]
+2024-11-18 15:53:57 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','affiliation_department','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/affiliation_department.csv');---result:[('',)]
+2024-11-18 15:53:58 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','complication','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/complication.csv');---result:[('',)]
+2024-11-18 15:53:58 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','common_used','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/common_used.csv');---result:[('',)]
+2024-11-18 15:53:58 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'symptoms',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/symptoms.csv');---result:[('',)]
+2024-11-18 15:53:58 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'manufacturer',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/manufacturer.csv');---result:[('',)]
+2024-11-18 15:53:58 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','treatment','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/treatment.csv');---result:[('',)]
+2024-11-18 15:53:58 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','suitable_to_eat','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/suitable_to_eat.csv');---result:[('',)]
+2024-11-18 15:53:58 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','avoid_eating','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/avoid_eating.csv');---result:[('',)]
+2024-11-18 15:53:58 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','diagnostic_tests','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/diagnostic_tests.csv');---result:[('',)]
+2024-11-18 15:53:58 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','recommended_recipes','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/recommended_recipes.csv');---result:[('',)]
+2024-11-18 15:53:58 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','highly_rated_medicines','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/highly_rated_medicines.csv');---result:[('',)]
+2024-11-18 15:53:58 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','with_symptoms','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/with_symptoms.csv');---result:[('',)]
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'disease',   '/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/disease.csv');---result:[('',)]
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','produce_medicine','/home/work/liuytest/大论文/医疗数据集/数据导入agens/import/produce_medicine.csv');---result:[('',)]
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 165 line - Loaded data in Postgres in 2.5991 seconds
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 73 line - create index
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 170 line - create index in Postgres in 0.0002 seconds
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 30 line - Run vacuum
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.second_level_departments;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment_plan;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.other_departments;---err:relation "medical.other_departments" does not exist
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.first_level_departments;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.inspection_means;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.food;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.belong_to;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recipe;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.drug;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.disease;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.affiliation_department;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.common_used;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.complication;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.suitable_to_eat;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.avoid_eating;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.symptoms;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.manufacturer;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recommended_recipes;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.diagnostic_tests;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.highly_rated_medicines;---err:the last operation didn't produce a result
+2024-11-18 15:54:00 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.with_symptoms;---err:the last operation didn't produce a result
+2024-11-18 15:54:01 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.produce_medicine;---err:the last operation didn't produce a result
+2024-11-18 15:54:01 - root - INFO      - load_agens_yiliao.py : 66 line - clear_dirty_data
+2024-11-18 15:54:04 - root - INFO      - load_agens_yiliao.py : 177 line - vacuum analyse Postgres in 4.5875 seconds
+2024-11-18 15:54:04 - root - INFO      - load_agens_yiliao.py : 218 line - Loaded total in Postgres in 7.3891 seconds
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 52 line - create graph
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 160 line - create in Postgres in 0.1840 seconds
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 88 line - load node
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 97 line - load edge
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'second_level_departments',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importsecond_level_departments.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importsecond_level_departments.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'first_level_departments',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importfirst_level_departments.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importfirst_level_departments.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'treatment_plan',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importtreatment_plan.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importtreatment_plan.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'inspection_means',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importinspection_means.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importinspection_means.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'disease',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importdisease.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importdisease.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'symptoms',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importsymptoms.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importsymptoms.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'manufacturer',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importmanufacturer.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importmanufacturer.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'drug',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importdrug.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importdrug.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','highly_rated_medicines','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importhighly_rated_medicines.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importhighly_rated_medicines.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'food',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importfood.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importfood.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','belong_to','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importbelong_to.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importbelong_to.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','suitable_to_eat','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importsuitable_to_eat.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importsuitable_to_eat.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','common_used','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importcommon_used.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importcommon_used.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_labels_from_file('medical',   'recipe',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importrecipe.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importrecipe.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','avoid_eating','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importavoid_eating.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importavoid_eating.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','complication','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importcomplication.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importcomplication.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','affiliation_department','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importaffiliation_department.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importaffiliation_department.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','produce_medicine','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importproduce_medicine.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importproduce_medicine.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','with_symptoms','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importwith_symptoms.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importwith_symptoms.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','diagnostic_tests','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importdiagnostic_tests.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importdiagnostic_tests.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','treatment','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importtreatment.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importtreatment.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:select * from load_edges_from_file('medical','recommended_recipes','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importrecommended_recipes.csv');---err:Failed to open /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/importrecommended_recipes.csv
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 165 line - Loaded data in Postgres in 0.0373 seconds
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 73 line - create index
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 170 line - create index in Postgres in 0.0002 seconds
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 30 line - Run vacuum
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.other_departments;---err:relation "medical.other_departments" does not exist
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.inspection_means;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.food;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.disease;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment_plan;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.symptoms;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.drug;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.first_level_departments;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.manufacturer;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.second_level_departments;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.highly_rated_medicines;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recipe;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.belong_to;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.suitable_to_eat;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.complication;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.affiliation_department;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.avoid_eating;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.common_used;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.diagnostic_tests;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.produce_medicine;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.with_symptoms;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recommended_recipes;---err:the last operation didn't produce a result
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 66 line - clear_dirty_data
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 177 line - vacuum analyse Postgres in 0.0606 seconds
+2024-11-18 16:43:37 - root - INFO      - load_agens_yiliao.py : 218 line - Loaded total in Postgres in 0.2910 seconds
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 24 line - load param postgres 127.0.0.1 5432 omm ZAQ1234@esz /home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 153 line - 连接的数据库配置信息: postgres,127.0.0.1,omm,ZAQ1234@esz,5432
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 52 line - create graph
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 160 line - create in Postgres in 0.1833 seconds
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 88 line - load node
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 97 line - load edge
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'first_level_departments',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/first_level_departments.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'second_level_departments',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/second_level_departments.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'treatment_plan',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/treatment_plan.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'food',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/food.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','belong_to','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/belong_to.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'recipe',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/recipe.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'inspection_means',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/inspection_means.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'drug',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/drug.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','affiliation_department','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/affiliation_department.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','complication','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/complication.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','common_used','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/common_used.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'symptoms',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/symptoms.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'manufacturer',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/manufacturer.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','treatment','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/treatment.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','suitable_to_eat','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/suitable_to_eat.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','avoid_eating','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/avoid_eating.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','recommended_recipes','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/recommended_recipes.csv');---result:[('',)]
+2024-11-18 16:44:10 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','diagnostic_tests','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/diagnostic_tests.csv');---result:[('',)]
+2024-11-18 16:44:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','highly_rated_medicines','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/highly_rated_medicines.csv');---result:[('',)]
+2024-11-18 16:44:11 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','with_symptoms','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/with_symptoms.csv');---result:[('',)]
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_labels_from_file('medical',   'disease',   '/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/disease.csv');---result:[('',)]
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 130 line - 执行sql:select * from load_edges_from_file('medical','produce_medicine','/home/work/liuytest/大论文/0数据导入/医疗数据导入agens/import/produce_medicine.csv');---result:[('',)]
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 165 line - Loaded data in Postgres in 2.4827 seconds
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 73 line - create index
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 170 line - create index in Postgres in 0.0003 seconds
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 30 line - Run vacuum
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.second_level_departments;---err:the last operation didn't produce a result
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.other_departments;---err:relation "medical.other_departments" does not exist
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.food;---err:the last operation didn't produce a result
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.first_level_departments;---err:the last operation didn't produce a result
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.belong_to;---err:the last operation didn't produce a result
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment_plan;---err:the last operation didn't produce a result
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recipe;---err:the last operation didn't produce a result
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.inspection_means;---err:the last operation didn't produce a result
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.drug;---err:the last operation didn't produce a result
+2024-11-18 16:44:12 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.disease;---err:the last operation didn't produce a result
+2024-11-18 16:44:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.affiliation_department;---err:the last operation didn't produce a result
+2024-11-18 16:44:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.common_used;---err:the last operation didn't produce a result
+2024-11-18 16:44:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.complication;---err:the last operation didn't produce a result
+2024-11-18 16:44:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.suitable_to_eat;---err:the last operation didn't produce a result
+2024-11-18 16:44:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.avoid_eating;---err:the last operation didn't produce a result
+2024-11-18 16:44:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.treatment;---err:the last operation didn't produce a result
+2024-11-18 16:44:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.symptoms;---err:the last operation didn't produce a result
+2024-11-18 16:44:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.manufacturer;---err:the last operation didn't produce a result
+2024-11-18 16:44:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.recommended_recipes;---err:the last operation didn't produce a result
+2024-11-18 16:44:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.diagnostic_tests;---err:the last operation didn't produce a result
+2024-11-18 16:44:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.highly_rated_medicines;---err:the last operation didn't produce a result
+2024-11-18 16:44:13 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.with_symptoms;---err:the last operation didn't produce a result
+2024-11-18 16:44:14 - root - INFO      - load_agens_yiliao.py : 134 line - 执行sql:VACUUM ANALYZE medical.produce_medicine;---err:the last operation didn't produce a result
+2024-11-18 16:44:14 - root - INFO      - load_agens_yiliao.py : 66 line - clear_dirty_data
+2024-11-18 16:44:17 - root - INFO      - load_agens_yiliao.py : 177 line - vacuum analyse Postgres in 4.8576 seconds
+2024-11-18 16:44:17 - root - INFO      - load_agens_yiliao.py : 218 line - Loaded total in Postgres in 7.6059 seconds

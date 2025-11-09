@@ -1,0 +1,19 @@
+[
+    "(n1:account)",
+    "(n1:company)",
+    "(n1:loan)",
+    "(n1:medium)",
+    "(n1:person)",
+    "(n1:account)-[r1:accountrepayloan]->(n2:loan)",
+    "(n1:account)-[r1:accounttransferaccount]->(n2:account)",
+    "(n1:account)-[r1:accountwithdrawaccount]->(n2:account)",
+    "(n1:company)-[r1:companyapplyloan]->(n2:loan)",
+    "(n1:company)-[r1:companyguaranteecompany]->(n2:company)",
+    "(n1:company)-[r1:companyinvestcompany]->(n2:company)",
+    "(n1:loan)-[r1:loandepositaccount]->(n2:account)",
+    "(n1:medium)-[r1:mediumsigninaccount]->(n2:account)",
+    "(n1:person)-[r1:personapplyLoan]->(n2:loan)",
+    "(n1:person)-[r1:personguaranteeperson]->(n2:person)",
+    "(n1:person)-[r1:personinvestcompany]->(n2:company)",
+    "(n1:person)-[r1:personownaccount]->(n2:account)"
+]

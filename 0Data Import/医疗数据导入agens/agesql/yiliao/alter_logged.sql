@@ -1,0 +1,25 @@
+-- Make logged
+SET GRAPH_PATH = medical;
+ALTER VLABEL first_level_departments SET LOGGED;
+ALTER VLABEL second_level_departments SET LOGGED;
+ALTER VLABEL other_departments SET LOGGED;
+ALTER VLABEL inspection_means SET LOGGED;
+ALTER VLABEL treatment_plan SET LOGGED;
+ALTER VLABEL manufacturer SET LOGGED;
+ALTER VLABEL disease SET LOGGED;
+ALTER VLABEL symptoms SET LOGGED;
+ALTER VLABEL drug SET LOGGED;
+ALTER VLABEL food SET LOGGED;
+ALTER VLABEL recipe SET LOGGED;
+ALTER ELABEL highly_rated_medicines SET LOGGED;
+ALTER ELABEL suitable_to_eat SET LOGGED;
+ALTER ELABEL belong_to SET LOGGED;
+ALTER ELABEL common_used SET LOGGED;
+ALTER ELABEL complication SET LOGGED;
+ALTER ELABEL avoid_eating SET LOGGED;
+ALTER ELABEL affiliation_department SET LOGGED;
+ALTER ELABEL treatment SET LOGGED;
+ALTER ELABEL produce_medicine SET LOGGED;
+ALTER ELABEL with_symptoms SET LOGGED;
+ALTER ELABEL diagnostic_tests SET LOGGED;
+ALTER ELABEL recommended_recipes SET LOGGED;

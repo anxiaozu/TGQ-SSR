@@ -1,0 +1,12 @@
+| [(:食谱 {name: "食谱", indexes: [], constraints: []}), 
+(:二级科室 {name: "二级科室", indexes: [], constraints: []}),
+ (:症状 {name: "症状", indexes: [], constraints: []}),
+  (:一级科室 {name: "一级科室", indexes: [], constraints: []}), 
+  (:食物 {name: "食物", indexes: [], constraints: []}),
+   (:治疗方案 {name: "治疗方案", indexes: [], constraints: []}), 
+   (:疾病 {name: "疾病", indexes: [], constraints: []}), (:药物 {name: "药物", indexes: [], constraints: []}), 
+   (:其他 {name: "其他", indexes: [], constraints: []}), 
+   (:检查手段 {name: "检查手段", indexes: [], constraints: []}), 
+   (:生产商 {name: "生产商", indexes: [], constraints: []})] 
+   
+   | [[:症状], [:症状], [:症状], [:症状], [:并发症], [:所属科室], [:所属科室], [:所属科室], [:所属科室], [:好评药品], [:好评药品], [:好评药品], [:好评药品], [:推荐食谱], [:属于], [:治疗方法], [:忌吃], [:宜吃], [:常用药品], [:诊断检查], [:诊断检查], [:诊断检查], [:诊断检查], [:生产药品]] |

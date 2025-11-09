@@ -1,0 +1,22 @@
+-- Make logged
+SET GRAPH_PATH = finbench;
+-- Make Vertex Labels
+ALTER VLABEL account SET LOGGED;
+ALTER VLABEL company SET LOGGED;
+ALTER VLABEL loan SET LOGGED;
+ALTER VLABEL medium SET LOGGED;
+ALTER VLABEL person SET LOGGED;
+--Make Edge Labels
+ALTER ELABEL AccountRepayLoan SET LOGGED;
+ALTER ELABEL AccountTransferAccount SET LOGGED;
+ALTER ELABEL AccountWithdrawAccount SET LOGGED;
+ALTER ELABEL CompanyApplyLoan SET LOGGED;
+ALTER ELABEL CompanyGuaranteeCompany SET LOGGED;
+ALTER ELABEL CompanyInvestCompany SET LOGGED;
+ALTER ELABEL CompanyOwnAccount SET LOGGED;
+ALTER ELABEL LoanDepositAccount SET LOGGED;
+ALTER ELABEL MediumSignInAccount SET LOGGED;
+ALTER ELABEL PersonApplyLoan SET LOGGED;
+ALTER ELABEL PersonGuaranteePerson SET LOGGED;
+ALTER ELABEL PersonInvestCompany SET LOGGED;
+ALTER ELABEL PersonOwnAccount SET LOGGED;
