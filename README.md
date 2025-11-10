@@ -15,7 +15,7 @@
 **TGQ-SSR** is a research codebase aimed at converting natural-language queries into graph queries via Semantic Subgraph Retrieval (SSR). The core idea is to: parse a text query → retrieve a semantically relevant subgraph from a graph database → generate a corresponding graph query (e.g., GQL/SPARQL). This pipeline is suitable for tasks such as knowledge-graph question answering, graph database retrieval, and semantic graph-query generation.
 
 
-![Overview](.\assests\Overview.png)
+![Overview](./assests/Overview.png)
 =======
 ------
 
